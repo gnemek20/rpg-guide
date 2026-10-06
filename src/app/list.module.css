@@ -150,6 +150,7 @@
   gap: 4px 12px;
 }
 .stat {
+  display: flex;
   flex-direction: row;
   gap: 6px;
   white-space: nowrap;

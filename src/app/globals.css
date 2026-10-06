@@ -76,9 +76,11 @@ button {
   min-width: 0;
 }
 .row {
+  display: flex;
   flex-direction: row;
 }
 .wrap {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }

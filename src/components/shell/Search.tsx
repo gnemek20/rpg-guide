@@ -88,7 +88,7 @@ export default function Search() {
           ref={input}
           type="search"
           value={q}
-          placeholder="아이템, 몬스터, 잠재능력 검색"
+          placeholder="아이템, 몬스터 검색"
           aria-label="검색"
           autoComplete="off"
           enterKeyHint="search"

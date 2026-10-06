@@ -94,7 +94,8 @@ export default function Home() {
 
       <Panel title="한눈에 보기" tex="stone">
         <Table
-          cols={[{ label: '하고 싶은 것', main: true }, { label: '방법', w: 1 }, { label: '안내', w: 0.6, right: true }]}
+          keep
+          cols={[{ label: '하고 싶은 것', main: true }, { label: '방법', w: 1 }, { label: '안내', w: 0.5, right: true }]}
           hrefs={quick.map(([, , href]) => href)}
           rows={quick.map(([want, how, href]) => [
             want,
