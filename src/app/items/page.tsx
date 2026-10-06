@@ -34,7 +34,7 @@ export default function Items() {
         <Filter scope="#items" placeholder="아이템, 세트 이름으로 찾기" groups={[{ param: 'c', attr: 'c', all: '전체', options: d.CATEGORIES.map((c) => ({ v: c, label: c })) }]} />
       </Panel>
 
-      <div id="items" className={ui.gap16}>
+      <div id="items" className={cx(ui.gap16, ui.stage)}>
         {regions.map((r) => {
           const mine = sets.filter((st) => d.regionOfSet(st.name)?.id === r.id)
           if (!mine.length) return null

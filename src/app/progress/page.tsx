@@ -34,7 +34,7 @@ export default function Progress() {
       <Panel title="도감" tex="stone" aside={<code>/도감</code>}>
         <p className="t-dim">모은 수량이 단계에 닿으면 보상을 받습니다. 상시 보상은 계속 적용됩니다.</p>
         <Filter scope="#coll" placeholder="도감 이름으로 찾기" groups={[{ param: 'c', attr: 'c', all: '전체', options: cats.map((c) => ({ v: c, label: c })) }]} />
-        <ul className={s.cardGrid} id="coll">
+        <ul className={cx(s.cardGrid, ui.stage)} id="coll">
           {pr.collections.map((c: any) => (
             <li key={c.id} className={s.card} data-k={c.name} data-c={c.category}>
               <div className={s.cardHead} data-hot>

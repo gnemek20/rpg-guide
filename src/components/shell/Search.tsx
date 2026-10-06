@@ -90,11 +90,10 @@ export default function Search() {
           onChange={(e) => { setQ(e.target.value); setOpen(true) }}
           onKeyDown={onKey}
         />
-        {q && (
-          <button type="button" className={s.clear} aria-label="검색어 지우기" onClick={() => { setQ(''); input.current?.focus() }}>
-            <Icon shape="close" size={16} />
-          </button>
-        )}
+        {/* 검색어가 생길 때 입력창 폭이 바뀌지 않게 자리는 항상 차지한다 */}
+        <button type="button" className={s.clear} data-on={!!q} tabIndex={q ? 0 : -1} aria-label="검색어 지우기" onClick={() => { setQ(''); input.current?.focus() }}>
+          <Icon shape="close" size={16} />
+        </button>
       </label>
       {show && (
         <div className={s.results} role="listbox">

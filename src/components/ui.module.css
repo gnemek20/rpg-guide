@@ -319,6 +319,8 @@
 
 /* ---------- 인벤토리 슬롯 */
 .slot {
+  display: flex;
+  overflow: hidden;
   position: relative;
   width: 40px;
   height: 40px;
@@ -440,6 +442,13 @@
 .count {
   color: var(--ink-3);
   white-space: nowrap;
+  width: 56px;
+  flex: none;
+  text-align: right;
+}
+.stage {
+  min-height: 72dvh;
+  align-content: flex-start;
 }
 .empty {
   padding: 24px;

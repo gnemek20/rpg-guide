@@ -1,5 +1,5 @@
 import Filter from '@/components/Filter'
-import { Chip, KV, Page, Panel, ui } from '@/components/ui'
+import { Chip, KV, Page, Panel, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import s from '../list.module.css'
 
@@ -38,7 +38,7 @@ export default function Enchants() {
           ]}
         />
         <p className="t-tiny t-faint">{d.clean(rules.note).replace(/effect_at_max/g, '효과').replace(/any_grade=true면/g, '"모든 등급" 표시가 있으면')}</p>
-        <ul className={s.cardGrid} id="ench">
+        <ul className={cx(s.cardGrid, ui.stage)} id="ench">
           {enchants.map((e) => (
             <li key={e.id} id={e.id} className={s.card} data-k={`${e.name} ${e.effect_at_max}`} data-for={e.for} data-g={e.grade} hidden={e.for !== kinds[0]}>
               <div className={s.cardHead}>

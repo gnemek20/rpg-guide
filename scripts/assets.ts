@@ -1,6 +1,7 @@
 // 빌드 전 에셋 생성: 블록 텍스처, 아이콘 스프라이트, 글꼴 서브셋.
 // 같은 입력이면 항상 같은 결과가 나오도록 난수는 고정 시드만 쓴다.
 import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 import { join } from 'node:path'
 import { PNG } from 'pngjs'
 import subsetFont from 'subset-font'
@@ -9,7 +10,7 @@ import { MATERIALS, SHAPES, UI_ICONS, POTION_MATS, iconFor, iconId, segments } f
 
 const GEN = 'src/generated'
 const PUB = 'public/gen'
-mkdirSync(join(GEN, 'fonts'), { recursive: true })
+mkdirSync(join(PUB, 'fonts'), { recursive: true })
 mkdirSync(PUB, { recursive: true })
 
 // ---------------------------------------------------------------- 텍스처
@@ -323,15 +324,17 @@ const FONTS: [string, string, number][] = [
   ['Galmuri14', 'Galmuri14.ttf', 400],
   ['Galmuri9', 'Galmuri9.ttf', 400],
 ]
-const faces: string[] = []
+const faces: { family: string; file: string; weight: number; v: string }[] = []
 for (const [family, file, weight] of FONTS) {
   const src = readFileSync(join('node_modules/galmuri/dist', file))
   const out = await subsetFont(src, text, { targetFormat: 'woff2' })
   const outName = file.replace('.ttf', '.woff2')
-  writeFileSync(join(GEN, 'fonts', outName), out)
-  faces.push(`@font-face {\n  font-family: '${family}';\n  src: url('./fonts/${outName}') format('woff2');\n  font-weight: ${weight};\n  font-style: normal;\n  font-display: swap;\n}`)
+  writeFileSync(join(PUB, 'fonts', outName), out)
+  // 내용이 바뀌면 주소도 바뀌게 해시를 붙인다
+  faces.push({ family, file: outName, weight, v: createHash('sha1').update(out).digest('hex').slice(0, 8) })
   console.log(`글꼴 ${outName}: ${(out.length / 1024).toFixed(1)}KB (${text.length}자)`)
 }
-writeFileSync(join(GEN, 'fonts.css'), `/* 자동 생성. scripts/assets.ts */\n${faces.join('\n')}\n`)
+// 글꼴은 레이아웃에서 미리 받기(preload)로 걸기 때문에 주소 목록만 내보낸다
+writeFileSync(join(GEN, 'fonts.ts'), `// 자동 생성. scripts/assets.ts\nexport const FONTS = ${JSON.stringify(faces, null, 1)}\n`)
 console.log(`텍스처 ${Object.keys(TEX).length}종, 아이콘 ${symbols.length}종 생성`)
 void MATERIALS

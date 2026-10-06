@@ -34,7 +34,7 @@ export default function Economy() {
 
       <Panel title="상점" tex="cobble">
         <Filter scope="#shop" placeholder="품목 이름으로 찾기" groups={[{ param: 't', attr: 't', options: tabs.map((t) => ({ v: key(t), label: key(t) })) }]} />
-        <div id="shop" className={ui.gap12}>
+        <div id="shop" className={cx(ui.gap12, ui.stage)}>
           {tabs.map((t, ti) => (
             <div key={key(t)} className={ui.gap8} data-group>
               <div className={cx('row', ui.gap8, ui.center)}>

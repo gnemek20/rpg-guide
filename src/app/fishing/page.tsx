@@ -3,7 +3,7 @@ import { Chip, Icon, ItemIcon, KV, Page, Panel, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import Link from 'next/link'
 import s from '../list.module.css'
-import f from './fishing.module.css'
+import Pond from './Pond'
 
 export const metadata = { title: '낚시 도감' }
 
@@ -16,20 +16,7 @@ export default function Fishing() {
   const kinds = [...new Set(catches.map((c) => c.kind))]
   return (
     <Page title="낚시 도감" lead="넓은 강에 찌를 던지면 자동으로 낚입니다." icon={['fishingrod', 'gray']}>
-      {/* 선착장: 물, 나무 바닥, 낚싯대 */}
-      <section className={f.pond} aria-hidden="true">
-        <div className={f.water} />
-        <div className={f.pier}>
-          <div className={f.post} />
-          <div className={f.post} />
-          <div className={f.post} />
-        </div>
-        <div className={f.rod} data-hot><Icon shape="fishingrod" size={64} /></div>
-        <div className={f.line} />
-        <div className={f.bobber} />
-        <div className={f.fishA} data-hot><Icon shape="fish" mat="cyan" size={32} /></div>
-        <div className={f.fishB} data-hot><Icon shape="fish" mat="gold" size={32} /></div>
-      </section>
+      <Pond />
 
       <div className={ui.cols}>
         <Panel title="규칙" tex="dark-planks">
@@ -60,7 +47,7 @@ export default function Fishing() {
             { param: 'k', attr: 'kind', all: '전체 종류', options: kinds.map((k) => ({ v: k, label: k })) },
           ]}
         />
-        <ul className={s.cardGrid} id="fish">
+        <ul className={cx(s.cardGrid, ui.stage)} id="fish">
           {catches.map((c) => {
             const it = c.item ? d.itemById(c.item) : undefined
             const cond = c.conditions ?? {}

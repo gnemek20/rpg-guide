@@ -146,6 +146,12 @@
   width: 240px;
   max-width: 100%;
 }
+.hits {
+  width: 24px;
+  flex: none;
+  text-align: right;
+  color: var(--ink-3);
+}
 .zoom {
   gap: 4px;
   cursor: default;
@@ -225,6 +231,7 @@
 .sheetBody {
   flex: 1;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   padding: 10px;
   gap: 12px;
   overscroll-behavior: contain;

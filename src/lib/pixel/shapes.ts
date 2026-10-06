@@ -867,6 +867,25 @@ export const SHAPES: Record<string, string[]> = {
     '................',
     '................',
   ],
+  // 낚싯대만 (줄, 찌 없음). 낚시 장면에서 줄을 따로 그릴 때 쓴다
+  pole: [
+    '............##..',
+    '...........#hk#.',
+    '..........#hk#..',
+    '.........#hk#...',
+    '........#hk#....',
+    '.......#hk#.....',
+    '......#hk#......',
+    '.....#hk#.......',
+    '....#hk#........',
+    '...#hk#.........',
+    '..#hk#..........',
+    '.#hk#...........',
+    '#kk#............',
+    '###.............',
+    '................',
+    '................',
+  ],
   island: [
     '................',
     '........#.......',
@@ -1214,7 +1233,7 @@ export function potionMat(name: string): string {
 
 /** 스프라이트에 항상 넣는 UI 아이콘 */
 export const UI_ICONS: [string, string][] = [
-  ['house', 'gray'], ['sign', 'gray'], ['book', 'red'], ['book', 'purple'], ['chat', 'gray'], ['chest', 'gray'], ['craft', 'gray'],
+  ['house', 'gray'], ['sign', 'gray'], ['pole', 'gray'], ['book', 'red'], ['book', 'purple'], ['chat', 'gray'], ['chest', 'gray'], ['craft', 'gray'],
   ['anvil', 'gray'], ['wand', 'gray'], ['skull', 'white'], ['fishingrod', 'gray'], ['island', 'gray'], ['trophy', 'gray'],
   ['tower', 'gray'], ['coin', 'gold'], ['search', 'gray'], ['close', 'gray'], ['menu', 'gray'], ['arrow', 'gray'],
   ['heart', 'gray'], ['shield', 'gray'], ['clock', 'gold'], ['scroll', 'sand'], ['scroll', 'blue'], ['scroll', 'purple'],

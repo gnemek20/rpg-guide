@@ -236,7 +236,7 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
               onChange={(e) => setQ(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter' && firstHit) pick(firstHit.id) }}
             />
-            {hits && <span className="t-faint">{hits.size}</span>}
+            <span className={s.hits}>{hits ? hits.size : ''}</span>
           </label>
           <div className={cx('row', s.zoom)}>
             <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => step(1.3)} aria-label="확대">+</button>

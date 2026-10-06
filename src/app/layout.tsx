@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
-import IconHover from '@/components/IconHover'
 import SceneCanvas from '@/components/scene/Scene'
 import Shell from '@/components/shell/Shell'
+import { FONTS } from '@/generated/fonts'
 import { meta } from '@/lib/data'
 import './globals.css'
 
@@ -15,13 +15,22 @@ export function generateMetadata(): Metadata {
 }
 export const viewport: Viewport = { themeColor: '#121110', width: 'device-width', initialScale: 1 }
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const fontUrl = (f: { file: string; v: string }) => `${BASE}/gen/fonts/${f.file}?v=${f.v}`
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
+      <head>
+        {/* 글꼴을 먼저 받아 두고, 받는 동안 대체 글꼴로 그리지 않는다. 글자 폭이 바뀌며 화면이 밀리는 일을 막는다 */}
+        {FONTS.map((f) => (
+          <link key={f.file} rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={fontUrl(f)} />
+        ))}
+        <style>{FONTS.map((f) => `@font-face{font-family:'${f.family}';src:url('${fontUrl(f)}') format('woff2');font-weight:${f.weight};font-style:normal;font-display:block}`).join('')}</style>
+      </head>
       <body>
         <SceneCanvas />
         <Shell siteName={meta().site_name}>{children}</Shell>
-        <IconHover />
       </body>
     </html>
   )

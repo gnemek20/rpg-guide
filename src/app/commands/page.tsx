@@ -1,5 +1,5 @@
 import Filter from '@/components/Filter'
-import { Page, Panel, Table, cx } from '@/components/ui'
+import { Page, Panel, Table, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import s from '../list.module.css'
 
@@ -14,7 +14,7 @@ export default function Commands() {
       </Panel>
       <Panel title="명령어" aside={<span className="t-faint">{commands.length}개</span>}>
         <Filter scope="#cmds" placeholder="명령어나 설명으로 찾기" />
-        <ul className={s.cardGrid} id="cmds">
+        <ul className={cx(s.cardGrid, ui.stage)} id="cmds">
           {commands.map((c) => (
             <li key={c.command} className={s.card} data-k={[c.command, ...c.aliases, c.description].join(' ')}>
               <div className={s.cardHead}>

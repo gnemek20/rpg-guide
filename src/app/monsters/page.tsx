@@ -15,7 +15,7 @@ export default function Monsters() {
       <Panel tex="deep-bricks" title="사냥터">
         <Filter scope="#mobs" placeholder="몬스터, 드롭 아이템으로 찾기" unit="마리" groups={[{ param: 'r', attr: 'r', options: regions.map((r) => ({ v: r.id, label: `${r.name} ${r.levels}` })) }]} />
       </Panel>
-      <ul className={s.cardGrid} id="mobs">
+      <ul className={cx(s.cardGrid, ui.stage)} id="mobs">
         {regions.flatMap((r, ri) =>
           [...r.monsters].sort((a, b) => a.level - b.level).map((m) => (
             <li key={m.id} id={m.id} className={cx(s.card, ui.panel)} data-k={`${m.name} ${m.drops.map((x) => x.item.name).join(' ')}`} data-r={r.id} hidden={ri > 0}>
