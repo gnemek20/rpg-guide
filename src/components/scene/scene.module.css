@@ -1,0 +1,24 @@
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--bg);
+}
+.canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: blur(1.5px);
+  transition: opacity 0.14s linear;
+}
+.canvas[data-on='true'] {
+  opacity: 1;
+  transition-duration: 0.36s;
+}
+/* 본문이 읽히도록 가장자리와 아래쪽을 어둡게 누른다 */
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(18, 17, 16, 0.1) 0, rgba(18, 17, 16, 0.25) 160px, rgba(18, 17, 16, 0.72) 520px);
+}

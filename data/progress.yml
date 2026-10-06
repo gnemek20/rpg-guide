@@ -1,0 +1,805 @@
+# 도감·업적·파견·출석
+# collections = /도감(활동하면 자동 진행), titles = /업적(칭호), expedition = /파견, attendance = /출석.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+collections:
+- id: cobblestone
+  name: 조약돌
+  category: 광물
+  icon_material: COBBLESTONE
+  tiers:
+  - required: 500
+    reward: 물리 방어력 +2 (상시)
+  - required: 2000
+    reward: 1,000G (한 번)
+  - required: 10000
+    reward: 최대 체력 +10 (상시)
+- id: coal
+  name: 석탄
+  category: 광물
+  icon_material: COAL
+  tiers:
+  - required: 100
+    reward: 물리 공격력 +1 (상시)
+  - required: 500
+    reward: 800G (한 번)
+  - required: 2000
+    reward: 치명타 피해 +5 (상시)
+- id: raw_iron
+  name: 철
+  category: 광물
+  icon_material: RAW_IRON
+  tiers:
+  - required: 100
+    reward: 물리 방어력 +2 (상시)
+  - required: 500
+    reward: 최대 체력 +5 (상시)
+  - required: 2000
+    reward: 물리 관통력 +3 (상시)
+- id: raw_gold
+  name: 금
+  category: 광물
+  icon_material: RAW_GOLD
+  tiers:
+  - required: 50
+    reward: 500G (한 번)
+  - required: 300
+    reward: 치명타 피해 +5 (상시)
+  - required: 1000
+    reward: 이동 속도 +2 (상시)
+- id: redstone
+  name: 레드스톤
+  category: 광물
+  icon_material: REDSTONE
+  tiers:
+  - required: 100
+    reward: 마법 공격력 +1 (상시)
+  - required: 500
+    reward: 마나 재생 +1 (상시)
+  - required: 2000
+    reward: 마법 관통력 +3 (상시)
+- id: lapis
+  name: 청금석
+  category: 광물
+  icon_material: LAPIS_LAZULI
+  tiers:
+  - required: 100
+    reward: 최대 마나 +5 (상시)
+  - required: 500
+    reward: 마법 방어력 +2 (상시)
+  - required: 2000
+    reward: 마법 공격력 +3 (상시)
+- id: diamond
+  name: 다이아몬드
+  category: 광물
+  icon_material: DIAMOND
+  tiers:
+  - required: 20
+    reward: 1,000G (한 번)
+  - required: 100
+    reward: 치명타 확률 +1 (상시)
+  - required: 500
+    reward: 물리 공격력 +3 (상시)
+- id: twisted_ore
+  name: 뒤틀린 광물
+  category: 광물
+  icon_material: AMETHYST_SHARD
+  tiers:
+  - required: 10
+    reward: 1,000G (한 번)
+  - required: 50
+    reward: 치명타 확률 +1 (상시)
+  - required: 200
+    reward: 최대 체력 +10 (상시)
+- id: wheat
+  name: 밀
+  category: 농사
+  icon_material: WHEAT
+  tiers:
+  - required: 200
+    reward: 최대 체력 +3 (상시)
+  - required: 1000
+    reward: 800G (한 번)
+  - required: 5000
+    reward: 체력 재생 +1 (상시)
+- id: carrot
+  name: 당근
+  category: 농사
+  icon_material: CARROT
+  tiers:
+  - required: 200
+    reward: 이동 속도 +1 (상시)
+  - required: 1000
+    reward: 800G (한 번)
+  - required: 5000
+    reward: 이동 속도 +2 (상시)
+- id: potato
+  name: 감자
+  category: 농사
+  icon_material: POTATO
+  tiers:
+  - required: 200
+    reward: 물리 방어력 +1 (상시)
+  - required: 1000
+    reward: 800G (한 번)
+  - required: 5000
+    reward: 최대 체력 +8 (상시)
+- id: beetroot
+  name: 비트
+  category: 농사
+  icon_material: BEETROOT
+  tiers:
+  - required: 200
+    reward: 최대 마나 +5 (상시)
+  - required: 1000
+    reward: 800G (한 번)
+  - required: 5000
+    reward: 마나 재생 +1 (상시)
+- id: nether_wart
+  name: 네더 사마귀
+  category: 농사
+  icon_material: NETHER_WART
+  tiers:
+  - required: 200
+    reward: 마법 공격력 +1 (상시)
+  - required: 1000
+    reward: 800G (한 번)
+  - required: 5000
+    reward: 마법 방어력 +3 (상시)
+- id: oak_log
+  name: 참나무
+  category: 벌목
+  icon_material: OAK_LOG
+  tiers:
+  - required: 200
+    reward: 최대 체력 +3 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 물리 방어력 +3 (상시)
+- id: spruce_log
+  name: 가문비나무
+  category: 벌목
+  icon_material: SPRUCE_LOG
+  tiers:
+  - required: 200
+    reward: 물리 방어력 +1 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 최대 체력 +8 (상시)
+- id: birch_log
+  name: 자작나무
+  category: 벌목
+  icon_material: BIRCH_LOG
+  tiers:
+  - required: 200
+    reward: 이동 속도 +1 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 이동 속도 +2 (상시)
+- id: jungle_log
+  name: 정글나무
+  category: 벌목
+  icon_material: JUNGLE_LOG
+  tiers:
+  - required: 200
+    reward: 체력 재생 +0.5 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 체력 재생 +1 (상시)
+- id: acacia_log
+  name: 아카시아나무
+  category: 벌목
+  icon_material: ACACIA_LOG
+  tiers:
+  - required: 200
+    reward: 물리 공격력 +1 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 물리 공격력 +2 (상시)
+- id: dark_oak_log
+  name: 짙은 참나무
+  category: 벌목
+  icon_material: DARK_OAK_LOG
+  tiers:
+  - required: 200
+    reward: 마법 방어력 +1 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 마법 방어력 +3 (상시)
+- id: cherry_log
+  name: 벚나무
+  category: 벌목
+  icon_material: CHERRY_LOG
+  tiers:
+  - required: 200
+    reward: 마법 공격력 +1 (상시)
+  - required: 1000
+    reward: 600G (한 번)
+  - required: 5000
+    reward: 마법 공격력 +2 (상시)
+- id: kill_lost_wanderer
+  name: 미혹된 나그네
+  category: 사냥
+  icon_material: ROTTEN_FLESH
+  tiers:
+  - required: 50
+    reward: 50G (한 번)
+  - required: 300
+    reward: 최대 체력 +3 (상시)
+  - required: 1000
+    reward: 물리 방어력 +2 (상시)
+- id: kill_cursed_samurai
+  name: 저주받은 사무라이
+  category: 사냥
+  icon_material: IRON_SWORD
+  tiers:
+  - required: 50
+    reward: 200G (한 번)
+  - required: 300
+    reward: 물리 공격력 +1 (상시)
+  - required: 1000
+    reward: 치명타 확률 +1 (상시)
+- id: kill_onryo_archer
+  name: 원혼 궁수
+  category: 사냥
+  icon_material: BOW
+  tiers:
+  - required: 50
+    reward: 250G (한 번)
+  - required: 300
+    reward: 치명타 피해 +3 (상시)
+  - required: 1000
+    reward: 물리 관통력 +2 (상시)
+- id: kill_fallen_priest
+  name: 타천 신관
+  category: 사냥
+  icon_material: GOLDEN_HELMET
+  tiers:
+  - required: 50
+    reward: 300G (한 번)
+  - required: 300
+    reward: 최대 마나 +5 (상시)
+  - required: 1000
+    reward: 마법 공격력 +2 (상시)
+- id: kill_venom_jorogumo
+  name: 독니 죠로구모
+  category: 사냥
+  icon_material: SPIDER_EYE
+  tiers:
+  - required: 50
+    reward: 350G (한 번)
+  - required: 300
+    reward: 이동 속도 +1 (상시)
+  - required: 1000
+    reward: 치명타 확률 +1 (상시)
+- id: kill_mist_wraith
+  name: 안개 속 원혼
+  category: 사냥
+  icon_material: GHAST_TEAR
+  tiers:
+  - required: 50
+    reward: 400G (한 번)
+  - required: 300
+    reward: 마법 방어력 +2 (상시)
+  - required: 1000
+    reward: 최대 체력 +8 (상시)
+- id: kill_corrupted_ronin
+  name: 타락한 낭인
+  category: 사냥
+  icon_material: WITHER_SKELETON_SKULL
+  tiers:
+  - required: 50
+    reward: 450G (한 번)
+  - required: 300
+    reward: 물리 공격력 +2 (상시)
+  - required: 1000
+    reward: 치명타 피해 +5 (상시)
+- id: kill_kitsunebi_miko
+  name: 여우불 무녀
+  category: 사냥
+  icon_material: BLAZE_POWDER
+  tiers:
+  - required: 50
+    reward: 500G (한 번)
+  - required: 300
+    reward: 마법 공격력 +2 (상시)
+  - required: 1000
+    reward: 마법 관통력 +3 (상시)
+- id: kill_wandering_onryo
+  name: 떠도는 원령
+  category: 사냥
+  icon_material: ENDER_PEARL
+  tiers:
+  - required: 50
+    reward: 550G (한 번)
+  - required: 300
+    reward: 최대 체력 +8 (상시)
+  - required: 1000
+    reward: 이동 속도 +2 (상시)
+- id: kill_oni_warrior
+  name: 오니 무사
+  category: 사냥
+  icon_material: IRON_AXE
+  tiers:
+  - required: 50
+    reward: 650G (한 번)
+  - required: 300
+    reward: 물리 방어력 +3 (상시)
+  - required: 1000
+    reward: 물리 공격력 +3 (상시)
+- id: kill_tengu_archer
+  name: 덴구 궁사
+  category: 사냥
+  icon_material: CROSSBOW
+  tiers:
+  - required: 50
+    reward: 700G (한 번)
+  - required: 300
+    reward: 치명타 확률 +1 (상시)
+  - required: 1000
+    reward: 물리 관통력 +3 (상시)
+- id: kill_nine_tailed_kitsune
+  name: 구미호
+  category: 사냥
+  icon_material: FOX_SPAWN_EGG
+  tiers:
+  - required: 1
+    reward: 2,000G (한 번)
+  - required: 5
+    reward: 최대 체력 +10 (상시)
+  - required: 20
+    reward: 물리 공격력 +3 (상시)
+- id: cod
+  name: 흔한 물고기
+  category: 낚시
+  icon_material: COD
+  tiers:
+  - required: 50
+    reward: 최대 체력 +2 (상시)
+  - required: 200
+    reward: 500G (한 번)
+  - required: 800
+    reward: 최대 체력 +5 (상시)
+- id: salmon
+  name: 고급 어종
+  category: 낚시
+  icon_material: SALMON
+  tiers:
+  - required: 30
+    reward: 이동 속도 +1 (상시)
+  - required: 150
+    reward: 500G (한 번)
+  - required: 600
+    reward: 이동 속도 +2 (상시)
+- id: tropical_fish
+  name: 희귀 어종
+  category: 낚시
+  icon_material: TROPICAL_FISH
+  tiers:
+  - required: 30
+    reward: 마나 재생 +0.5 (상시)
+  - required: 150
+    reward: 500G (한 번)
+  - required: 600
+    reward: 최대 마나 +10 (상시)
+- id: pufferfish
+  name: 영웅 어종
+  category: 낚시
+  icon_material: PUFFERFISH
+  tiers:
+  - required: 10
+    reward: 치명타 확률 +1 (상시)
+  - required: 50
+    reward: 800G (한 번)
+  - required: 200
+    reward: 치명타 피해 +5 (상시)
+- id: nautilus_shell
+  name: 낚시 재료
+  category: 낚시
+  icon_material: INK_SAC
+  tiers:
+  - required: 10
+    reward: 마법 방어력 +2 (상시)
+  - required: 50
+    reward: 800G (한 번)
+  - required: 200
+    reward: 물리 방어력 +3 (상시)
+- id: sea_treasure
+  name: 전설의 낚시
+  category: 낚시
+  icon_material: HEART_OF_THE_SEA
+  tiers:
+  - required: 1
+    reward: 1,000G (한 번)
+  - required: 5
+    reward: 최대 체력 +10 (상시)
+  - required: 20
+    reward: 치명타 확률 +2 (상시)
+- id: set_sakura
+  name: 벚나무 세트
+  category: 특수
+  icon_material: CHERRY_SAPLING
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 물리 공격력 +2 (상시)
+- id: set_susuki
+  name: 억새 세트
+  category: 특수
+  icon_material: SHORT_GRASS
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 치명타 피해 +5 (상시)
+- id: set_kitsunebi
+  name: 여우불 세트
+  category: 특수
+  icon_material: BLAZE_POWDER
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 마법 공격력 +2 (상시)
+- id: set_moss
+  name: 이끼 세트
+  category: 특수
+  icon_material: MOSS_BLOCK
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 최대 체력 +10 (상시)
+- id: set_kekkai
+  name: 결계 세트
+  category: 특수
+  icon_material: AMETHYST_CLUSTER
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 최대 마나 +15 (상시)
+- id: set_twisted_steel
+  name: 뒤틀린 강철 세트
+  category: 특수
+  icon_material: IRON_BLOCK
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 물리 공격력 +3 (상시)
+- id: set_twisted_shard
+  name: 뒤틀린 파편 세트
+  category: 특수
+  icon_material: AMETHYST_SHARD
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 치명타 확률 +1 (상시)
+- id: set_unstable_mana
+  name: 불안정한 마나 세트
+  category: 특수
+  icon_material: LAPIS_BLOCK
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 마법 공격력 +3 (상시)
+- id: set_ruin_explorer
+  name: 폐허 탐험가 세트
+  category: 특수
+  icon_material: COMPASS
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 물리 방어력 +3 (상시)
+- id: set_twisted_seal
+  name: 뒤틀린 봉인 세트
+  category: 특수
+  icon_material: PAPER
+  tiers:
+  - required: 1
+    reward: 300G (한 번)
+  - required: 5
+    reward: 마나 재생 +1 (상시)
+- id: set_mangrove
+  name: 맹그로브 세트
+  category: 특수
+  icon_material: MANGROVE_ROOTS
+  tiers:
+  - required: 1
+    reward: 600G (한 번)
+  - required: 5
+    reward: 물리 공격력 +4 (상시)
+- id: set_reed
+  name: 갈대 세트
+  category: 특수
+  icon_material: SUGAR_CANE
+  tiers:
+  - required: 1
+    reward: 600G (한 번)
+  - required: 5
+    reward: 치명타 확률 +2 (상시)
+- id: set_bog_mist
+  name: 늪안개 세트
+  category: 특수
+  icon_material: LILY_PAD
+  tiers:
+  - required: 1
+    reward: 600G (한 번)
+  - required: 5
+    reward: 마법 공격력 +4 (상시)
+- id: set_mire_mud
+  name: 수렁 진흙 세트
+  category: 특수
+  icon_material: MUD
+  tiers:
+  - required: 1
+    reward: 600G (한 번)
+  - required: 5
+    reward: 최대 체력 +15 (상시)
+- id: set_firefly
+  name: 반딧불 세트
+  category: 특수
+  icon_material: GLOW_BERRIES
+  tiers:
+  - required: 1
+    reward: 600G (한 번)
+  - required: 5
+    reward: 마나 재생 +1.5 (상시)
+- id: set_red_sandstone
+  name: 붉은 사암 세트
+  category: 특수
+  icon_material: RED_SANDSTONE
+  tiers:
+  - required: 1
+    reward: 900G (한 번)
+  - required: 5
+    reward: 물리 공격력 +5 (상시)
+- id: set_sandstorm
+  name: 모래바람 세트
+  category: 특수
+  icon_material: SAND
+  tiers:
+  - required: 1
+    reward: 900G (한 번)
+  - required: 5
+    reward: 치명타 확률 +1.5 (상시)
+- id: set_sunglass
+  name: 햇살 유리 세트
+  category: 특수
+  icon_material: YELLOW_STAINED_GLASS
+  tiers:
+  - required: 1
+    reward: 900G (한 번)
+  - required: 5
+    reward: 마법 공격력 +5 (상시)
+- id: set_terracotta
+  name: 테라코타 세트
+  category: 특수
+  icon_material: TERRACOTTA
+  tiers:
+  - required: 1
+    reward: 900G (한 번)
+  - required: 5
+    reward: 최대 체력 +15 (상시)
+- id: set_mirage
+  name: 신기루 세트
+  category: 특수
+  icon_material: PINK_STAINED_GLASS
+  tiers:
+  - required: 1
+    reward: 900G (한 번)
+  - required: 5
+    reward: 마법 방어력 +5 (상시)
+- id: set_mycel_steel
+  name: 균사 강철 세트
+  category: 특수
+  icon_material: MYCELIUM
+  tiers:
+  - required: 1
+    reward: 1,300G (한 번)
+  - required: 5
+    reward: 물리 공격력 +7 (상시)
+- id: set_sporewind
+  name: 포자바람 세트
+  category: 특수
+  icon_material: BROWN_MUSHROOM
+  tiers:
+  - required: 1
+    reward: 1,300G (한 번)
+  - required: 5
+    reward: 치명타 확률 +2 (상시)
+- id: set_glowcap
+  name: 발광 균사 세트
+  category: 특수
+  icon_material: SHROOMLIGHT
+  tiers:
+  - required: 1
+    reward: 1,300G (한 번)
+  - required: 5
+    reward: 마법 공격력 +7 (상시)
+- id: set_capshell
+  name: 갓 껍질 세트
+  category: 특수
+  icon_material: RED_MUSHROOM_BLOCK
+  tiers:
+  - required: 1
+    reward: 1,300G (한 번)
+  - required: 5
+    reward: 최대 체력 +20 (상시)
+- id: set_silverspore
+  name: 은빛 포자 세트
+  category: 특수
+  icon_material: MUSHROOM_STEM
+  tiers:
+  - required: 1
+    reward: 1,300G (한 번)
+  - required: 5
+    reward: 마법 방어력 +7 (상시)
+titles:
+- id: first_blood
+  title: "[ 첫 사냥 ]"
+  condition: 몬스터 1마리 처치
+  category: 전투
+- id: hunter_100
+  title: "[ 사냥꾼 ]"
+  condition: 몬스터 100마리 처치
+  category: 전투
+- id: hunter_1000
+  title: "[ 학살자 ]"
+  condition: 몬스터 1,000마리 처치
+  category: 전투
+- id: hunter_10000
+  title: "[ 사신 ]"
+  condition: 몬스터 10,000마리 처치
+  category: 전투
+- id: miner_10
+  title: "[ 광부 견습생 ]"
+  condition: 채굴 레벨 10 달성
+  category: 채굴
+- id: miner_30
+  title: "[ 숙련 광부 ]"
+  condition: 채굴 레벨 30 달성
+  category: 채굴
+- id: miner_50
+  title: "[ 광산왕 ]"
+  condition: 채굴 레벨 50 달성
+  category: 채굴
+- id: farmer_10
+  title: "[ 농부 견습생 ]"
+  condition: 농사 레벨 10 달성
+  category: 농사
+- id: farmer_30
+  title: "[ 숙련 농부 ]"
+  condition: 농사 레벨 30 달성
+  category: 농사
+- id: farmer_50
+  title: "[ 대농장주 ]"
+  condition: 농사 레벨 50 달성
+  category: 농사
+- id: rich_1000
+  title: "[ 중산층 ]"
+  condition: 1,000 G 보유
+  category: 경제
+- id: rich_10000
+  title: "[ 부자 ]"
+  condition: 10,000 G 보유
+  category: 경제
+- id: rich_100000
+  title: "[ 재벌 ]"
+  condition: 100,000 G 보유
+  category: 경제
+- id: rich_1000000
+  title: "[ 금융왕 ]"
+  condition: 1,000,000 G 보유
+  category: 경제
+- id: death_10
+  title: "[ 불사조 ]"
+  condition: 10번 사망
+  category: 탐험
+- id: tower_10
+  title: "[ 탐험가 ]"
+  condition: 시련의 탑 10층 돌파
+  category: 탐험
+- id: tower_50
+  title: "[ 탑의 지배자 ]"
+  condition: 시련의 탑 50층 돌파
+  category: 탐험
+- id: collector_all
+  title: "[ 수집가 ]"
+  condition: 모든 도감 1티어 달성
+  category: 특수
+expedition:
+  how: /파견 — 슬롯에 목적지를 골라 보내면 시간이 지난 뒤 골드를 받습니다(접속하지 않아도 진행).
+  slots: 기본 2칸, 최대 5칸 (확장 비용 = (지금 칸 수 + 1) × 5,000G)
+  destinations:
+  - name: 어둠의 숲
+    description: 위험하지만 보상이 쏠쏠한 숲
+    minutes: 10
+    gold:
+    - 100
+    - 300
+    bonus_chance: 10%
+    required_level: 1
+  - name: 고대 광산
+    description: 잊혀진 광맥의 보물
+    minutes: 20
+    gold:
+    - 300
+    - 800
+    bonus_chance: 15%
+    required_level: 5
+  - name: 수정 동굴
+    description: 은은하게 빛나는 수정 동굴
+    minutes: 30
+    gold:
+    - 500
+    - 1500
+    bonus_chance: 20%
+    required_level: 10
+  - name: 용의 둥지
+    description: 극한의 위험, 최상의 보상
+    minutes: 60
+    gold:
+    - 1000
+    - 3000
+    bonus_chance: 35%
+    required_level: 20
+  - name: 성계의 틈
+    description: 차원의 경계가 흐릿한 곳
+    minutes: 120
+    gold:
+    - 2000
+    - 6000
+    bonus_chance: 50%
+    required_level: 30
+attendance:
+  how: /출석 — 접속해 있으면 하루 한 번 자동 지급. 하루를 건너뛰면 1일차부터 다시.
+  days:
+  - day: 1
+    gold: 300
+    items: []
+  - day: 2
+    gold: 400
+    items: []
+  - day: 3
+    gold: 500
+    items:
+    - id: monster_essence
+      name: 몬스터 정수
+      amount: 5
+  - day: 4
+    gold: 600
+    items: []
+  - day: 5
+    gold: 800
+    items:
+    - id: return_stone
+      name: 귀환석
+      amount: 1
+  - day: 6
+    gold: 1000
+    items: []
+  - day: 7
+    gold: 2000
+    items:
+    - id: twisted_lapis
+      name: 뒤틀린 청금석
+      amount: 2
+ranking:
+  how: /랭킹
+  boards:
+  - 시련의 탑
+  - 숙련도
+  - 골드
+  - 처치 수

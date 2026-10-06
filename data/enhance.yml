@@ -1,0 +1,133 @@
+# 강화·각성
+# 대장장이 볼칸(/강화). 실패해도 골드·재료는 사라집니다.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+enhance:
+  npc: 대장장이 볼칸
+  stat_per_success: 능력치 ×1.1 (하락하면 되돌림)
+  material_any_of:
+  - id: monster_essence
+    name: 몬스터 정수
+  - id: twisted_coal
+    name: 뒤틀린 석탄
+  - id: twisted_iron
+    name: 뒤틀린 철
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+  - id: shadow_crystal
+    name: 그림자 수정
+  protect:
+    하락 방지: 그 단계 골드 ×1.0 추가 — 하락 대신 그냥 실패
+    파괴 방지: 그 단계 골드 ×2.0 추가 — 파괴 대신 그냥 실패
+  steps:
+  - from: '+0'
+    to: '+1'
+    gold: 100
+    materials: 1
+    success: 95%
+    decrease_on_fail: 0%
+    destroy_on_fail: 0%
+  - from: '+1'
+    to: '+2'
+    gold: 200
+    materials: 2
+    success: 90%
+    decrease_on_fail: 0%
+    destroy_on_fail: 0%
+  - from: '+2'
+    to: '+3'
+    gold: 350
+    materials: 3
+    success: 85%
+    decrease_on_fail: 0%
+    destroy_on_fail: 0%
+  - from: '+3'
+    to: '+4'
+    gold: 550
+    materials: 4
+    success: 75%
+    decrease_on_fail: 0%
+    destroy_on_fail: 0%
+  - from: '+4'
+    to: '+5'
+    gold: 800
+    materials: 5
+    success: 65%
+    decrease_on_fail: 0%
+    destroy_on_fail: 0%
+  - from: '+5'
+    to: '+6'
+    gold: 1100
+    materials: 6
+    success: 55%
+    decrease_on_fail: 10%
+    destroy_on_fail: 0%
+  - from: '+6'
+    to: '+7'
+    gold: 1500
+    materials: 7
+    success: 48%
+    decrease_on_fail: 15%
+    destroy_on_fail: 0%
+  - from: '+7'
+    to: '+8'
+    gold: 2000
+    materials: 8
+    success: 42%
+    decrease_on_fail: 18%
+    destroy_on_fail: 0%
+  - from: '+8'
+    to: '+9'
+    gold: 2600
+    materials: 9
+    success: 36%
+    decrease_on_fail: 20%
+    destroy_on_fail: 2%
+  - from: '+9'
+    to: '+10'
+    gold: 3300
+    materials: 10
+    success: 30%
+    decrease_on_fail: 22%
+    destroy_on_fail: 4%
+  - from: '+10'
+    to: '+11'
+    gold: 4100
+    materials: 12
+    success: 25%
+    decrease_on_fail: 25%
+    destroy_on_fail: 8%
+  - from: '+11'
+    to: '+12'
+    gold: 5000
+    materials: 14
+    success: 20%
+    decrease_on_fail: 25%
+    destroy_on_fail: 12%
+  - from: '+12'
+    to: '+13'
+    gold: 6000
+    materials: 16
+    success: 16%
+    decrease_on_fail: 25%
+    destroy_on_fail: 16%
+  - from: '+13'
+    to: '+14'
+    gold: 7200
+    materials: 18
+    success: 12%
+    decrease_on_fail: 22%
+    destroy_on_fail: 22%
+  - from: '+14'
+    to: '+15'
+    gold: 8600
+    materials: 20
+    success: 8%
+    decrease_on_fail: 20%
+    destroy_on_fail: 28%
+awaken:
+  cost:
+    id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  effect: 장비의 1차 능력치 +25%

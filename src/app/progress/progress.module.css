@@ -1,0 +1,35 @@
+.days {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.day {
+  flex: 1 1 120px;
+  gap: 4px;
+  padding: 8px;
+  background: var(--panel-2);
+  border: 2px solid var(--edge-lo);
+  box-shadow: inset 2px 2px 0 var(--edge-hi);
+}
+.day:last-child {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), var(--tex-grass-top);
+  background-size: auto, 64px 64px;
+  image-rendering: pixelated;
+}
+.dayN {
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--ink-2);
+}
+.need {
+  width: 56px;
+  flex: none;
+  text-align: right;
+  color: var(--ink-2);
+}
+@media (max-width: 719px) {
+  .day {
+    flex: 1 1 28%;
+  }
+}

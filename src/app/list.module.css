@@ -1,0 +1,318 @@
+/* 여러 페이지가 같이 쓰는 목록, 격자, 상세 배치 */
+.rowLink {
+  flex-direction: row;
+  gap: 8px;
+  min-height: 36px;
+  padding: 6px 8px;
+  background: var(--panel-2);
+  border: 2px solid var(--edge-lo);
+  flex: 1;
+}
+.rowTitle {
+  flex: 1;
+}
+.rowLink:focus-visible {
+  border-color: var(--gold);
+}
+
+/* 가이드 목차 */
+.guideGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.guideGrid li {
+  flex: 1 1 280px;
+}
+.guideCard {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  flex: 1;
+  background: var(--panel-2);
+  border: 2px solid var(--edge-lo);
+  box-shadow: inset 2px 2px 0 var(--edge-hi);
+}
+.guideNo {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  text-align: center;
+  line-height: 24px;
+  background-image: var(--tex-grass-top);
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+  color: #fff;
+  text-shadow: 1px 1px 0 #1d3a12;
+  border: 2px solid #000;
+  box-sizing: content-box;
+}
+.guideText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+}
+.guideTitle {
+  font-family: var(--f-head);
+  font-size: 15px;
+}
+
+/* 가이드 본문: 왼쪽 본문 + 오른쪽 목차 */
+.doc {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+.docMain {
+  flex: 1;
+  gap: 16px;
+}
+.toc {
+  position: sticky;
+  top: 64px;
+  width: 200px;
+  flex: none;
+  gap: 12px;
+}
+.tocList {
+  gap: 2px;
+}
+.tocLink {
+  padding: 4px 8px;
+  border-left: 4px solid var(--line);
+  color: var(--ink-2);
+  flex: 1;
+}
+.tocLink[aria-current='page'] {
+  border-left-color: var(--grass);
+  color: #fff;
+  background: var(--panel-2);
+}
+.pager {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+/* 아이템 격자: 인벤토리 칸 */
+.inv {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  background: #c6c6c6;
+  border: 2px solid #000;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #555;
+}
+.groupHead {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+.groupName {
+  font-weight: 700;
+}
+.cardGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cardGrid > * {
+  flex: 1 1 240px;
+}
+.card {
+  gap: 8px;
+  padding: 10px;
+  background: var(--panel-2);
+  border: 2px solid var(--edge-lo);
+  box-shadow: inset 2px 2px 0 var(--edge-hi);
+  scroll-margin-top: 72px;
+}
+.card:target {
+  border-color: var(--gold);
+}
+.cardHead {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.cardName {
+  font-weight: 700;
+  flex: 1;
+}
+.statLine {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.stat {
+  flex-direction: row;
+  gap: 6px;
+  white-space: nowrap;
+}
+.bonus {
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+/* 마인크래프트 툴팁 모양의 이름표 */
+.tip {
+  align-self: flex-start;
+  gap: 2px;
+  padding: 6px 8px;
+  background: #100010;
+  border: 2px solid #2a0a5c;
+  box-shadow: 0 0 0 2px #100010;
+  margin: 2px;
+  max-width: 100%;
+}
+.tipName {
+  color: #fff;
+  font-weight: 700;
+}
+.tipLore {
+  color: #a8a8a8;
+}
+
+/* 제작대 3x3 */
+.bench {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px;
+  background: #c6c6c6;
+  border: 2px solid #000;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #555;
+  align-self: flex-start;
+  max-width: 100%;
+}
+.benchGrid {
+  width: 124px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
+  flex: none;
+}
+.benchArrow {
+  filter: brightness(0.35);
+}
+
+/* 확률 막대: 색상 원 대신 길이로 표시 */
+.bar {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.barTrack {
+  flex: 1;
+  height: 8px;
+  min-width: 40px;
+  background: #000;
+  border: 2px solid var(--line);
+  box-sizing: content-box;
+}
+.barFill {
+  height: 100%;
+  background: var(--grass);
+}
+.barNum {
+  width: 40px;
+  flex: none;
+  text-align: right;
+}
+
+@media (hover: hover) {
+  .rowLink:hover,
+  .guideCard:hover {
+    background: var(--panel-3);
+    border-color: var(--ink-3);
+  }
+  .tocLink:hover {
+    color: #fff;
+  }
+}
+@media (max-width: 959px) {
+  .doc {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .toc {
+    position: static;
+    width: auto;
+  }
+  .tocList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .tocLink {
+    flex: none;
+    border-left-width: 2px;
+    background: var(--panel-2);
+  }
+}
+
+/* 아이템 칸: 슬롯 + 이름 */
+.cells {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.cells > * {
+  flex: 1 1 200px;
+}
+.cell {
+  flex-direction: row;
+  gap: 8px;
+  padding: 4px;
+  background: var(--panel-2);
+  border: 2px solid var(--edge-lo);
+}
+.cellText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.cellName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cellSub {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cell:focus-visible {
+  border-color: var(--gold);
+}
+.setGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.setGrid > * {
+  flex: 1 1 200px;
+}
+@media (hover: hover) {
+  .cell:hover {
+    background: var(--panel-3);
+    border-color: var(--ink-3);
+  }
+  .cell:hover .cellName {
+    color: var(--grass-hi);
+  }
+}
+@media (max-width: 719px) {
+  .cells > *,
+  .setGrid > * {
+    flex: 1 1 100%;
+  }
+}

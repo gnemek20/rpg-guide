@@ -1,0 +1,492 @@
+# 장비 세트
+# 같은 세트 방어구 2·4부위를 입거나 세트 무기를 들면 붙는 보너스.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+sets:
+- id: sakura
+  name: 벚나무
+  members:
+  - id: sakura_blade
+    name: 벚나무 도
+  - id: sakura_helmet
+    name: 벚나무 투구
+  - id: sakura_chestplate
+    name: 벚나무 흉갑
+  - id: sakura_leggings
+    name: 벚나무 각반
+  - id: sakura_boots
+    name: 벚나무 신발
+  bonus:
+    2부위:
+      물리 공격력: 5
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: susuki
+  name: 억새
+  members:
+  - id: susuki_blade
+    name: 억새검
+  - id: susuki_helmet
+    name: 억새 두건
+  - id: susuki_chestplate
+    name: 억새 경갑
+  - id: susuki_leggings
+    name: 억새 각반
+  - id: susuki_boots
+    name: 억새 신발
+  bonus:
+    2부위:
+      치명타 확률: 4
+    세트 무기:
+      치명타 피해: 15
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: kitsunebi
+  name: 여우불
+  members:
+  - id: kitsunebi_wand
+    name: 여우불 지팡이
+  - id: kitsunebi_hood
+    name: 여우불 두건
+  - id: kitsunebi_robe
+    name: 여우불 로브
+  - id: kitsunebi_leggings
+    name: 여우불 각반
+  - id: kitsunebi_boots
+    name: 여우불 신발
+  bonus:
+    2부위:
+      마법 공격력: 6
+    4부위:
+      쿨타임 감소: 8
+      마나 재생: 2
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: moss
+  name: 이끼
+  members:
+  - id: moss_club
+    name: 이끼 몽둥이
+  - id: moss_hood
+    name: 이끼 두건
+  - id: moss_armor
+    name: 이끼 갑옷
+  - id: moss_leggings
+    name: 이끼 각반
+  - id: moss_boots
+    name: 이끼 장화
+  bonus:
+    2부위:
+      최대 체력: 20
+    4부위:
+      체력 재생: 2
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: kekkai
+  name: 결계
+  members:
+  - id: kekkai_rod
+    name: 결계의 지팡이
+  - id: kekkai_helmet
+    name: 결계의 부적
+  - id: kekkai_chestplate
+    name: 결계의 로브
+  - id: kekkai_leggings
+    name: 결계의 각반
+  - id: kekkai_boots
+    name: 결계의 신발
+  bonus:
+    2부위:
+      마법 방어력: 8
+    4부위:
+      소환수 능력치: 15
+    세트 무기:
+      최대 마나: 20
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: twisted_steel
+  name: 뒤틀린 강철
+  members:
+  - id: twisted_steel_helmet
+    name: 뒤틀린 강철 투구
+  - id: twisted_steel_chestplate
+    name: 뒤틀린 강철 흉갑
+  - id: twisted_steel_leggings
+    name: 뒤틀린 강철 각반
+  - id: twisted_steel_boots
+    name: 뒤틀린 강철 신발
+  bonus:
+    2부위:
+      물리 관통력: 8
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: twisted_shard
+  name: 뒤틀린 파편
+  members:
+  - id: twisted_shard_helmet
+    name: 뒤틀린 파편 두건
+  - id: twisted_shard_chestplate
+    name: 뒤틀린 파편 경갑
+  - id: twisted_shard_leggings
+    name: 뒤틀린 파편 각반
+  - id: twisted_shard_boots
+    name: 뒤틀린 파편 신발
+  bonus:
+    2부위:
+      치명타 확률: 6
+    세트 무기:
+      치명타 피해: 25
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: unstable_mana
+  name: 불안정한 마력
+  members:
+  - id: unstable_mana_hood
+    name: 불안정한 마력 두건
+  - id: unstable_mana_robe
+    name: 불안정한 마력 로브
+  - id: unstable_mana_leggings
+    name: 불안정한 마력 각반
+  - id: unstable_mana_boots
+    name: 불안정한 마력 신발
+  bonus:
+    2부위:
+      마법 공격력: 10
+    4부위:
+      쿨타임 감소: 12
+      최대 마나: 30
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: ruin_explorer
+  name: 뒤틀린 폐허
+  members:
+  - id: ruin_explorer_pick
+    name: 폐허 탐사자의 곡괭이
+  - id: ruin_explorer_helmet
+    name: 폐허 탐사자의 투구
+  - id: ruin_explorer_leggings
+    name: 폐허 탐사자의 각반
+  - id: ruin_explorer_boots
+    name: 폐허 탐사자의 장화
+  bonus:
+    2부위:
+      최대 체력: 30
+    4부위:
+      체력 재생: 3
+    세트 무기:
+      물리 방어력: 10
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: twisted_seal
+  name: 뒤틀린 봉인
+  members:
+  - id: twisted_seal_rod
+    name: 뒤틀린 봉인 지팡이
+  - id: twisted_seal_hood
+    name: 뒤틀린 봉인 두건
+  - id: twisted_seal_robe
+    name: 뒤틀린 봉인 로브
+  - id: twisted_seal_leggings
+    name: 뒤틀린 봉인 각반
+  - id: twisted_seal_boots
+    name: 뒤틀린 봉인 신발
+  bonus:
+    2부위:
+      마법 방어력: 12
+      보호막: 5
+    4부위:
+      소환수 능력치: 25
+    세트 무기:
+      최대 마나: 30
+      마나 재생: 1
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: mangrove
+  name: 맹그로브
+  members:
+  - id: mangrove_greatsword
+    name: 맹그로브 대검
+  - id: mangrove_helmet
+    name: 맹그로브 투구
+  - id: mangrove_chestplate
+    name: 맹그로브 흉갑
+  - id: mangrove_leggings
+    name: 맹그로브 각반
+  - id: mangrove_boots
+    name: 맹그로브 장화
+  bonus:
+    2부위:
+      물리 공격력: 14
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: reed
+  name: 갈대
+  members:
+  - id: reed_dagger
+    name: 갈대 단검
+  - id: reed_helmet
+    name: 갈대 두건
+  - id: reed_chestplate
+    name: 갈대 조끼
+  - id: reed_leggings
+    name: 갈대 바지
+  - id: reed_boots
+    name: 갈대 신발
+  bonus:
+    2부위:
+      치명타 확률: 8
+    세트 무기:
+      치명타 피해: 30
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: bog_mist
+  name: 늪안개
+  members:
+  - id: bog_mist_staff
+    name: 늪안개 지팡이
+  - id: bog_mist_helmet
+    name: 늪안개 두건
+  - id: bog_mist_chestplate
+    name: 늪안개 로브
+  - id: bog_mist_leggings
+    name: 늪안개 하의
+  - id: bog_mist_boots
+    name: 늪안개 신발
+  bonus:
+    2부위:
+      마법 공격력: 14
+    4부위:
+      쿨타임 감소: 10
+      최대 마나: 40
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: mire_mud
+  name: 수렁 진흙
+  members:
+  - id: mire_mud_helmet
+    name: 수렁 진흙 투구
+  - id: mire_mud_chestplate
+    name: 수렁 진흙 흉갑
+  - id: mire_mud_leggings
+    name: 수렁 진흙 각반
+  - id: mire_mud_boots
+    name: 수렁 진흙 장화
+  bonus:
+    2부위:
+      최대 체력: 45
+    4부위:
+      체력 재생: 4
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: firefly
+  name: 반딧불
+  members:
+  - id: firefly_rod
+    name: 반딧불 막대
+  - id: firefly_helmet
+    name: 반딧불 두건
+  - id: firefly_chestplate
+    name: 반딧불 로브
+  - id: firefly_leggings
+    name: 반딧불 하의
+  - id: firefly_boots
+    name: 반딧불 신발
+  bonus:
+    2부위:
+      마법 방어력: 16
+      보호막: 8
+    4부위:
+      소환수 능력치: 30
+    세트 무기:
+      최대 마나: 40
+      마나 재생: 2
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: red_sandstone
+  name: 붉은 사암
+  members:
+  - id: red_sandstone_blade
+    name: 붉은 사암 대도
+  - id: red_sandstone_helmet
+    name: 붉은 사암 투구
+  - id: red_sandstone_chestplate
+    name: 붉은 사암 흉갑
+  - id: red_sandstone_leggings
+    name: 붉은 사암 각반
+  - id: red_sandstone_boots
+    name: 붉은 사암 장화
+  bonus:
+    2부위:
+      물리 공격력: 22
+    세트 무기:
+      물리 관통력: 10
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: sandstorm
+  name: 모래바람
+  members:
+  - id: sandstorm_dagger
+    name: 모래바람 단검
+  - id: sandstorm_helmet
+    name: 모래바람 두건
+  - id: sandstorm_chestplate
+    name: 모래바람 조끼
+  - id: sandstorm_leggings
+    name: 모래바람 바지
+  - id: sandstorm_boots
+    name: 모래바람 신발
+  bonus:
+    2부위:
+      치명타 확률: 10
+      이동 속도: 5
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: sunglass
+  name: 햇살 유리
+  members:
+  - id: sunglass_staff
+    name: 햇살 유리 지팡이
+  - id: sunglass_helmet
+    name: 햇살 유리 두건
+  - id: sunglass_chestplate
+    name: 햇살 유리 로브
+  - id: sunglass_leggings
+    name: 햇살 유리 하의
+  - id: sunglass_boots
+    name: 햇살 유리 신발
+  bonus:
+    2부위:
+      마법 공격력: 22
+    4부위:
+      마법 관통력: 12
+    세트 무기:
+      쿨타임 감소: 8
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: terracotta
+  name: 테라코타
+  members:
+  - id: terracotta_hammer
+    name: 테라코타 망치
+  - id: terracotta_helmet
+    name: 테라코타 투구
+  - id: terracotta_chestplate
+    name: 테라코타 흉갑
+  - id: terracotta_leggings
+    name: 테라코타 각반
+  - id: terracotta_boots
+    name: 테라코타 장화
+  bonus:
+    2부위:
+      최대 체력: 65
+    4부위:
+      물리 방어력: 30
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: mirage
+  name: 신기루
+  members:
+  - id: mirage_rod
+    name: 신기루 홀
+  - id: mirage_helmet
+    name: 신기루 두건
+  - id: mirage_chestplate
+    name: 신기루 로브
+  - id: mirage_leggings
+    name: 신기루 하의
+  - id: mirage_boots
+    name: 신기루 신발
+  bonus:
+    2부위:
+      마법 방어력: 24
+      보호막: 12
+    4부위:
+      소환수 능력치: 40
+    세트 무기:
+      최대 마나: 60
+      마나 재생: 3
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: mycel_steel
+  name: 균사 강철
+  members:
+  - id: mycel_steel_greatsword
+    name: 균사 강철 대검
+  - id: mycel_steel_helmet
+    name: 균사 강철 투구
+  - id: mycel_steel_chestplate
+    name: 균사 강철 흉갑
+  - id: mycel_steel_leggings
+    name: 균사 강철 각반
+  - id: mycel_steel_boots
+    name: 균사 강철 장화
+  bonus:
+    2부위:
+      물리 공격력: 30
+    세트 무기:
+      물리 관통력: 14
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: sporewind
+  name: 포자바람
+  members:
+  - id: sporewind_dagger
+    name: 포자바람 단검
+  - id: sporewind_helmet
+    name: 포자바람 두건
+  - id: sporewind_chestplate
+    name: 포자바람 조끼
+  - id: sporewind_leggings
+    name: 포자바람 바지
+  - id: sporewind_boots
+    name: 포자바람 신발
+  bonus:
+    2부위:
+      치명타 확률: 12
+      치명타 피해: 20
+    세트 무기:
+      타격 간격 감소: 8
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: glowcap
+  name: 발광 균사
+  members:
+  - id: glowcap_staff
+    name: 발광 균사 지팡이
+  - id: glowcap_helmet
+    name: 발광 균사 두건
+  - id: glowcap_chestplate
+    name: 발광 균사 로브
+  - id: glowcap_leggings
+    name: 발광 균사 하의
+  - id: glowcap_boots
+    name: 발광 균사 신발
+  bonus:
+    2부위:
+      마법 공격력: 30
+    4부위:
+      쿨타임 감소: 12
+      최대 마나: 60
+    세트 무기:
+      마법 관통력: 14
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: capshell
+  name: 갓 껍질
+  members:
+  - id: capshell_mace
+    name: 갓 껍질 철퇴
+  - id: capshell_helmet
+    name: 갓 껍질 투구
+  - id: capshell_chestplate
+    name: 갓 껍질 흉갑
+  - id: capshell_leggings
+    name: 갓 껍질 각반
+  - id: capshell_boots
+    name: 갓 껍질 장화
+  bonus:
+    2부위:
+      최대 체력: 90
+    4부위:
+      체력 재생: 8
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.
+- id: silverspore
+  name: 은빛 포자
+  members:
+  - id: silverspore_rod
+    name: 은빛 포자 홀
+  - id: silverspore_helmet
+    name: 은빛 포자 두건
+  - id: silverspore_chestplate
+    name: 은빛 포자 로브
+  - id: silverspore_leggings
+    name: 은빛 포자 하의
+  - id: silverspore_boots
+    name: 은빛 포자 신발
+  bonus:
+    2부위:
+      마법 방어력: 32
+      보호막: 16
+    4부위:
+      소환수 능력치: 50
+    세트 무기:
+      최대 마나: 80
+      마나 재생: 4
+  note: 확률·발동형 세트 효과는 각 아이템 description에 적혀 있습니다.

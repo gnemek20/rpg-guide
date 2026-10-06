@@ -1,0 +1,215 @@
+@import '../generated/fonts.css';
+@import '../generated/textures.css';
+
+:root {
+  /* 색: 돌, 흙, 풀. 네온 없음 */
+  --bg: #121110;
+  --panel: #1d1b1a;
+  --panel-2: #262422;
+  --panel-3: #302d2a;
+  --line: #3b3835;
+  --edge-hi: #4a4642;
+  --edge-lo: #0b0a0a;
+  --ink: #ece8df;
+  --ink-2: #b5aea2;
+  --ink-3: #807a6f;
+  --grass: #5e9a40;
+  --grass-hi: #7ab556;
+  --grass-lo: #3d6a2a;
+  --dirt: #79553a;
+  --gold: #f2c13c;
+  --red: #c8402e;
+  --water: #3d74d8;
+  --slot: #8b8b8b;
+  --slot-hi: #ffffff;
+  --slot-lo: #373737;
+
+  /* 4px 격자 */
+  --u: 4px;
+  --px: 2px;
+
+  --f-body: 'Galmuri11', 'Malgun Gothic', sans-serif;
+  --f-head: 'Galmuri14', 'Galmuri11', sans-serif;
+  --f-tiny: 'Galmuri9', 'Galmuri11', sans-serif;
+
+  --side-w: 208px;
+  --top-h: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 자식을 담는 요소는 전부 flex. 기본은 세로, 가로는 .row */
+html,
+body,
+div,
+main,
+header,
+footer,
+nav,
+section,
+article,
+aside,
+ul,
+ol,
+li,
+dl,
+form,
+figure,
+label,
+blockquote {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+a,
+button {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+.row {
+  flex-direction: row;
+}
+.wrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+html {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 12px;
+  line-height: 20px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  scrollbar-color: var(--line) var(--bg);
+}
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+*:focus,
+*:focus-visible {
+  outline: none;
+}
+img,
+svg {
+  display: block;
+  flex: none;
+}
+strong,
+b {
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--f-head);
+  font-weight: 400;
+}
+code {
+  font-family: var(--f-body);
+  color: var(--gold);
+}
+::selection {
+  background: var(--grass);
+  color: #fff;
+}
+
+.tex {
+  image-rendering: pixelated;
+  background-size: 64px 64px;
+}
+
+/* 글자 크기: 갈무리가 또렷한 크기만 쓴다 (9 -> 10px, 11 -> 12/24px, 14 -> 15/30px) */
+.t-tiny {
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+}
+.t-dim {
+  color: var(--ink-2);
+}
+.t-faint {
+  color: var(--ink-3);
+}
+.t-gold {
+  color: var(--gold);
+}
+.t-grass {
+  color: var(--grass-hi);
+}
+.t-red {
+  color: #e2705f;
+}
+.t-num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 아이콘 */
+.ic {
+  overflow: visible;
+  shape-rendering: crispEdges;
+}
+.ic rect {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* 화면 전환: 패널이 살짝 올라오며 나타난다 */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* display:flex 가 hidden 속성을 덮지 않게 한다 */
+[hidden] {
+  display: none !important;
+}

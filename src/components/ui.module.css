@@ -1,0 +1,473 @@
+/* ---------- 페이지 머리: 배경 씬이 비치는 구간 */
+.page {
+  gap: 16px;
+  padding: 16px 16px 96px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  animation: page-in 0.16s ease-out both;
+}
+.head {
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+  min-height: 88px;
+  padding: 12px 4px 4px;
+}
+.headIcon {
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel);
+  border: 2px solid var(--edge-lo);
+  box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+  flex: none;
+}
+.headText {
+  gap: 4px;
+  flex: 1;
+}
+.title {
+  font-size: 30px;
+  line-height: 36px;
+  text-shadow: 2px 2px 0 #000;
+}
+.lead {
+  color: var(--ink);
+  text-shadow: 1px 1px 0 #000;
+}
+.crumb {
+  flex-direction: row;
+  gap: 6px;
+  color: var(--ink-2);
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* ---------- 패널: 불투명 본문 */
+.panel {
+  background: var(--panel);
+  border: 2px solid var(--edge-lo);
+  box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+}
+.strip {
+  height: 16px;
+  flex: none;
+  image-rendering: pixelated;
+  background-size: 32px 32px;
+  border-bottom: 2px solid var(--edge-lo);
+}
+.panelHead {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 0;
+}
+.panelTitle {
+  font-size: 15px;
+  line-height: 20px;
+  flex: 1;
+}
+.panelBody {
+  gap: 12px;
+  padding: 12px 16px 16px;
+}
+.sub {
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--grass-hi);
+}
+
+/* ---------- 블록 버튼: 윗면 + 오른쪽, 아래 옆면 */
+.btn {
+  position: relative;
+  gap: 8px;
+  height: 32px;
+  padding: 0 12px;
+  margin: 0 4px 4px 0;
+  background-color: #6f6f6f;
+  background-image: var(--tex-stone);
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+  border: 2px solid #000;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.28), inset -2px -2px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 1px 1px 0 #2a2a2a;
+  white-space: nowrap;
+  transition: transform 0.08s steps(2);
+}
+.btn::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  filter: brightness(0.5);
+  transition: inherit;
+}
+.btn::before {
+  left: calc(100% + 2px);
+  top: -2px;
+  width: 4px;
+  height: calc(100% + 4px);
+  transform: skewY(45deg);
+  transform-origin: left top;
+}
+.btn::after {
+  top: calc(100% + 2px);
+  left: -2px;
+  height: 4px;
+  width: calc(100% + 4px);
+  transform: skewX(45deg);
+  transform-origin: left top;
+  filter: brightness(0.35);
+}
+.btn:active,
+.btn[aria-pressed='true'],
+.btn[aria-current='page'] {
+  transform: translate(2px, 2px);
+}
+.btn:active::before,
+.btn[aria-pressed='true']::before,
+.btn[aria-current='page']::before {
+  width: 2px;
+}
+.btn:active::after,
+.btn[aria-pressed='true']::after,
+.btn[aria-current='page']::after {
+  height: 2px;
+}
+.btn:focus-visible {
+  border-color: var(--gold);
+}
+.btnGrass {
+  background-color: var(--grass);
+  background-image: var(--tex-grass-top);
+}
+.btnDirt {
+  background-image: var(--tex-dirt);
+}
+.btnWood {
+  background-image: var(--tex-planks);
+}
+.btnDark {
+  background-image: var(--tex-deepslate);
+}
+.btn[aria-pressed='true'],
+.btn[aria-current='page'] {
+  background-image: var(--tex-grass-top);
+}
+.btnSm {
+  height: 24px;
+  padding: 0 8px;
+}
+@media (hover: hover) {
+  .btn:hover {
+    transform: translate(-1px, -1px);
+    filter: brightness(1.12);
+  }
+  .btn:hover::before {
+    width: 5px;
+  }
+  .btn:hover::after {
+    height: 5px;
+  }
+}
+
+/* ---------- 입력 */
+.field {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 8px;
+  background: #000;
+  border: 2px solid #a0a0a0;
+  box-shadow: inset 2px 2px 0 #2a2a2a;
+}
+.field:focus-within {
+  border-color: #fff;
+}
+.field input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  color: #fff;
+}
+.field input::placeholder {
+  color: var(--ink-3);
+}
+@media (pointer: coarse) {
+  /* iOS 확대 방지 */
+  .field input {
+    font-size: 16px;
+  }
+}
+
+/* ---------- 태그 */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 16px;
+  padding: 0 4px;
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+  background: var(--panel-3);
+  color: var(--ink-2);
+  border-left: 4px solid var(--chip, var(--ink-3));
+  white-space: nowrap;
+  flex: none;
+}
+
+/* ---------- 표: flex 행. 좁은 화면에서는 카드 */
+.table {
+  border: 2px solid var(--edge-lo);
+  background: var(--panel-2);
+}
+.tr {
+  flex-direction: row;
+  align-items: stretch;
+  border-top: 2px solid var(--panel);
+}
+.tr:first-child {
+  border-top: 0;
+}
+.th {
+  background: #141312;
+  color: var(--ink-2);
+}
+.td {
+  flex: 1 1 0;
+  padding: 6px 8px;
+  justify-content: center;
+  gap: 2px;
+}
+.th .td {
+  padding: 4px 8px;
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+}
+.tdR {
+  align-items: flex-end;
+  text-align: right;
+}
+.tdLabel {
+  display: none;
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--ink-3);
+  flex: none;
+  width: 56px;
+}
+@media (hover: hover) {
+  .tr:not(.th):hover {
+    background: var(--panel-3);
+  }
+}
+@media (max-width: 719px) {
+  .cards {
+    border: 0;
+    background: none;
+    gap: 8px;
+  }
+  .cards .th {
+    display: none;
+  }
+  .cards .tr {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid var(--edge-lo);
+    background: var(--panel-2);
+    padding: 4px 0;
+  }
+  .cards .td {
+    flex: 1 1 46% !important;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 2px 8px;
+  }
+  .cards .tdR {
+    text-align: left;
+  }
+  .cards .tdLabel {
+    display: flex;
+  }
+  .cards .tdMain {
+    flex: 1 1 100% !important;
+    font-weight: 700;
+    padding-bottom: 4px;
+  }
+  .cards .tdMain .tdLabel {
+    display: none;
+  }
+  .cards .tdEmpty {
+    display: none;
+  }
+  .td {
+    padding: 6px;
+  }
+}
+.cellBody {
+  flex: 1;
+  gap: 2px;
+}
+
+/* ---------- 인벤토리 슬롯 */
+.slot {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: var(--slot);
+  box-shadow: inset 2px 2px 0 var(--slot-lo), inset -2px -2px 0 var(--slot-hi);
+  flex: none;
+}
+.slot:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+.slotAmt {
+  position: absolute;
+  right: 3px;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #3f3f3f;
+}
+@media (hover: hover) {
+  .slot:hover {
+    background: #c5c5c5;
+  }
+}
+
+/* ---------- 아이템 참조 (아이콘 + 이름 + 수량) */
+.ref {
+  gap: 6px;
+  flex: none;
+  max-width: 100%;
+}
+.refName {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+.refPlain .refName {
+  text-decoration: none;
+}
+@media (hover: hover) {
+  a.ref:hover .refName {
+    color: var(--grass-hi);
+    text-decoration-color: var(--grass-hi);
+  }
+}
+
+/* ---------- 항목 목록 (라벨 / 값) */
+.kv {
+  gap: 2px;
+}
+.kvRow {
+  flex-direction: row;
+  gap: 12px;
+  padding: 4px 0;
+  border-top: 2px dotted var(--line);
+}
+.kvRow:first-child {
+  border-top: 0;
+}
+.kvKey {
+  width: 96px;
+  flex: none;
+  color: var(--ink-2);
+}
+.kvVal {
+  flex: 1;
+  gap: 4px;
+}
+
+/* ---------- 배치 도우미 */
+.gap4 {
+  gap: 4px;
+}
+.gap8 {
+  gap: 8px;
+}
+.gap12 {
+  gap: 12px;
+}
+.gap16 {
+  gap: 16px;
+}
+.center {
+  align-items: center;
+}
+.grow {
+  flex: 1;
+}
+.cols {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.cols > * {
+  flex: 1 1 320px;
+}
+.note {
+  padding: 8px 12px;
+  background: var(--panel-2);
+  border-left: 4px solid var(--gold);
+  color: var(--ink-2);
+}
+.tabs {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.tools {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.tools .field {
+  flex: 1 1 200px;
+}
+.count {
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.empty {
+  padding: 24px;
+  align-items: center;
+  color: var(--ink-3);
+}
+
+@media (max-width: 719px) {
+  .page {
+    padding: 8px 8px 96px;
+    gap: 8px;
+  }
+  .head {
+    min-height: 72px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: var(--f-body);
+    font-weight: 700;
+  }
+  .panelHead {
+    padding: 12px 12px 0;
+  }
+  .panelBody {
+    padding: 12px;
+  }
+  .kvKey {
+    width: 80px;
+  }
+}

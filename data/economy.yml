@@ -1,0 +1,527 @@
+# 경제
+# buy_price = 살 때 기본가(거래량에 따라 조금씩 움직임), sell_price = 팔 때 값. buy_price가 없으면 판매 전용 품목입니다.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+shop_tabs:
+- npc: 블럭 상점 헤이즐
+  tab: 건축 블록
+  items:
+  - id: QUARTZ_BLOCK
+    name: 석영 블록
+    buy_price: 20
+  - id: SMOOTH_STONE
+    name: 매끄러운 돌
+    buy_price: 8
+  - id: STONE_BRICKS
+    name: 석재 벽돌
+    buy_price: 8
+  - id: GLASS
+    name: 유리
+    buy_price: 5
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    buy_price: 3
+  - id: SPRUCE_PLANKS
+    name: 가문비나무 판자
+    buy_price: 3
+  - id: BIRCH_PLANKS
+    name: 자작나무 판자
+    buy_price: 3
+  - id: OAK_LOG
+    name: 참나무 원목
+    buy_price: 5
+    sell_price: 4
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    buy_price: 5
+  - id: OAK_LEAVES
+    name: 참나무 잎
+    buy_price: 3
+  - id: GLOWSTONE
+    name: 발광석
+    buy_price: 15
+  - id: SEA_LANTERN
+    name: 바다 랜턴
+    buy_price: 20
+  - id: LANTERN
+    name: 랜턴
+    buy_price: 12
+  - id: IRON_BARS
+    name: 철 창살
+    buy_price: 5
+  - id: BRICK
+    name: 벽돌
+    buy_price: 6
+  - id: TERRACOTTA
+    name: 테라코타
+    buy_price: 8
+- npc: 블럭 상점 헤이즐
+  tab: 색깔 블록
+  items:
+  - id: WHITE_CONCRETE
+    name: 하얀색 콘크리트
+    buy_price: 10
+  - id: LIGHT_GRAY_CONCRETE
+    name: 회백색 콘크리트
+    buy_price: 10
+  - id: GRAY_CONCRETE
+    name: 회색 콘크리트
+    buy_price: 10
+  - id: BLACK_CONCRETE
+    name: 검은색 콘크리트
+    buy_price: 10
+  - id: RED_CONCRETE
+    name: 빨간색 콘크리트
+    buy_price: 10
+  - id: ORANGE_CONCRETE
+    name: 주황색 콘크리트
+    buy_price: 10
+  - id: YELLOW_CONCRETE
+    name: 노란색 콘크리트
+    buy_price: 10
+  - id: LIME_CONCRETE
+    name: 연두색 콘크리트
+    buy_price: 10
+  - id: GREEN_CONCRETE
+    name: 초록색 콘크리트
+    buy_price: 10
+  - id: CYAN_CONCRETE
+    name: 청록색 콘크리트
+    buy_price: 10
+  - id: LIGHT_BLUE_CONCRETE
+    name: 하늘색 콘크리트
+    buy_price: 10
+  - id: BLUE_CONCRETE
+    name: 파란색 콘크리트
+    buy_price: 10
+  - id: PURPLE_CONCRETE
+    name: 보라색 콘크리트
+    buy_price: 10
+  - id: MAGENTA_CONCRETE
+    name: 자홍색 콘크리트
+    buy_price: 10
+  - id: PINK_CONCRETE
+    name: 분홍색 콘크리트
+    buy_price: 10
+  - id: BROWN_CONCRETE
+    name: 갈색 콘크리트
+    buy_price: 10
+  - id: WHITE_WOOL
+    name: 하얀색 양털
+    buy_price: 8
+  - id: LIGHT_GRAY_WOOL
+    name: 회백색 양털
+    buy_price: 8
+  - id: GRAY_WOOL
+    name: 회색 양털
+    buy_price: 8
+  - id: BLACK_WOOL
+    name: 검은색 양털
+    buy_price: 8
+  - id: RED_WOOL
+    name: 빨간색 양털
+    buy_price: 8
+  - id: ORANGE_WOOL
+    name: 주황색 양털
+    buy_price: 8
+  - id: YELLOW_WOOL
+    name: 노란색 양털
+    buy_price: 8
+  - id: LIME_WOOL
+    name: 연두색 양털
+    buy_price: 8
+  - id: GREEN_WOOL
+    name: 초록색 양털
+    buy_price: 8
+  - id: CYAN_WOOL
+    name: 청록색 양털
+    buy_price: 8
+  - id: LIGHT_BLUE_WOOL
+    name: 하늘색 양털
+    buy_price: 8
+  - id: BLUE_WOOL
+    name: 파란색 양털
+    buy_price: 8
+  - id: PURPLE_WOOL
+    name: 보라색 양털
+    buy_price: 8
+  - id: MAGENTA_WOOL
+    name: 자홍색 양털
+    buy_price: 8
+  - id: PINK_WOOL
+    name: 분홍색 양털
+    buy_price: 8
+  - id: BROWN_WOOL
+    name: 갈색 양털
+    buy_price: 8
+- npc: 상점 마르코
+  tab: 농자재
+  items:
+  - id: WHEAT_SEEDS
+    name: 밀 씨앗
+    buy_price: 5
+  - id: PUMPKIN_SEEDS
+    name: 호박씨
+    buy_price: 15
+  - id: MELON_SEEDS
+    name: 수박씨
+    buy_price: 15
+  - id: BEETROOT_SEEDS
+    name: 비트 씨앗
+    buy_price: 10
+  - id: COCOA_BEANS
+    name: 코코아 콩
+    buy_price: 20
+  - id: SWEET_BERRIES
+    name: 달콤한 열매
+    buy_price: 15
+  - id: NETHER_WART
+    name: 네더 사마귀
+    buy_price: 25
+    sell_price: 6
+  - id: SUGAR_CANE
+    name: 사탕수수
+    buy_price: 10
+  - id: OAK_SAPLING
+    name: 참나무 묘목
+    buy_price: 10
+  - id: SPRUCE_SAPLING
+    name: 가문비나무 묘목
+    buy_price: 10
+  - id: BIRCH_SAPLING
+    name: 자작나무 묘목
+    buy_price: 10
+  - id: JUNGLE_SAPLING
+    name: 정글나무 묘목
+    buy_price: 30
+  - id: DARK_OAK_SAPLING
+    name: 짙은 참나무 묘목
+    buy_price: 20
+  - id: ACACIA_SAPLING
+    name: 아카시아나무 묘목
+    buy_price: 30
+  - id: CHERRY_SAPLING
+    name: 벚나무 묘목
+    buy_price: 50
+  - id: MANGROVE_PROPAGULE
+    name: 맹그로브나무 주아
+    buy_price: 80
+  - id: PALE_OAK_SAPLING
+    name: 창백한 참나무 묘목
+    buy_price: 120
+  - id: CRIMSON_NYLIUM
+    name: 진홍빛 네사체
+    buy_price: 40
+  - id: CRIMSON_FUNGUS
+    name: 진홍빛 균
+    buy_price: 150
+  - id: WARPED_NYLIUM
+    name: 뒤틀린 네사체
+    buy_price: 40
+  - id: WARPED_FUNGUS
+    name: 뒤틀린 균
+    buy_price: 200
+  - id: BONE_MEAL
+    name: 뼛가루
+    buy_price: 5
+- npc: 상점 마르코
+  tab: 약초 씨앗
+  items:
+  - id: wild_herb_seed
+    name: 들풀 씨앗
+    buy_price: 15
+  - id: red_herb_seed
+    name: 붉은 약초 씨앗
+    buy_price: 30
+  - id: ginseng_root_seed
+    name: 산삼 뿌리 씨앗
+    buy_price: 60
+  - id: fire_shroom_seed
+    name: 화염 버섯 씨앗
+    buy_price: 100
+  - id: moonflower_seed
+    name: 달빛 꽃 씨앗
+    buy_price: 150
+  - id: frost_lily_seed
+    name: 서리 백합 씨앗
+    buy_price: 220
+  - id: star_root_seed
+    name: 별 인삼 씨앗
+    buy_price: 300
+  - id: void_bloom_seed
+    name: 공허 꽃 씨앗
+    buy_price: 400
+  - id: dragon_pepper_seed
+    name: 용 고추 씨앗
+    buy_price: 520
+- npc: 상점 마르코
+  tab: 약초·채집물
+  items:
+  - id: wild_herb
+    name: 들풀
+    sell_price: 2
+  - id: red_herb
+    name: 붉은 약초
+    sell_price: 3
+  - id: ginseng_root
+    name: 산삼 뿌리
+    sell_price: 4
+  - id: fire_shroom
+    name: 화염 버섯
+    sell_price: 5
+  - id: moonflower
+    name: 달빛 꽃
+    sell_price: 7
+  - id: frost_lily
+    name: 서리 백합
+    sell_price: 8
+  - id: star_root
+    name: 별 인삼
+    sell_price: 11
+  - id: void_bloom
+    name: 공허 꽃
+    sell_price: 14
+  - id: dragon_pepper
+    name: 용 고추
+    sell_price: 17
+  - id: tree_sap
+    name: 나무 수액
+    sell_price: 4
+  - id: pine_resin
+    name: 송진
+    sell_price: 7
+  - id: jungle_nectar
+    name: 정글 꿀
+    sell_price: 10
+  - id: acacia_bark
+    name: 아카시아 껍질
+    sell_price: 13
+  - id: dark_sap
+    name: 검은 수액
+    sell_price: 16
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    sell_price: 20
+  - id: mangrove_extract
+    name: 맹그로브 진액
+    sell_price: 25
+  - id: pale_moss
+    name: 창백한 이끼
+    sell_price: 30
+  - id: crimson_ember
+    name: 진홍 불씨
+    sell_price: 36
+  - id: warped_hypha
+    name: 청록 균사
+    sell_price: 42
+  - id: quartz_crystal
+    name: 석영 결정
+    sell_price: 25
+  - id: amethyst_fragment
+    name: 자수정 조각
+    sell_price: 40
+  - id: garnet_shard
+    name: 석류석
+    sell_price: 60
+  - id: sapphire_shard
+    name: 청옥
+    sell_price: 85
+  - id: obsidian_core
+    name: 흑요핵
+    sell_price: 115
+  - id: star_core
+    name: 별의 핵
+    sell_price: 150
+- npc: 상점 마르코
+  tab: 몬스터 전리품
+  items:
+  - id: ROTTEN_FLESH
+    name: 썩은 살점
+    sell_price: 1
+  - id: BONE
+    name: 뼈다귀
+    sell_price: 3
+  - id: STRING
+    name: 실
+    sell_price: 3
+  - id: SPIDER_EYE
+    name: 거미 눈
+    sell_price: 3
+  - id: ARROW
+    name: 화살
+    sell_price: 1
+  - id: GUNPOWDER
+    name: 화약
+    sell_price: 4
+  - id: SLIME_BALL
+    name: 슬라임볼
+    sell_price: 6
+  - id: MAGMA_CREAM
+    name: 마그마 크림
+    sell_price: 8
+  - id: ENDER_PEARL
+    name: 엔더 진주
+    sell_price: 20
+  - id: BLAZE_ROD
+    name: 블레이즈 막대기
+    buy_price: 60
+    sell_price: 25
+  - id: BLAZE_POWDER
+    name: 블레이즈 가루
+    sell_price: 10
+  - id: GHAST_TEAR
+    name: 가스트 눈물
+    sell_price: 30
+  - id: PHANTOM_MEMBRANE
+    name: 팬텀 막
+    sell_price: 12
+  - id: PRISMARINE_SHARD
+    name: 프리즈머린 조각
+    sell_price: 4
+  - id: PRISMARINE_CRYSTALS
+    name: 프리즈머린 수정
+    sell_price: 6
+  - id: BREEZE_ROD
+    name: 브리즈 막대기
+    sell_price: 25
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    sell_price: 3
+  - id: SUGAR
+    name: 설탕
+    sell_price: 1
+  - id: SHULKER_SHELL
+    name: 셜커 껍데기
+    sell_price: 40
+  - id: bog_resin
+    name: 늪지 수지
+    sell_price: 40
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    sell_price: 60
+  - id: spore_cap
+    name: 포자 갓
+    sell_price: 85
+  - id: hellforge_ember
+    name: 지옥불 잉걸
+    sell_price: 120
+- npc: 상점 마르코
+  tab: 섬 개척
+  items:
+  - id: DIRT
+    name: 흙
+    buy_price: 15
+  - id: LAVA_BUCKET
+    name: 용암 양동이
+    buy_price: 2000
+  - id: WATER_BUCKET
+    name: 물 양동이
+    buy_price: 400
+  - id: BREWING_STAND
+    name: 양조기
+    buy_price: 500
+  - id: GLASS_BOTTLE
+    name: 유리병
+    buy_price: 3
+  - id: SOUL_SAND
+    name: 영혼 모래
+    buy_price: 40
+- npc: 상점 마르코
+  tab: 소모품
+  items:
+  - id: return_stone
+    name: 귀환석
+    buy_price: 150
+  - id: heal_potion_1
+    name: 하급 회복 물약
+    buy_price: 25
+  - id: heal_potion_2
+    name: 중급 회복 물약
+    buy_price: 90
+  - id: heal_potion_3
+    name: 상급 회복 물약
+    buy_price: 300
+  - id: mana_potion_1
+    name: 하급 마나 물약
+    buy_price: 25
+  - id: mana_potion_2
+    name: 중급 마나 물약
+    buy_price: 90
+  - id: mana_potion_3
+    name: 상급 마나 물약
+    buy_price: 300
+- npc: 상점 마르코
+  tab: 조합 재료
+  items:
+  - id: lost_soul
+    name: 미혹된 넋
+    buy_price: 22
+  - id: foxfire_essence
+    name: 여우불 정수
+    buy_price: 22
+  - id: cursed_moss
+    name: 저주받은 이끼
+    buy_price: 22
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    buy_price: 22
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    buy_price: 27
+  - id: LEATHER
+    name: 가죽
+    buy_price: 8
+  - id: FEATHER
+    name: 깃털
+    buy_price: 5
+  - id: BLAZE_ROD
+    name: 블레이즈 막대기
+    buy_price: 60
+    sell_price: 25
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    buy_price: 15
+  - id: KELP
+    name: 켈프
+    buy_price: 5
+  - id: CARROT
+    name: 당근
+    buy_price: 6
+    sell_price: 4
+  - id: twisted_coal
+    name: 뒤틀린 석탄
+    buy_price: 150
+    sell_price: 100
+  - id: twisted_iron
+    name: 뒤틀린 철
+    buy_price: 225
+    sell_price: 150
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    buy_price: 450
+    sell_price: 300
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    buy_price: 576
+    sell_price: 384
+shop_discount:
+- spent: 1000000
+  discount: 10%
+- spent: 500000
+  discount: 7%
+- spent: 100000
+  discount: 5%
+- spent: 50000
+  discount: 3%
+trade:
+  how: /거래 <닉네임>
+  fee: 받는 골드의 5% + 성사 때 양쪽 50G
+bank:
+  interest: 하루 0.3% (하루 최대 1,000G, 최대 7일치까지 정산)
+  transfer: 송금 수수료 2%, 최소 100G
+auction:
+  listing_fee: 가격의 1% (최소 10G)
+  sales_tax: 5%
+  duration_hours: 48
+  max_listings: 10
+  note: 정가 즉시 구매. 대금·기간 만료 반환은 우편으로.

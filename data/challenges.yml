@@ -1,0 +1,114 @@
+# 도전 — 시련의 탑·보스 레이드
+# 탑과 레이드는 서로 다른 콘텐츠입니다.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+tower:
+  name: 시련의 탑
+  how: 메뉴 → 시련의 탑. 1인 도전, 층을 깰 때마다 고난 3개 중 하나를 골라 누적합니다.
+  sections:
+  - name: 시련의 탑 1구간
+    min_level: 0
+    recommended_level: 15
+  - name: 시련의 탑 2구간
+    min_level: 30
+    recommended_level: 30
+  - name: 시련의 탑 3구간
+    min_level: 45
+    recommended_level: 45
+  floors_per_section: 5
+  boss_material_drops:
+    3층:
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 35.0
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 15.0
+    - item:
+        id: ancient_rune
+        name: 고대 룬
+      chance_percent: 10.0
+    5층:
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 30.0
+    - item:
+        id: ancient_rune
+        name: 고대 룬
+      chance_percent: 40.0
+    - item:
+        id: dragon_scale
+        name: 용의 비늘
+      chance_percent: 25.0
+    - item:
+        id: phoenix_feather
+        name: 불사조의 깃털
+      chance_percent: 15.0
+  gold: 층마다 60G + 층당 40G, 보스 층 +100G (구간 배율 적용)
+  hardships:
+  - name: 혈약
+    flavor: 피로 맺은 계약은 양쪽 모두를 굶주리게 한다.
+    gain: 준 피해의 4%만큼 체력 회복
+    cost: 몬스터 공격력 +25%
+  - name: 유리 대포
+    flavor: 모든 방어를 버리고 칼끝만 남긴다.
+    gain: 주는 피해 +40%
+    cost: 받는 피해 +35%
+  - name: 질풍
+    flavor: 바람은 너와 적을 가리지 않는다.
+    gain: 이동 속도 증가(신속 I)
+    cost: 몬스터 기술 사이 대기·쿨타임 −25%
+  - name: 철갑
+    flavor: 단단해진 만큼, 적도 쉽게 쓰러지지 않는다.
+    gain: 받는 피해 −25%
+    cost: 몬스터 체력 +40%
+  - name: 사냥꾼의 눈
+    flavor: 급소가 보인다. 적의 칼끝도 빨라진다.
+    gain: 치명타 확률 +25%
+    cost: 몬스터 기술 예고 시간 −25%
+  - name: 포위
+    flavor: 둘러싸일수록 피가 끓는다.
+    gain: 몬스터를 쓰러뜨릴 때마다 체력 15% 회복
+    cost: 무리 층 +1마리, 동시에 붙는 근접 +1
+  - name: 마력 범람
+    flavor: 넘치는 마력은 적에게도 흘러든다.
+    gain: 마나 소모 −40%
+    cost: 몬스터 체력 +25%
+  - name: 불굴
+    flavor: 쓰러지지 않는다. 다만 아물지도 않는다.
+    gain: 층마다 한 번, 치명상을 체력 1로 버틴다
+    cost: 받는 회복 −50%
+  - name: 사신의 거래
+    flavor: 하나를 거둘 때마다 낫이 무거워진다.
+    gain: 쓰러뜨릴 때마다 이번 층 주는 피해 +8%(누적)
+    cost: 무리 중 1마리가 정예(체력 ×2, 피해 ×1.3)
+  floor_bosses: ※ 층별 보스 이름·공략 문구는 아직 정리 전 — 별도 전달
+boss_raid:
+  name: 보스 레이드
+  how: 메뉴 → 보스. 1인 도전, 도전은 무제한이고 보상은 하루 정해진 횟수까지(모든 보스 공용).
+  daily_rewards: 3
+  bosses:
+  - id: mire_ferryman
+    name: 수렁의 사공
+    recommended_level: 20
+    flavor: 홍수가 나던 날에도 뱃삯부터 받던 사공.
+    health: 6000
+    time_limit: 5분이 지나면 광폭화, 8분이면 실패
+    mechanics:
+    - name: 뱃삯
+      text: 사공이 흘린 동전을 주우면 사공에게 받는 피해가 1닢당 늘어납니다. 뱃삯을 청구할 때 요구한 닢 수가 있으면 크게 공격할 기회, 모자라면 물속으로 끌려갑니다.
+    - name: 불어나는 물
+      text: 물이 차면 뗏목 위로 피합니다. 한 뗏목에 오래 서 있으면 가라앉습니다.
+    - name: 마지막 뱃삯
+      text: 끝에 가면 바닥의 동전을 사공이 주워 회복합니다. 먼저 주워야 합니다.
+    rewards:
+      gold: 3000
+      hunting_exp: 2000
+      drops:
+      - item:
+          id: ferryman_lantern
+          name: 사공의 등불
+        chance_percent: 15

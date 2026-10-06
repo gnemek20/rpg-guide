@@ -1,0 +1,932 @@
+# 마법·주문서
+# 마법은 무기에 각인해 우클릭으로 씁니다. scroll_recipe = 주문서 제작 비용(마법 각인 NPC).
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+scroll_base_price: 200
+spells:
+- id: fireball
+  name: 🔥 파이어볼
+  grade: 기본
+  tier: 1
+  description: 화염 구체를 발사하여 대상에게 피해를 줍니다.
+  mana: 25
+  cooldown_seconds: 3
+  damage: 150
+  range: 20
+  cast: 투사체
+  status_effect: 화상
+  required_level: 1
+- id: flame_burst
+  name: 🔥 플레임 버스트
+  grade: 고급
+  tier: 2
+  description: 주변에 화염 폭발을 일으킵니다.
+  mana: 50
+  cooldown_seconds: 8
+  damage: 200
+  range: 5
+  area: 4
+  cast: 자신
+  status_effect: 화상
+  required_level: 10
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: fire_shroom
+      name: 화염 버섯
+      amount: 4
+- id: inferno
+  name: 🔥 인페르노
+  grade: 희귀
+  tier: 3
+  description: 대상 지점에 지옥불을 소환합니다.
+  mana: 100
+  cooldown_seconds: 15
+  damage: 350
+  range: 15
+  area: 5
+  cast: 지면 지정
+  status_effect: 화상
+  required_level: 25
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: garnet_shard
+      name: 석류석
+      amount: 3
+- id: meteor_strike
+  name: ☄ 메테오 스트라이크
+  grade: 전설
+  tier: 4
+  description: 하늘에서 거대한 운석을 떨어뜨립니다.
+  mana: 200
+  cooldown_seconds: 30
+  damage: 600
+  range: 25
+  area: 7
+  cast: 지면 지정
+  status_effect: 화상
+  required_level: 40
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: dragon_pepper
+      name: 용 고추
+      amount: 6
+- id: ice_bolt
+  name: ❄ 아이스 볼트
+  grade: 기본
+  tier: 1
+  description: 얼음 화살을 발사하여 대상을 둔화시킵니다.
+  mana: 20
+  cooldown_seconds: 2
+  damage: 120
+  range: 20
+  cast: 투사체
+  status_effect: 빙결·둔화
+  required_level: 1
+- id: frost_nova
+  name: ❄ 프로스트 노바
+  grade: 고급
+  tier: 2
+  description: 주변 대상을 동결시키는 냉기 폭발.
+  mana: 55
+  cooldown_seconds: 10
+  damage: 180
+  range: 6
+  area: 5
+  cast: 자신
+  status_effect: 빙결·둔화
+  required_level: 12
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: quartz_crystal
+      name: 석영 결정
+      amount: 4
+- id: blizzard
+  name: ❄ 블리자드
+  grade: 희귀
+  tier: 3
+  description: 광범위한 눈보라를 불러냅니다.
+  mana: 110
+  cooldown_seconds: 18
+  damage: 300
+  range: 15
+  area: 6
+  cast: 지면 지정
+  status_effect: 빙결·둔화
+  required_level: 28
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: frost_lily
+      name: 서리 백합
+      amount: 4
+- id: absolute_zero
+  name: ❄ 절대영도
+  grade: 전설
+  tier: 4
+  description: 모든 것을 얼려버리는 극한의 한파.
+  mana: 180
+  cooldown_seconds: 35
+  damage: 500
+  range: 20
+  area: 8
+  cast: 지면 지정
+  status_effect: 빙결·둔화
+  required_level: 42
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: sapphire_shard
+      name: 청옥
+      amount: 5
+- id: spark
+  name: ⚡ 스파크
+  grade: 기본
+  tier: 1
+  description: 작은 전기 충격을 가합니다.
+  mana: 15
+  cooldown_seconds: 1
+  damage: 100
+  range: 15
+  cast: 조준 즉시
+  status_effect: 기절
+  required_level: 1
+- id: chain_lightning
+  name: ⚡ 체인 라이트닝
+  grade: 고급
+  tier: 2
+  description: 전기가 연쇄적으로 적들에게 퍼집니다.
+  mana: 60
+  cooldown_seconds: 8
+  damage: 180
+  range: 15
+  area: 3
+  cast: 조준 즉시
+  status_effect: 기절
+  required_level: 15
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: twisted_redstone
+      name: 뒤틀린 레드스톤
+      amount: 4
+- id: thunderbolt
+  name: ⚡ 선더볼트
+  grade: 희귀
+  tier: 3
+  description: 하늘에서 벼락을 떨어뜨립니다.
+  mana: 90
+  cooldown_seconds: 12
+  damage: 320
+  range: 20
+  area: 3
+  cast: 지면 지정
+  status_effect: 기절
+  required_level: 22
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: star_root
+      name: 별 인삼
+      amount: 4
+- id: storm_call
+  name: ⚡ 스톰 콜
+  grade: 전설
+  tier: 4
+  description: 거대한 전기 폭풍을 일으킵니다.
+  mana: 170
+  cooldown_seconds: 28
+  damage: 550
+  range: 25
+  area: 6
+  cast: 지면 지정
+  status_effect: 기절
+  required_level: 38
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: star_core
+      name: 별의 핵
+      amount: 1
+- id: shadow_bolt
+  name: 🌑 섀도우 볼트
+  grade: 기본
+  tier: 1
+  description: 어둠의 에너지를 발사합니다.
+  mana: 30
+  cooldown_seconds: 3
+  damage: 140
+  range: 18
+  cast: 투사체
+  status_effect: 지속 피해
+  required_level: 5
+- id: life_drain
+  name: 🌑 생명력 흡수
+  grade: 고급
+  tier: 2
+  description: 대상의 생명력을 빼앗아 흡수합니다.
+  mana: 65
+  cooldown_seconds: 10
+  damage: 200
+  range: 12
+  cast: 조준 즉시
+  status_effect: 흡혈
+  required_level: 18
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: dark_sap
+      name: 검은 수액
+      amount: 4
+- id: void_eruption
+  name: 💀 공허 폭발
+  grade: 희귀
+  tier: 3
+  description: 광범위한 어둠의 에너지를 방출합니다.
+  mana: 120
+  cooldown_seconds: 16
+  damage: 380
+  range: 15
+  area: 5
+  cast: 자신
+  status_effect: 지속 피해
+  required_level: 30
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: void_bloom
+      name: 공허 꽃
+      amount: 3
+- id: death_sentence
+  name: 💀 사형선고
+  grade: 전설
+  tier: 4
+  description: 대상에게 죽음의 저주를 내립니다.
+  mana: 220
+  cooldown_seconds: 40
+  damage: 700
+  range: 20
+  cast: 조준 즉시
+  status_effect: 지속 피해
+  required_level: 45
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: obsidian_core
+      name: 흑요핵
+      amount: 2
+- id: holy_light
+  name: ✦ 성스러운 빛
+  grade: 기본
+  tier: 1
+  description: 자신의 체력을 회복합니다.
+  mana: 30
+  cooldown_seconds: 5
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 회복
+  required_level: 3
+- id: divine_shield
+  name: ✦ 신성한 방벽
+  grade: 고급
+  tier: 2
+  description: 일시적인 보호막을 생성합니다.
+  mana: 70
+  cooldown_seconds: 20
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 보호막
+  required_level: 16
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: ginseng_root
+      name: 산삼 뿌리
+      amount: 4
+- id: smite
+  name: ✦ 천벌
+  grade: 희귀
+  tier: 3
+  description: 신성한 빛으로 대상에게 큰 피해를 줍니다.
+  mana: 80
+  cooldown_seconds: 10
+  damage: 300
+  range: 15
+  cast: 조준 즉시
+  required_level: 20
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: moonflower
+      name: 달빛 꽃
+      amount: 4
+- id: judgment
+  name: ⚖ 심판
+  grade: 전설
+  tier: 4
+  description: 천상의 심판을 내려 광역 신성 피해를 줍니다.
+  mana: 190
+  cooldown_seconds: 32
+  damage: 580
+  range: 20
+  area: 6
+  cast: 지면 지정
+  required_level: 40
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: star_core
+      name: 별의 핵
+      amount: 1
+- id: thorn_whip
+  name: 🌿 가시채찍
+  grade: 기본
+  tier: 1
+  description: 덩굴 채찍으로 대상을 끌어옵니다.
+  mana: 20
+  cooldown_seconds: 4
+  damage: 110
+  range: 15
+  cast: 조준 즉시
+  status_effect: 끌어당김
+  required_level: 3
+- id: rejuvenation
+  name: 🌿 재생
+  grade: 고급
+  tier: 2
+  description: 시간에 걸쳐 체력을 회복합니다.
+  mana: 50
+  cooldown_seconds: 12
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 회복
+  required_level: 8
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: jungle_nectar
+      name: 정글 꿀
+      amount: 4
+- id: entangle
+  name: 🌿 속박
+  grade: 희귀
+  tier: 3
+  description: 대상을 덩굴로 묶어 이동 불가 상태로 만듭니다.
+  mana: 85
+  cooldown_seconds: 14
+  damage: 150
+  range: 15
+  area: 3
+  cast: 지면 지정
+  status_effect: 기절
+  required_level: 22
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: cherry_nectar
+      name: 벚꽃 꿀
+      amount: 4
+- id: dash
+  name: 💨 대시
+  grade: 기본
+  tier: 1
+  description: 바람의 힘으로 바라보는 방향으로 빠르게 돌진합니다.
+  mana: 15
+  cooldown_seconds: 3
+  damage: 0
+  range: 10
+  cast: 자신
+  status_effect: 돌진
+  required_level: 1
+- id: wind_slash
+  name: 🌀 윈드 슬래시
+  grade: 기본
+  tier: 1
+  description: 날카로운 바람의 칼날을 날립니다.
+  mana: 18
+  cooldown_seconds: 2
+  damage: 130
+  range: 18
+  cast: 투사체
+  status_effect: 넉백
+  required_level: 1
+- id: gale_force
+  name: 🌀 게일 포스
+  grade: 고급
+  tier: 2
+  description: 강력한 돌풍으로 주변 적을 날려냅니다.
+  mana: 45
+  cooldown_seconds: 8
+  damage: 170
+  range: 6
+  area: 4
+  cast: 자신
+  status_effect: 넉백
+  required_level: 10
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: pine_resin
+      name: 송진
+      amount: 4
+- id: tornado
+  name: 🌀 토네이도
+  grade: 희귀
+  tier: 3
+  description: 거대한 회오리 바람을 일으킵니다.
+  mana: 100
+  cooldown_seconds: 16
+  damage: 280
+  range: 18
+  area: 5
+  cast: 지면 지정
+  status_effect: 넉백
+  required_level: 26
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: mangrove_extract
+      name: 맹그로브 진액
+      amount: 4
+- id: arcane_missile
+  name: ✧ 아케인 미사일
+  grade: 기본
+  tier: 1
+  description: 추적하는 마법 화살 3발을 발사합니다.
+  mana: 22
+  cooldown_seconds: 3
+  damage: 130
+  range: 20
+  cast: 투사체
+  required_level: 1
+- id: mana_burst
+  name: ✧ 마나 폭발
+  grade: 고급
+  tier: 2
+  description: 축적된 마나를 폭발시켜 광역 피해를 줍니다.
+  mana: 70
+  cooldown_seconds: 10
+  damage: 250
+  range: 8
+  area: 4
+  cast: 자신
+  required_level: 14
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: amethyst_fragment
+      name: 자수정 조각
+      amount: 3
+- id: arcane_barrage
+  name: ✧ 아케인 일제사격
+  grade: 희귀
+  tier: 3
+  description: 수많은 마법탄을 대상에게 퍼붓습니다.
+  mana: 95
+  cooldown_seconds: 12
+  damage: 340
+  range: 18
+  area: 2
+  cast: 조준 즉시
+  required_level: 24
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: twisted_lapis
+      name: 뒤틀린 청금석
+      amount: 4
+- id: dimension_rift
+  name: ✧ 차원의 균열
+  grade: 전설
+  tier: 4
+  description: 공간을 찢어 순수한 비전 에너지를 해방합니다.
+  mana: 210
+  cooldown_seconds: 35
+  damage: 650
+  range: 22
+  area: 5
+  cast: 지면 지정
+  required_level: 43
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: obsidian_core
+      name: 흑요핵
+      amount: 2
+- id: spirit_ally
+  name: ✦ 정령 소환
+  grade: 기본
+  tier: 1
+  description: 내 능력치의 일부(동기화율)를 나눠 받은 정령을 부립니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 35
+  cooldown_seconds: 25
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 1
+  summon:
+    name: 검의 정령
+    role: 붙어서 벤다
+- id: flame_spirit
+  name: ✦ 불꽃 정령 소환
+  grade: 고급
+  tier: 2
+  description: 거리를 두고 불꽃탄을 쏘아 적을 불태우는 정령을 부립니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 40
+  cooldown_seconds: 25
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 12
+  summon:
+    name: 불꽃 정령
+    role: 거리를 두고 탄을 쏜다
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: fire_shroom
+      name: 화염 버섯
+      amount: 4
+    - id: foxfire_essence
+      name: 여우불 정수
+      amount: 3
+- id: frost_spirit
+  name: ✦ 서리 정령 소환
+  grade: 고급
+  tier: 2
+  description: 냉기탄으로 맞은 곳 주변까지 얼리고 적을 느리게 하는 정령을 부립니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 40
+  cooldown_seconds: 25
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 14
+  summon:
+    name: 서리 정령
+    role: 냉기탄 + 주변 피해·둔화
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: quartz_crystal
+      name: 석영 결정
+      amount: 4
+    - id: lost_soul
+      name: 미혹된 넋
+      amount: 3
+- id: healing_spirit
+  name: ✦ 치유 정령 소환
+  grade: 고급
+  tier: 2
+  description: 주인과 근처 파티원의 체력을 꾸준히 회복시키는 정령을 부립니다. 공격하지 않습니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 45
+  cooldown_seconds: 30
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 16
+  summon:
+    name: 치유 정령
+    role: 주인과 파티원 회복
+  scroll_recipe:
+    gold: 800
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 3
+    - id: shadow_crystal
+      name: 그림자 수정
+      amount: 2
+    - id: ginseng_root
+      name: 산삼 뿌리
+      amount: 4
+    - id: lost_soul
+      name: 미혹된 넋
+      amount: 3
+- id: storm_spirit
+  name: ✦ 폭풍 정령 소환
+  grade: 희귀
+  tier: 3
+  description: 적에게서 적으로 튀는 연쇄 번개를 내리치는 정령을 부립니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 55
+  cooldown_seconds: 30
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 24
+  summon:
+    name: 폭풍 정령
+    role: 번개가 여러 적에게 튄다
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: star_root
+      name: 별 인삼
+      amount: 3
+    - id: twisted_redstone
+      name: 뒤틀린 레드스톤
+      amount: 6
+- id: guardian_spirit
+  name: ✦ 수호 정령 소환
+  grade: 희귀
+  tier: 3
+  description: 주인에게 주기적으로 보호막을 씌우는 방패 정령을 부립니다. 공격하지 않습니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 55
+  cooldown_seconds: 30
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 26
+  summon:
+    name: 수호 정령
+    role: 주인에게 보호막
+  scroll_recipe:
+    gold: 3000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 6
+    - id: moon_pearl
+      name: 달빛 진주
+      amount: 2
+    - id: storm_scale
+      name: 폭풍 비늘
+      amount: 1
+    - id: garnet_shard
+      name: 석류석
+      amount: 3
+    - id: bog_resin
+      name: 늪지 수지
+      amount: 6
+- id: shadow_wolves
+  name: ✦ 그림자 늑대 무리
+  grade: 전설
+  tier: 4
+  description: 세 마리의 그림자 늑대가 함께 적을 물어뜯습니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 70
+  cooldown_seconds: 35
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 38
+  summon:
+    name: 그림자 늑대 무리
+    role: 여러 마리가 함께 공격
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: void_bloom
+      name: 공허 꽃
+      amount: 4
+    - id: dark_sap
+      name: 검은 수액
+      amount: 6
+- id: stone_golem
+  name: ✦ 고대 골렘 소환
+  grade: 전설
+  tier: 4
+  description: 느리지만 주변 적을 한꺼번에 내려치는 고대 골렘을 부립니다. 유지하는 동안 마나를 계속 쓰고, 다시 시전하면 돌려보냅니다.
+  mana: 80
+  cooldown_seconds: 40
+  damage: 0
+  range: 0
+  cast: 자신
+  status_effect: 소환
+  required_level: 42
+  summon:
+    name: 고대 골렘
+    role: 주변 전체를 내려친다
+  scroll_recipe:
+    gold: 10000
+    materials:
+    - id: abyss_ink
+      name: 심해 먹물
+      amount: 10
+    - id: mermaid_tear
+      name: 인어의 눈물
+      amount: 2
+    - id: leviathan_scale
+      name: 리바이어던 비늘
+      amount: 1
+    - id: obsidian_core
+      name: 흑요핵
+      amount: 2
+    - id: star_core
+      name: 별의 핵
+      amount: 1

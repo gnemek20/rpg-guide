@@ -1,0 +1,4939 @@
+# 아이템
+# 커스텀 아이템 전체. sources = 얻는 곳, uses = 쓰이는 곳, icon_material = 마인크래프트 아이콘 이름.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+items:
+- id: compressed_stone
+  name: 압축된 코블스톤
+  category: 재료·기타
+  description:
+  - 코블스톤을 뭉쳐 만든 단단한 돌입니다.
+  - 대장간에서 장비를 제작할 때 사용됩니다.
+  icon_material: COBBLESTONE
+  sources:
+  - 제작 — 조약돌 ×576
+  uses:
+  - 초보자의 곡괭이 제작
+- id: rookie_pickaxe
+  name: 초보자의 곡괭이
+  category: 무기·도구·장비
+  stats:
+    힘: 1.0
+  description:
+  - 섬에서 광물을 채집하기 위한 기초 도구입니다.
+  icon_material: WOODEN_PICKAXE
+  sources:
+  - 제작 — 압축된 코블스톤 ×12 + 막대기 ×12
+  uses: []
+- id: twisted_coal
+  name: 뒤틀린 석탄
+  category: 재료·기타
+  description:
+  - 심연의 불꽃을 머금은 석탄.
+  - 섬의 기초 화로나 하급 업그레이드에 쓰입니다.
+  icon_material: COAL
+  sources:
+  - 역병 운반자 처치 6.0% · 개척지
+  - 뼈 저격수 처치 7.0% · 개척지
+  - 모래언덕 병사 처치 8.0% · 개척지
+  - 저주받은 사무라이 처치 6.0% · 요괴 계곡
+  - 원혼 궁수 처치 7.0% · 요괴 계곡
+  - 타천 신관 처치 8.0% · 요괴 계곡
+  - 상점 구매 150G
+  sell_price: 100
+  uses: []
+- id: twisted_iron
+  name: 뒤틀린 철
+  category: 재료·기타
+  description:
+  - 일그러진 철광석의 파편.
+  - 희귀 등급 장비 제련에 사용됩니다.
+  icon_material: RAW_IRON
+  sources:
+  - 늪 구울 처치 6.0% · 신비의 늪
+  - 수렁 거미 처치 6.0% · 신비의 늪
+  - 이끼 궁수 처치 6.0% · 신비의 늪
+  - 늪 저주술사 처치 6.0% · 신비의 늪
+  - 썩은 거한 처치 6.0% · 신비의 늪
+  - 늪지 잠복자 처치 6.0% · 신비의 늪
+  - 늪 밀렵꾼 처치 6.0% · 신비의 늪
+  - 늪 사냥꾼 처치 6.0% · 신비의 늪
+  - 이끼 골렘 처치 6.0% · 신비의 늪
+  - 늪의 공포 처치 6.0% · 신비의 늪
+  - 상점 구매 225G
+  sell_price: 150
+  uses:
+  - 갈대 단검 제작
+  - 갈대 두건 제작
+  - 갈대 바지 제작
+  - 갈대 조끼 제작
+  - 강화된 텅스텐 낫 제작
+  - 개량형 개척자 흉갑 제작
+  - 관통의 비약 양조
+  - 늪안개 두건 제작
+  - 늪안개 로브 제작
+  - 늪안개 지팡이 제작
+  - 늪안개 하의 제작
+  - 뒤틀린 강철 각반 제작
+  - 뒤틀린 강철 신발 제작
+  - 뒤틀린 강철 투구 제작
+  - 뒤틀린 강철 흉갑 제작
+  - 뒤틀린 덩굴 반지 제작
+  - 뒤틀린 봉인 각반 제작
+  - 뒤틀린 봉인 두건 제작
+  - 뒤틀린 봉인 로브 제작
+  - 뒤틀린 봉인 신발 제작
+  - 뒤틀린 봉인 지팡이 제작
+  - 뒤틀린 전투도끼 제작
+  - 뒤틀린 철 단검 제작
+  - 뒤틀린 파편 각반 제작
+  - 뒤틀린 파편 경갑 제작
+  - 뒤틀린 파편 두건 제작
+  - 뒤틀린 파편 신발 제작
+  - 맹그로브 각반 제작
+  - 맹그로브 대검 제작
+  - 맹그로브 투구 제작
+  - 맹그로브 흉갑 제작
+  - 반딧불 두건 제작
+  - 반딧불 로브 제작
+  - 반딧불 막대 제작
+  - 반딧불 하의 제작
+  - 불안정한 마력 각반 제작
+  - 불안정한 마력 두건 제작
+  - 불안정한 마력 로브 제작
+  - 불안정한 마력 신발 제작
+  - 불안정한 마력 지팡이 제작
+  - 수렁 진흙 각반 제작
+  - 수렁 진흙 철퇴 제작
+  - 수렁 진흙 투구 제작
+  - 수렁 진흙 흉갑 제작
+  - 안정화된 마력 벨트 제작
+  - 연구소 배급 지팡이 제작
+  - 정밀한 합금 곡괭이 제작
+  - 조잡한 철제 갑옷 제작
+  - 폐허 탐사자의 각반 제작
+  - 폐허 탐사자의 곡괭이 제작
+  - 폐허 탐사자의 장화 제작
+  - 폐허 탐사자의 투구 제작
+- id: twisted_redstone
+  name: 뒤틀린 레드스톤
+  category: 재료·기타
+  description:
+  - 불길한 에너지가 흐르는 붉은 가루.
+  - 자동 채굴기 회로 업그레이드에 필수적입니다.
+  icon_material: REDSTONE
+  sources:
+  - 저주받은 기사 처치 5.0% · 개척지
+  - 공허 주술사 처치 6.0% · 개척지
+  - 모래 미라 처치 6.0% · 버려진 메사
+  - 모래 전갈 처치 6.0% · 버려진 메사
+  - 폐허 도적 처치 6.0% · 버려진 메사
+  - 도적 저격수 처치 6.0% · 버려진 메사
+  - 태양 숭배자 처치 6.0% · 버려진 메사
+  - 유랑 해골 처치 6.0% · 버려진 메사
+  - 메사 골렘 처치 6.0% · 버려진 메사
+  - 저주받은 근위병 처치 6.0% · 버려진 메사
+  - 모래 폭풍 정령 처치 6.0% · 버려진 메사
+  - 사막 거수 처치 6.0% · 버려진 메사
+  - 낚시 (희귀 · 낚시 Lv.20)
+  - 상점 구매 450G
+  sell_price: 300
+  uses:
+  - ⚡ 체인 라이트닝 주문서 제작
+  - ✦ 폭풍 정령 소환 주문서 제작
+  - 모래바람 단검 제작
+  - 모래바람 두건 제작
+  - 모래바람 바지 제작
+  - 모래바람 조끼 제작
+  - 붉은 사암 각반 제작
+  - 붉은 사암 대도 제작
+  - 붉은 사암 투구 제작
+  - 붉은 사암 흉갑 제작
+  - 신기루 두건 제작
+  - 신기루 로브 제작
+  - 신기루 하의 제작
+  - 신기루 홀 제작
+  - 테라코타 각반 제작
+  - 테라코타 망치 제작
+  - 테라코타 투구 제작
+  - 테라코타 흉갑 제작
+  - 햇살 유리 두건 제작
+  - 햇살 유리 로브 제작
+  - 햇살 유리 지팡이 제작
+  - 햇살 유리 하의 제작
+- id: twisted_lapis
+  name: 뒤틀린 청금석
+  category: 재료·기타
+  description:
+  - 마력이 폭주하여 변이된 푸른 보석.
+  - 마법봉 슬롯 해금 및 인챈트에 사용됩니다.
+  icon_material: LAPIS_LAZULI
+  sources:
+  - 상급 마법사 처치 4.0% · 개척지
+  - 포자 보행자 처치 6.0% · 버섯 숲
+  - 균사 거미 처치 6.0% · 버섯 숲
+  - 버섯갓 궁수 처치 6.0% · 버섯 숲
+  - 균류 연금술사 처치 6.0% · 버섯 숲
+  - 버섯 파수병 처치 6.0% · 버섯 숲
+  - 썩은 포복자 처치 6.0% · 버섯 숲
+  - 포자 떠돌이 처치 6.0% · 버섯 숲
+  - 버섯 골렘 처치 6.0% · 버섯 숲
+  - 균사 짐승 처치 6.0% · 버섯 숲
+  - 낚시 (희귀 · 낚시 Lv.20)
+  - 상점 구매 576G
+  sell_price: 384
+  uses:
+  - ✧ 아케인 일제사격 주문서 제작
+  - 갓 껍질 각반 제작
+  - 갓 껍질 철퇴 제작
+  - 갓 껍질 투구 제작
+  - 갓 껍질 흉갑 제작
+  - 균사 강철 각반 제작
+  - 균사 강철 대검 제작
+  - 균사 강철 투구 제작
+  - 균사 강철 흉갑 제작
+  - 발광 균사 두건 제작
+  - 발광 균사 로브 제작
+  - 발광 균사 지팡이 제작
+  - 발광 균사 하의 제작
+  - 은빛 포자 두건 제작
+  - 은빛 포자 로브 제작
+  - 은빛 포자 하의 제작
+  - 은빛 포자 홀 제작
+  - 포자바람 단검 제작
+  - 포자바람 두건 제작
+  - 포자바람 바지 제작
+  - 포자바람 조끼 제작
+- id: twisted_diamond
+  name: 뒤틀린 다이아몬드
+  category: 재료·기타
+  description:
+  - 차원의 압력을 견뎌낸 궁극의 보석.
+  - 전설 장비 제작 및 한계돌파의 핵심 재료입니다.
+  icon_material: DIAMOND
+  sources:
+  - 잿빛 망자 처치 2.0% · 네더 협곡
+  - 잿불 멧돼지 처치 2.0% · 네더 협곡
+  - 피글린 약탈자 처치 2.0% · 네더 협곡
+  - 영혼 궁수 처치 2.0% · 네더 협곡
+  - 블레이즈 파수꾼 처치 2.0% · 네더 협곡
+  - 피글린 선봉대 처치 2.0% · 네더 협곡
+  - 위더 약탈자 처치 2.0% · 네더 협곡
+  - 흑요석 골렘 처치 2.0% · 네더 협곡
+  - 지옥불 마녀 처치 2.0% · 네더 협곡
+  - 협곡 폭군 처치 2.0% · 네더 협곡
+  - 낚시 (영웅 · 낚시 Lv.30)
+  - 시련의 탑 3층 보스 15% (구간마다)
+  - 시련의 탑 5층 보스 30% (구간마다)
+  sell_price: 1666
+  uses:
+  - 에르베 기사단 갑옷 제작
+  - 에르베 실습용 장검 제작
+  - 차원의 여행자 망토 제작
+  - 파수꾼의 핵 지팡이 제작
+- id: monster_essence
+  name: 몬스터 정수
+  category: 재료·기타
+  description:
+  - 사냥한 몬스터에게서 추출한 생명의 정수.
+  - 다양한 장비 제작 및 강화에 사용됩니다.
+  icon_material: GHAST_TEAR
+  sources:
+  - 썩어가는 탐색자 처치 10.0% · 개척지
+  - 숲 배회자 처치 12.0% · 개척지
+  - 역병 운반자 처치 15.0% · 개척지
+  - 뼈 저격수 처치 16.0% · 개척지
+  - 모래언덕 병사 처치 18.0% · 개척지
+  - 독액 추적자 처치 20.0% · 개척지
+  - 서리 파수꾼 처치 22.0% · 개척지
+  - 저주받은 기사 처치 22.0% · 개척지
+  - 공허 주술사 처치 24.0% · 개척지
+  - 악몽의 망령 처치 24.0% · 개척지
+  - 철의 처형자 처치 26.0% · 개척지
+  - 정예 사수 처치 26.0% · 개척지
+  - 상급 마법사 처치 28.0% · 개척지
+  - 미혹된 나그네 처치 10.0% · 요괴 계곡
+  - 저주받은 사무라이 처치 15.0% · 요괴 계곡
+  - 원혼 궁수 처치 16.0% · 요괴 계곡
+  - 타천 신관 처치 18.0% · 요괴 계곡
+  - 독니 죠로구모 처치 20.0% · 요괴 계곡
+  - 안개 속 원혼 처치 22.0% · 요괴 계곡
+  - 타락한 낭인 처치 22.0% · 요괴 계곡
+  - 여우불 무녀 처치 24.0% · 요괴 계곡
+  - 떠도는 원령 처치 24.0% · 요괴 계곡
+  - 오니 무사 처치 26.0% · 요괴 계곡
+  - 덴구 궁사 처치 26.0% · 요괴 계곡
+  - 늪 구울 처치 28.0% · 신비의 늪
+  - 수렁 거미 처치 28.0% · 신비의 늪
+  - 이끼 궁수 처치 28.0% · 신비의 늪
+  - 늪 저주술사 처치 28.0% · 신비의 늪
+  - 썩은 거한 처치 40.0% · 신비의 늪
+  - 늪지 잠복자 처치 28.0% · 신비의 늪
+  - 늪 밀렵꾼 처치 28.0% · 신비의 늪
+  - 늪 사냥꾼 처치 28.0% · 신비의 늪
+  - 이끼 골렘 처치 40.0% · 신비의 늪
+  - 늪의 공포 처치 40.0% · 신비의 늪
+  - 모래 미라 처치 28.0% · 버려진 메사
+  - 모래 전갈 처치 28.0% · 버려진 메사
+  - 폐허 도적 처치 28.0% · 버려진 메사
+  - 도적 저격수 처치 28.0% · 버려진 메사
+  - 태양 숭배자 처치 28.0% · 버려진 메사
+  - 유랑 해골 처치 28.0% · 버려진 메사
+  - 메사 골렘 처치 40.0% · 버려진 메사
+  - 저주받은 근위병 처치 28.0% · 버려진 메사
+  - 모래 폭풍 정령 처치 28.0% · 버려진 메사
+  - 사막 거수 처치 40.0% · 버려진 메사
+  - 포자 보행자 처치 28.0% · 버섯 숲
+  - 균사 거미 처치 28.0% · 버섯 숲
+  - 버섯갓 궁수 처치 28.0% · 버섯 숲
+  - 균류 연금술사 처치 28.0% · 버섯 숲
+  - 버섯 파수병 처치 28.0% · 버섯 숲
+  - 썩은 포복자 처치 28.0% · 버섯 숲
+  - 포자 떠돌이 처치 28.0% · 버섯 숲
+  - 버섯 골렘 처치 40.0% · 버섯 숲
+  - 균사 짐승 처치 40.0% · 버섯 숲
+  - 잿빛 망자 처치 28.0% · 네더 협곡
+  - 잿불 멧돼지 처치 40.0% · 네더 협곡
+  - 피글린 약탈자 처치 28.0% · 네더 협곡
+  - 영혼 궁수 처치 28.0% · 네더 협곡
+  - 블레이즈 파수꾼 처치 28.0% · 네더 협곡
+  - 피글린 선봉대 처치 28.0% · 네더 협곡
+  - 위더 약탈자 처치 28.0% · 네더 협곡
+  - 흑요석 골렘 처치 40.0% · 네더 협곡
+  - 지옥불 마녀 처치 28.0% · 네더 협곡
+  - 협곡 폭군 처치 40.0% · 네더 협곡
+  uses:
+  - 갈대 단검 제작
+  - 갈대 두건 제작
+  - 갈대 신발 제작
+  - 갈대 조끼 제작
+  - 갓 껍질 벨트 제작
+  - 갓 껍질 장화 제작
+  - 갓 껍질 철퇴 제작
+  - 갓 껍질 투구 제작
+  - 갓 껍질 흉갑 제작
+  - 관통의 룬 제작
+  - 균사 강철 대검 제작
+  - 균사 강철 장화 제작
+  - 균사 강철 투구 제작
+  - 균사 강철 흉갑 제작
+  - 늪안개 두건 제작
+  - 늪안개 로브 제작
+  - 늪안개 신발 제작
+  - 늪안개 지팡이 제작
+  - 맹그로브 대검 제작
+  - 맹그로브 장화 제작
+  - 맹그로브 투구 제작
+  - 맹그로브 흉갑 제작
+  - 모래바람 단검 제작
+  - 모래바람 두건 제작
+  - 모래바람 신발 제작
+  - 모래바람 조끼 제작
+  - 반딧불 두건 제작
+  - 반딧불 로브 제작
+  - 반딧불 막대 제작
+  - 반딧불 신발 제작
+  - 발광 균사 두건 제작
+  - 발광 균사 로브 제작
+  - 발광 균사 신발 제작
+  - 발광 균사 지팡이 제작
+  - 불멸의 룬 제작
+  - 붉은 사암 대도 제작
+  - 붉은 사암 장화 제작
+  - 붉은 사암 투구 제작
+  - 붉은 사암 흉갑 제작
+  - 사냥꾼의 강장제 양조
+  - 사암 판 벨트 제작
+  - 생명의 룬 제작
+  - 석영 룬 제작
+  - 석영 반지 제작
+  - 수렁 가죽 벨트 제작
+  - 수렁 진흙 장화 제작
+  - 수렁 진흙 철퇴 제작
+  - 수렁 진흙 투구 제작
+  - 수렁 진흙 흉갑 제작
+  - 수호의 룬 제작
+  - 신기루 두건 제작
+  - 신기루 로브 제작
+  - 신기루 신발 제작
+  - 신기루 홀 제작
+  - 에르베 기사단 갑옷 제작
+  - 에르베 실습용 장검 제작
+  - 영겁의 룬 제작
+  - 예리함의 룬 제작
+  - 유목민 허리띠 제작
+  - 은빛 포자 두건 제작
+  - 은빛 포자 로브 제작
+  - 은빛 포자 신발 제작
+  - 은빛 포자 홀 제작
+  - 이끼 엮음 띠 제작
+  - 질풍의 룬 제작
+  - 차원의 여행자 망토 제작
+  - 테라코타 망치 제작
+  - 테라코타 장화 제작
+  - 테라코타 투구 제작
+  - 테라코타 흉갑 제작
+  - 파멸의 룬 제작
+  - 파수꾼의 핵 지팡이 제작
+  - 포자바람 단검 제작
+  - 포자바람 두건 제작
+  - 포자바람 신발 제작
+  - 포자바람 조끼 제작
+  - 햇살 유리 두건 제작
+  - 햇살 유리 로브 제작
+  - 햇살 유리 신발 제작
+  - 햇살 유리 지팡이 제작
+  - 흐름의 룬 제작
+  - 흑요 사슬 벨트 제작
+- id: dragon_scale
+  name: 용의 비늘
+  category: 재료·기타
+  description:
+  - 전설적인 용의 비늘 조각.
+  - 전설 등급 장비 제작의 핵심 재료입니다.
+  icon_material: PRISMARINE_SHARD
+  sources:
+  - 시련의 탑 5층 보스 25% (구간마다)
+  uses:
+  - 에르베 실습용 장검 제작
+- id: shadow_crystal
+  name: 그림자 수정
+  category: 재료·기타
+  description:
+  - 어둠의 힘이 응축된 수정.
+  - 고급 장비 제작 및 인챈트에 사용됩니다.
+  icon_material: AMETHYST_SHARD
+  sources:
+  - 악몽의 망령 처치 3.0% · 개척지
+  - 철의 처형자 처치 5.0% · 개척지
+  - 정예 사수 처치 6.0% · 개척지
+  - 상급 마법사 처치 8.0% · 개척지
+  - 늪지 배회자 처치 5.0% · 개척지
+  - 동굴 추적자 처치 6.0% · 개척지
+  - 역병 좀비 (변이체) 처치 6.0% · 개척지
+  - 뼈 수호자 처치 7.0% · 개척지
+  - 늪지 마녀 처치 8.0% · 개척지
+  - 그림자 원령 처치 8.0% · 개척지
+  - 타락한 심판자 처치 10.0% · 개척지
+  - 독니 거미 처치 12.0% · 개척지
+  - 떠도는 원령 처치 3.0% · 요괴 계곡
+  - 오니 무사 처치 5.0% · 요괴 계곡
+  - 덴구 궁사 처치 6.0% · 요괴 계곡
+  - 늪 구울 처치 5.0% · 신비의 늪
+  - 수렁 거미 처치 5.0% · 신비의 늪
+  - 이끼 궁수 처치 5.0% · 신비의 늪
+  - 늪 저주술사 처치 5.0% · 신비의 늪
+  - 썩은 거한 처치 8.0% · 신비의 늪
+  - 늪지 잠복자 처치 5.0% · 신비의 늪
+  - 늪 밀렵꾼 처치 5.0% · 신비의 늪
+  - 늪 사냥꾼 처치 5.0% · 신비의 늪
+  - 이끼 골렘 처치 8.0% · 신비의 늪
+  - 늪의 공포 처치 8.0% · 신비의 늪
+  - 모래 미라 처치 5.0% · 버려진 메사
+  - 모래 전갈 처치 5.0% · 버려진 메사
+  - 폐허 도적 처치 5.0% · 버려진 메사
+  - 도적 저격수 처치 5.0% · 버려진 메사
+  - 태양 숭배자 처치 5.0% · 버려진 메사
+  - 유랑 해골 처치 5.0% · 버려진 메사
+  - 메사 골렘 처치 8.0% · 버려진 메사
+  - 저주받은 근위병 처치 5.0% · 버려진 메사
+  - 모래 폭풍 정령 처치 5.0% · 버려진 메사
+  - 사막 거수 처치 8.0% · 버려진 메사
+  - 포자 보행자 처치 5.0% · 버섯 숲
+  - 균사 거미 처치 5.0% · 버섯 숲
+  - 버섯갓 궁수 처치 5.0% · 버섯 숲
+  - 균류 연금술사 처치 5.0% · 버섯 숲
+  - 버섯 파수병 처치 5.0% · 버섯 숲
+  - 썩은 포복자 처치 5.0% · 버섯 숲
+  - 포자 떠돌이 처치 5.0% · 버섯 숲
+  - 버섯 골렘 처치 8.0% · 버섯 숲
+  - 균사 짐승 처치 8.0% · 버섯 숲
+  - 잿빛 망자 처치 5.0% · 네더 협곡
+  - 잿불 멧돼지 처치 8.0% · 네더 협곡
+  - 피글린 약탈자 처치 5.0% · 네더 협곡
+  - 영혼 궁수 처치 5.0% · 네더 협곡
+  - 블레이즈 파수꾼 처치 5.0% · 네더 협곡
+  - 피글린 선봉대 처치 5.0% · 네더 협곡
+  - 위더 약탈자 처치 5.0% · 네더 협곡
+  - 흑요석 골렘 처치 8.0% · 네더 협곡
+  - 지옥불 마녀 처치 5.0% · 네더 협곡
+  - 협곡 폭군 처치 8.0% · 네더 협곡
+  - 시련의 탑 3층 보스 35% (구간마다)
+  uses:
+  - ⚡ 체인 라이트닝 주문서 제작
+  - ✦ 불꽃 정령 소환 주문서 제작
+  - ✦ 서리 정령 소환 주문서 제작
+  - ✦ 신성한 방벽 주문서 제작
+  - ✦ 치유 정령 소환 주문서 제작
+  - ✧ 마나 폭발 주문서 제작
+  - ❄ 프로스트 노바 주문서 제작
+  - 차원의 여행자 망토 제작
+  - 🌀 게일 포스 주문서 제작
+  - 🌑 생명력 흡수 주문서 제작
+  - 🌿 재생 주문서 제작
+  - 🔥 플레임 버스트 주문서 제작
+- id: ancient_rune
+  name: 고대 룬
+  category: 재료·기타
+  description:
+  - 잊혀진 문명의 마법이 새겨진 돌.
+  - 영웅 등급 이상의 장비를 각성시킬 수 있습니다.
+  icon_material: ECHO_SHARD
+  sources:
+  - 시련의 탑 3층 보스 10% (구간마다)
+  - 시련의 탑 5층 보스 40% (구간마다)
+  uses:
+  - 파수꾼의 핵 지팡이 제작
+- id: phoenix_feather
+  name: 불사조의 깃털
+  category: 재료·기타
+  description:
+  - 불멸의 불사조에게서 떨어진 깃털.
+  - 전설 장비의 최종 한계돌파에 필수적입니다.
+  icon_material: FEATHER
+  sources:
+  - 시련의 탑 5층 보스 15% (구간마다)
+  uses:
+  - 에르베 기사단 갑옷 제작
+- id: lost_soul
+  name: 미혹된 넋
+  category: 재료·기타
+  description:
+  - 계곡을 떠도는 나그네·사무라이의 잔념.
+  - 벚나무 세트 제작에 사용됩니다.
+  icon_material: PHANTOM_MEMBRANE
+  sources:
+  - 미혹된 나그네 처치 18.0% · 요괴 계곡
+  - 저주받은 사무라이 처치 15.0% · 요괴 계곡
+  - 원혼 궁수 처치 15.0% · 요괴 계곡
+  - 상점 구매 22G
+  uses:
+  - ✦ 서리 정령 소환 주문서 제작
+  - ✦ 치유 정령 소환 주문서 제작
+  - 교감의 비약 양조
+  - 벚나무 각반 제작
+  - 벚나무 도 제작
+  - 벚나무 신발 제작
+  - 벚나무 투구 제작
+  - 벚나무 흉갑 제작
+  - 지혜의 비약 제작
+  - 활기의 비약 제작
+  - 힘의 비약 제작
+- id: foxfire_essence
+  name: 여우불 정수
+  category: 재료·기타
+  description:
+  - 신관과 무녀에게서 흘러나온 푸른 불꽃의 정수.
+  - 여우불 세트 제작에 사용됩니다.
+  icon_material: BLAZE_POWDER
+  sources:
+  - 타천 신관 처치 15.0% · 요괴 계곡
+  - 여우불 무녀 처치 15.0% · 요괴 계곡
+  - 상점 구매 22G
+  uses:
+  - ✦ 불꽃 정령 소환 주문서 제작
+  - 여우불 각반 제작
+  - 여우불 두건 제작
+  - 여우불 로브 제작
+  - 여우불 신발 제작
+  - 여우불 지팡이 제작
+  - 지혜의 비약 제작
+  - 집중의 비약 양조
+- id: cursed_moss
+  name: 저주받은 이끼
+  category: 재료·기타
+  description:
+  - 원혼이 서린 자리에서만 자라는 이끼.
+  - 이끼 세트 제작에 사용됩니다.
+  icon_material: WITHER_ROSE
+  sources:
+  - 안개 속 원혼 처치 15.0% · 요괴 계곡
+  - 떠도는 원령 처치 15.0% · 요괴 계곡
+  - 상점 구매 22G
+  uses:
+  - 결계의 비약 양조
+  - 수호의 비약 양조
+  - 이끼 각반 제작
+  - 이끼 갑옷 제작
+  - 이끼 두건 제작
+  - 이끼 몽둥이 제작
+  - 이끼 장화 제작
+  - 철벽의 비약 제작
+- id: jorogumo_thread
+  name: 죠로구모의 실
+  category: 재료·기타
+  description:
+  - 죠로구모와 낭인에게서 뽑아낸 질긴 실.
+  - 억새 세트 제작에 사용됩니다.
+  icon_material: COBWEB
+  sources:
+  - 독니 죠로구모 처치 15.0% · 요괴 계곡
+  - 타락한 낭인 처치 15.0% · 요괴 계곡
+  - 상점 구매 22G
+  uses:
+  - 억새 각반 제작
+  - 억새 경갑 제작
+  - 억새 두건 제작
+  - 억새 신발 제작
+  - 억새검 제작
+  - 연격의 비약 양조
+  - 정밀의 비약 양조
+  - 질풍의 비약 II 양조
+  - 질풍의 비약 제작
+- id: oni_sealstone
+  name: 오니의 봉인석
+  category: 재료·기타
+  description:
+  - 오니와 덴구를 봉인했던 돌 조각.
+  - 결계 세트 제작에 사용됩니다.
+  icon_material: MAGMA_CREAM
+  sources:
+  - 오니 무사 처치 15.0% · 요괴 계곡
+  - 덴구 궁사 처치 15.0% · 요괴 계곡
+  - 상점 구매 27G
+  uses:
+  - 결계의 각반 제작
+  - 결계의 로브 제작
+  - 결계의 부적 제작
+  - 결계의 신발 제작
+  - 결계의 지팡이 제작
+  - 힘의 비약 제작
+- id: sakura_blade
+  name: 벚나무 도
+  category: 장비 세트
+  set: 벚나무
+  stats:
+    힘: 11.2
+    민첩: 4.8
+  description:
+  - 계곡의 벚나무를 깎아 만든 목검에
+  - 강철 날을 덧댄 무기.
+  icon_material: IRON_SWORD
+  sources:
+  - 제작 — 철 주괴 ×12 + 벚나무 판자 ×6 + 미혹된 넋 ×2
+  uses: []
+- id: sakura_helmet
+  name: 벚나무 투구
+  category: 장비 세트
+  set: 벚나무
+  stats:
+    힘: 4.9
+    민첩: 2.1
+  icon_material: IRON_HELMET
+  sources:
+  - 제작 — 철 주괴 ×30 + 미혹된 넋 ×2
+  uses: []
+- id: sakura_chestplate
+  name: 벚나무 흉갑
+  category: 장비 세트
+  set: 벚나무
+  stats:
+    힘: 8.4
+    민첩: 3.6
+  description:
+  - 떨어진 꽃잎 무늬가 새겨진 갑옷.
+  icon_material: IRON_CHESTPLATE
+  sources:
+  - 제작 — 철 주괴 ×48 + 미혹된 넋 ×2
+  uses: []
+- id: sakura_leggings
+  name: 벚나무 각반
+  category: 장비 세트
+  set: 벚나무
+  stats:
+    힘: 6.3
+    민첩: 2.7
+  icon_material: IRON_LEGGINGS
+  sources:
+  - 제작 — 철 주괴 ×42 + 미혹된 넋 ×2
+  uses: []
+- id: sakura_boots
+  name: 벚나무 신발
+  category: 장비 세트
+  set: 벚나무
+  stats:
+    힘: 4.2
+    민첩: 1.8
+  icon_material: IRON_BOOTS
+  sources:
+  - 제작 — 철 주괴 ×24 + 미혹된 넋 ×2
+  uses: []
+- id: kitsunebi_wand
+  name: 여우불 지팡이
+  category: 장비 세트
+  set: 여우불
+  stats:
+    지능: 11.2
+    의지: 4.8
+  description:
+  - 계곡을 떠도는 푸른 여우불을 담아 봉인한 지팡이.
+  - 손에 쥐면 은은한 냉기가 흐릅니다.
+  icon_material: STICK
+  sources:
+  - 제작 — 발광석 가루 ×12 + 막대기 ×12 + 여우불 정수 ×2
+  uses: []
+- id: kitsunebi_hood
+  name: 여우불 두건
+  category: 장비 세트
+  set: 여우불
+  stats:
+    지능: 4.9
+    의지: 2.1
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 가죽 ×30 + 여우불 정수 ×2
+  uses: []
+- id: kitsunebi_robe
+  name: 여우불 로브
+  category: 장비 세트
+  set: 여우불
+  stats:
+    지능: 8.4
+    의지: 3.6
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 가죽 ×48 + 여우불 정수 ×2
+  uses: []
+- id: kitsunebi_leggings
+  name: 여우불 각반
+  category: 장비 세트
+  set: 여우불
+  stats:
+    지능: 6.3
+    의지: 2.7
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 가죽 ×42 + 여우불 정수 ×2
+  uses: []
+- id: kitsunebi_boots
+  name: 여우불 신발
+  category: 장비 세트
+  set: 여우불
+  stats:
+    지능: 4.2
+    의지: 1.8
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 가죽 ×24 + 여우불 정수 ×2
+  uses: []
+- id: moss_club
+  name: 이끼 몽둥이
+  category: 장비 세트
+  set: 이끼
+  stats:
+    활력: 4.2
+    의지: 1.8
+  description:
+  - 오래된 바위에 낀 이끼를 두른 몽둥이.
+  - 화려하진 않지만 버티는 데는 충분합니다.
+  icon_material: WOODEN_SWORD
+  sources:
+  - 제작 — 이끼 블록 ×12 + 막대기 ×6 + 저주받은 이끼 ×2
+  uses: []
+- id: moss_hood
+  name: 이끼 두건
+  category: 장비 세트
+  set: 이끼
+  stats:
+    활력: 6.3
+    의지: 2.7
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 가죽 ×24 + 이끼 블록 ×6 + 저주받은 이끼 ×2
+  uses: []
+- id: moss_armor
+  name: 이끼 갑옷
+  category: 장비 세트
+  set: 이끼
+  stats:
+    활력: 11.2
+    의지: 4.8
+  description:
+  - 계곡 바위의 이끼를 겹겹이 엮어 만든 갑옷.
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 가죽 ×36 + 이끼 블록 ×12 + 저주받은 이끼 ×2
+  uses: []
+- id: moss_leggings
+  name: 이끼 각반
+  category: 장비 세트
+  set: 이끼
+  stats:
+    활력: 8.4
+    의지: 3.6
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 가죽 ×36 + 이끼 블록 ×6 + 저주받은 이끼 ×2
+  uses: []
+- id: moss_boots
+  name: 이끼 장화
+  category: 장비 세트
+  set: 이끼
+  stats:
+    활력: 4.9
+    의지: 2.1
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 가죽 ×12 + 이끼 블록 ×12 + 저주받은 이끼 ×2
+  uses: []
+- id: susuki_blade
+  name: 억새검
+  category: 장비 세트
+  set: 억새
+  stats:
+    민첩: 11.2
+    힘: 4.8
+  description:
+  - 날카로운 억새 잎을 본떠 벼린 칼날.
+  - 가볍게 휘두르는 순간 급소를 노립니다.
+  icon_material: IRON_SWORD
+  sources:
+  - 제작 — 철 주괴 ×12 + 실 ×6 + 죠로구모의 실 ×2
+  uses: []
+- id: susuki_helmet
+  name: 억새 두건
+  category: 장비 세트
+  set: 억새
+  stats:
+    민첩: 4.9
+    힘: 2.1
+  icon_material: CHAINMAIL_HELMET
+  sources:
+  - 제작 — 실 ×30 + 죠로구모의 실 ×2
+  uses: []
+- id: susuki_chestplate
+  name: 억새 경갑
+  category: 장비 세트
+  set: 억새
+  stats:
+    민첩: 8.4
+    힘: 3.6
+  description:
+  - 바람에 눕는 억새처럼 몸놀림을 가볍게 합니다.
+  icon_material: CHAINMAIL_CHESTPLATE
+  sources:
+  - 제작 — 실 ×48 + 죠로구모의 실 ×2
+  uses: []
+- id: susuki_leggings
+  name: 억새 각반
+  category: 장비 세트
+  set: 억새
+  stats:
+    민첩: 6.3
+    힘: 2.7
+  icon_material: CHAINMAIL_LEGGINGS
+  sources:
+  - 제작 — 실 ×42 + 죠로구모의 실 ×2
+  uses: []
+- id: susuki_boots
+  name: 억새 신발
+  category: 장비 세트
+  set: 억새
+  stats:
+    민첩: 4.2
+    힘: 1.8
+  icon_material: CHAINMAIL_BOOTS
+  sources:
+  - 제작 — 실 ×24 + 죠로구모의 실 ×2
+  uses: []
+- id: kekkai_rod
+  name: 결계의 지팡이
+  category: 장비 세트
+  set: 결계
+  stats:
+    의지: 4.2
+    지능: 1.8
+  description:
+  - 계곡의 결계를 다스리던 무녀가 쓰던 지팡이.
+  icon_material: STICK
+  sources:
+  - 제작 — 종이 ×12 + 막대기 ×12 + 오니의 봉인석 ×2
+  uses: []
+- id: kekkai_helmet
+  name: 결계의 부적
+  category: 장비 세트
+  set: 결계
+  stats:
+    의지: 6.3
+    지능: 2.7
+  description:
+  - 거북 등딱지에 봉인된 오래된 결계.
+  icon_material: TURTLE_HELMET
+  sources:
+  - 제작 — 종이 ×30 + 오니의 봉인석 ×2
+  uses: []
+- id: kekkai_chestplate
+  name: 결계의 로브
+  category: 장비 세트
+  set: 결계
+  stats:
+    의지: 11.2
+    지능: 4.8
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 종이 ×48 + 오니의 봉인석 ×2
+  uses: []
+- id: kekkai_leggings
+  name: 결계의 각반
+  category: 장비 세트
+  set: 결계
+  stats:
+    의지: 8.4
+    지능: 3.6
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 종이 ×42 + 오니의 봉인석 ×2
+  uses: []
+- id: kekkai_boots
+  name: 결계의 신발
+  category: 장비 세트
+  set: 결계
+  stats:
+    의지: 4.9
+    지능: 2.1
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 종이 ×24 + 오니의 봉인석 ×2
+  uses: []
+- id: family_scythe
+  name: 낡은 가문용 낫
+  category: 무기·도구·장비
+  level_band: Lv.1~10
+  stats:
+    힘: 2.5
+  description:
+  - 대대로 전해 내려온 녹슨 낫.
+  - 농사에 적합하지만 무기로도 쓸 수 있습니다.
+  - 가문 전래 시리즈 (Lv.1~10)
+  - "특수: 농사 경험치 +10%"
+  icon_material: WOODEN_HOE
+  sources:
+  - 제작 — 참나무 판자 ×12 + 막대기 ×12
+  uses: []
+- id: pioneer_axe
+  name: 개척자의 나무 도끼
+  category: 무기·도구·장비
+  level_band: Lv.1~10
+  stats:
+    힘: 2.5
+  description:
+  - 개척 초기부터 사용되어 온 나무 도끼.
+  - 벌목 작업에 최적화되어 있습니다.
+  - 가문 전래 시리즈 (Lv.1~10)
+  - "특수: 벌목 경험치 +10%"
+  icon_material: WOODEN_AXE
+  sources:
+  - 제작 — 참나무 판자 ×18 + 막대기 ×12
+  uses: []
+- id: family_pickaxe
+  name: 녹슨 가문용 곡괭이
+  category: 무기·도구·장비
+  level_band: Lv.1~10
+  stats:
+    힘: 2.5
+  description:
+  - 가문 대대로 사용해온 곡괭이.
+  - 녹이 슬었지만 아직 쓸만합니다.
+  - 가문 전래 시리즈 (Lv.1~10)
+  - "특수: 채광 경험치 +10%"
+  icon_material: WOODEN_PICKAXE
+  sources:
+  - 제작 — 참나무 판자 ×18 + 막대기 ×12
+  uses: []
+- id: research_staff
+  name: 연구용 나무 지팡이
+  category: 무기·도구·장비
+  level_band: Lv.1~10
+  stats:
+    지능: 5.0
+    의지: 2.0
+  description:
+  - 마법 연구용으로 쓰이던 소박한 지팡이.
+  - 약하지만 마나를 끌어올리는 힘이 있습니다.
+  - 가문 전래 시리즈 (Lv.1~10)
+  icon_material: STICK
+  sources:
+  - 제작 — 참나무 판자 ×6 + 막대기 ×12
+  uses: []
+- id: family_pendant
+  name: 가문 문장 펜던트
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.1~10
+  stats:
+    활력: 5.0
+    의지: 2.0
+    이동 속도: 2.0
+  description:
+  - 가문의 문장이 새겨진 오래된 펜던트.
+  - 착용하면 심신이 안정됩니다.
+  - 가문 전래 시리즈 (Lv.1~10)
+  icon_material: GOLD_NUGGET
+  sources:
+  - 제작 — 금 조각 ×18
+  uses: []
+- id: twisted_axe
+  name: 뒤틀린 전투도끼
+  category: 장비 세트
+  set: 뒤틀린 강철
+  level_band: Lv.11~20
+  stats:
+    힘: 15.7
+    민첩: 6.7
+  description:
+  - 뒤틀린 철괴를 두들겨 벼린 육중한 도끼.
+  - 휘두를 때마다 뒤틀린 기운이 진동합니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_AXE
+  sources:
+  - 제작 — 철 주괴 ×12 + 뒤틀린 철 ×4
+  uses: []
+- id: twisted_steel_helmet
+  name: 뒤틀린 강철 투구
+  category: 장비 세트
+  set: 뒤틀린 강철
+  level_band: Lv.11~20
+  stats:
+    힘: 6.9
+    민첩: 2.9
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_HELMET
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 철 주괴 ×6
+  uses: []
+- id: twisted_steel_chestplate
+  name: 뒤틀린 강철 흉갑
+  category: 장비 세트
+  set: 뒤틀린 강철
+  level_band: Lv.11~20
+  stats:
+    힘: 11.8
+    민첩: 5.0
+  description:
+  - 일그러진 철판을 겹겹이 덧댄 흉갑.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 철 주괴 ×12
+  uses: []
+- id: twisted_steel_leggings
+  name: 뒤틀린 강철 각반
+  category: 장비 세트
+  set: 뒤틀린 강철
+  level_band: Lv.11~20
+  stats:
+    힘: 8.8
+    민첩: 3.8
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_LEGGINGS
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 철 주괴 ×6
+  uses: []
+- id: twisted_steel_boots
+  name: 뒤틀린 강철 신발
+  category: 장비 세트
+  set: 뒤틀린 강철
+  level_band: Lv.11~20
+  stats:
+    힘: 5.9
+    민첩: 2.5
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_BOOTS
+  sources:
+  - 제작 — 뒤틀린 철 ×4 + 철 주괴 ×12
+  uses: []
+- id: twisted_dagger
+  name: 뒤틀린 철 단검
+  category: 장비 세트
+  set: 뒤틀린 파편
+  level_band: Lv.11~20
+  stats:
+    민첩: 15.7
+    힘: 6.7
+  description:
+  - 뒤틀린 파편으로 벼린 단검.
+  - 불안정하지만 예리한 살기가 깃들어 있습니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  - "특수: 치명타 확률 +5%"
+  icon_material: IRON_SWORD
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 막대기 ×6
+  uses: []
+- id: twisted_shard_helmet
+  name: 뒤틀린 파편 두건
+  category: 장비 세트
+  set: 뒤틀린 파편
+  level_band: Lv.11~20
+  stats:
+    민첩: 6.9
+    힘: 2.9
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: CHAINMAIL_HELMET
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 실 ×6
+  uses: []
+- id: twisted_shard_chestplate
+  name: 뒤틀린 파편 경갑
+  category: 장비 세트
+  set: 뒤틀린 파편
+  level_band: Lv.11~20
+  stats:
+    민첩: 11.8
+    힘: 5.0
+  description:
+  - 날카로운 파편을 사슬에 엮어 짠 경갑.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: CHAINMAIL_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 실 ×12
+  uses: []
+- id: twisted_shard_leggings
+  name: 뒤틀린 파편 각반
+  category: 장비 세트
+  set: 뒤틀린 파편
+  level_band: Lv.11~20
+  stats:
+    민첩: 8.8
+    힘: 3.8
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: CHAINMAIL_LEGGINGS
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 실 ×6
+  uses: []
+- id: twisted_shard_boots
+  name: 뒤틀린 파편 신발
+  category: 장비 세트
+  set: 뒤틀린 파편
+  level_band: Lv.11~20
+  stats:
+    민첩: 5.9
+    힘: 2.5
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: CHAINMAIL_BOOTS
+  sources:
+  - 제작 — 뒤틀린 철 ×4 + 실 ×12
+  uses: []
+- id: unstable_magic_staff
+  name: 불안정한 마력 지팡이
+  category: 장비 세트
+  set: 불안정한 마력
+  level_band: Lv.11~20
+  stats:
+    지능: 15.7
+    의지: 6.7
+    쿨타임 감소: 3.0
+  description:
+  - 뒤틀린 마력이 깃든 지팡이.
+  - 강력하지만 제어가 어렵습니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: BLAZE_ROD
+  sources:
+  - 제작 — 뒤틀린 철 ×4 + 블레이즈 막대기 ×12
+  uses: []
+- id: unstable_mana_hood
+  name: 불안정한 마력 두건
+  category: 장비 세트
+  set: 불안정한 마력
+  level_band: Lv.11~20
+  stats:
+    지능: 6.9
+    의지: 2.9
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 발광석 가루 ×6
+  uses: []
+- id: unstable_mana_robe
+  name: 불안정한 마력 로브
+  category: 장비 세트
+  set: 불안정한 마력
+  level_band: Lv.11~20
+  stats:
+    지능: 11.8
+    의지: 5.0
+  description:
+  - 마력이 스며들어 자꾸 형태가 뒤틀리는 로브.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 발광석 가루 ×12
+  uses: []
+- id: unstable_mana_leggings
+  name: 불안정한 마력 각반
+  category: 장비 세트
+  set: 불안정한 마력
+  level_band: Lv.11~20
+  stats:
+    지능: 8.8
+    의지: 3.8
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 발광석 가루 ×6
+  uses: []
+- id: unstable_mana_boots
+  name: 불안정한 마력 신발
+  category: 장비 세트
+  set: 불안정한 마력
+  level_band: Lv.11~20
+  stats:
+    지능: 5.9
+    의지: 2.5
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 뒤틀린 철 ×4 + 발광석 가루 ×12
+  uses: []
+- id: ruin_explorer_pick
+  name: 폐허 탐사자의 곡괭이
+  category: 장비 세트
+  set: 뒤틀린 폐허
+  level_band: Lv.11~20
+  stats:
+    활력: 5.9
+    의지: 2.5
+  description:
+  - 무너진 폐허를 파헤치기 위해 개조한 곡괭이.
+  - 무기로 휘둘러도 제법 묵직합니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_PICKAXE
+  sources:
+  - 제작 — 조약돌 ×18 + 뒤틀린 철 ×4
+  uses: []
+- id: ruin_explorer_helmet
+  name: 폐허 탐사자의 투구
+  category: 장비 세트
+  set: 뒤틀린 폐허
+  level_band: Lv.11~20
+  stats:
+    활력: 8.8
+    의지: 3.8
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_HELMET
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 조약돌 ×6
+  uses: []
+- id: crude_iron_armor
+  name: 조잡한 철제 갑옷
+  category: 장비 세트
+  set: 뒤틀린 폐허
+  level_band: Lv.11~20
+  stats:
+    활력: 15.7
+    의지: 6.7
+  description:
+  - 뒤틀린 파편을 녹여 만든 갑옷.
+  - 투박하지만 든든합니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  - "특수: 넉백 저항 +5%"
+  icon_material: IRON_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 철 ×16
+  uses: []
+- id: ruin_explorer_leggings
+  name: 폐허 탐사자의 각반
+  category: 장비 세트
+  set: 뒤틀린 폐허
+  level_band: Lv.11~20
+  stats:
+    활력: 11.8
+    의지: 5.0
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_LEGGINGS
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 조약돌 ×6
+  uses: []
+- id: ruin_explorer_boots
+  name: 폐허 탐사자의 장화
+  category: 장비 세트
+  set: 뒤틀린 폐허
+  level_band: Lv.11~20
+  stats:
+    활력: 6.9
+    의지: 2.9
+    이동 속도: 8.0
+  description:
+  - 폐허를 누비기 위해 만들어진 빠른 장화.
+  - 가볍고 튼튼합니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: IRON_BOOTS
+  sources:
+  - 제작 — 뒤틀린 철 ×8
+  uses: []
+- id: twisted_seal_rod
+  name: 뒤틀린 봉인 지팡이
+  category: 장비 세트
+  set: 뒤틀린 봉인
+  level_band: Lv.11~20
+  stats:
+    의지: 5.9
+    지능: 2.5
+  description:
+  - 날뛰는 뒤틀린 기운을 억누르기 위해 깎은 지팡이.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: STICK
+  sources:
+  - 제작 — 종이 ×12 + 뒤틀린 철 ×4
+  uses: []
+- id: twisted_seal_hood
+  name: 뒤틀린 봉인 두건
+  category: 장비 세트
+  set: 뒤틀린 봉인
+  level_band: Lv.11~20
+  stats:
+    의지: 8.8
+    지능: 3.8
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 종이 ×6
+  uses: []
+- id: twisted_seal_robe
+  name: 뒤틀린 봉인 로브
+  category: 장비 세트
+  set: 뒤틀린 봉인
+  level_band: Lv.11~20
+  stats:
+    의지: 15.7
+    지능: 6.7
+  description:
+  - 봉인 부적을 겹겹이 덧댄 로브.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 종이 ×12
+  uses: []
+- id: twisted_seal_leggings
+  name: 뒤틀린 봉인 각반
+  category: 장비 세트
+  set: 뒤틀린 봉인
+  level_band: Lv.11~20
+  stats:
+    의지: 11.8
+    지능: 5.0
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 종이 ×6
+  uses: []
+- id: twisted_seal_boots
+  name: 뒤틀린 봉인 신발
+  category: 장비 세트
+  set: 뒤틀린 봉인
+  level_band: Lv.11~20
+  stats:
+    의지: 6.9
+    지능: 2.9
+  description:
+  - 뒤틀린 시리즈 (Lv.11~20)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 뒤틀린 철 ×4 + 종이 ×12
+  uses: []
+- id: twisted_vine_ring
+  name: 뒤틀린 덩굴 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.11~20
+  stats:
+    지능: 10.0
+    의지: 4.0
+  description:
+  - 뒤틀린 덩굴이 고리 형태로 굳은 반지.
+  - 마력이 서서히 스며듭니다.
+  - 뒤틀린 시리즈 (Lv.11~20)
+  - "특수: 마나 재생 +1"
+  icon_material: EMERALD
+  sources:
+  - 제작 — 뒤틀린 철 ×8 + 에메랄드 ×6
+  uses: []
+- id: tungsten_scythe
+  name: 강화된 텅스텐 낫
+  category: 무기·도구·장비
+  level_band: Lv.21~29
+  stats:
+    힘: 7.0
+    민첩: 3.0
+  description:
+  - 에르베 기술로 강화된 텅스텐 합금 낫.
+  - 농사와 전투 모두에 뛰어납니다.
+  - 개량된 개척자 시리즈 (Lv.21~29)
+  - "특수: 농사 시 낮은 확률로 작물 2배"
+  icon_material: DIAMOND_HOE
+  sources:
+  - 제작 — 다이아몬드 ×12 + 뒤틀린 철 ×4
+  uses: []
+- id: alloy_pickaxe
+  name: 정밀한 합금 곡괭이
+  category: 무기·도구·장비
+  level_band: Lv.21~29
+  stats:
+    힘: 7.0
+    민첩: 3.0
+  description:
+  - 에르베 합금 기술로 제작된 곡괭이.
+  - 채광 속도가 비약적으로 향상됩니다.
+  - 개량된 개척자 시리즈 (Lv.21~29)
+  - "특수: 채광 속도 +15%"
+  icon_material: DIAMOND_PICKAXE
+  sources:
+  - 제작 — 다이아몬드 ×18 + 뒤틀린 철 ×4
+  uses: []
+- id: pioneer_chestplate
+  name: 개량형 개척자 흉갑
+  category: 무기·도구·장비
+  level_band: Lv.21~29
+  stats:
+    활력: 14.0
+    의지: 6.0
+  description:
+  - 에르베 기술이 접목된 고성능 흉갑.
+  - 놀라운 방어력과 체력 보정을 제공합니다.
+  - 개량된 개척자 시리즈 (Lv.21~29)
+  - "특수: 물리 피해 감소 +3%"
+  icon_material: DIAMOND_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 철 ×12 + 다이아몬드 ×12
+  uses: []
+- id: lab_staff
+  name: 연구소 배급 지팡이
+  category: 무기·도구·장비
+  level_band: Lv.21~29
+  stats:
+    지능: 14.0
+    의지: 6.0
+  description:
+  - 에르베 연구소에서 지급하는 표준 지팡이.
+  - 안정적이고 강력한 마법 공격이 가능합니다.
+  - 개량된 개척자 시리즈 (Lv.21~29)
+  - "특수: 마법 관통력 +10"
+  icon_material: END_ROD
+  sources:
+  - 제작 — 다이아몬드 ×6 + 뒤틀린 철 ×4
+  uses: []
+- id: stabilized_belt
+  name: 안정화된 마력 벨트
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.21~29
+  stats:
+    활력: 10.0
+    지능: 10.0
+  description:
+  - 마력의 흐름을 안정화시키는 특수 벨트.
+  - 체력과 마나 모두를 균형 있게 보완합니다.
+  - 개량된 개척자 시리즈 (Lv.21~29)
+  - "특수: 뒤틀림 저항 +5"
+  icon_material: LEATHER
+  sources:
+  - 제작 — 가죽 ×6 + 뒤틀린 철 ×2
+  uses: []
+- id: erbe_longsword
+  name: 에르베 실습용 장검
+  category: 무기·도구·장비
+  stats:
+    힘: 22.0
+    민첩: 10.0
+  description:
+  - 에르베 기사단에서 지급하는 훈련용 장검.
+  - 실습용이라지만 일반 무기를 압도합니다.
+  - 에르베 관문 시리즈 (Lv.30)
+  - "특수: 최종 대미지 +5%"
+  icon_material: NETHERITE_SWORD
+  sources:
+  - 제작 — 용의 비늘 ×2 + 뒤틀린 다이아몬드 ×2 + 몬스터 정수 ×2
+  uses: []
+- id: guardian_core_staff
+  name: 파수꾼의 핵 지팡이
+  category: 무기·도구·장비
+  stats:
+    지능: 22.0
+    의지: 10.0
+  description:
+  - 에르베 관문 파수꾼의 핵으로 만든 지팡이.
+  - 엄청난 마법 위력을 자랑합니다.
+  - 에르베 관문 시리즈 (Lv.30)
+  - "특수: 마법 치명타 피해 +20%"
+  icon_material: END_ROD
+  sources:
+  - 제작 — 고대 룬 ×2 + 뒤틀린 다이아몬드 ×2 + 몬스터 정수 ×2
+  uses: []
+- id: erbe_knight_armor
+  name: 에르베 기사단 갑옷
+  category: 무기·도구·장비
+  stats:
+    활력: 22.0
+    의지: 10.0
+  description:
+  - 에르베 기사단의 상징.
+  - 극한의 방어력으로 주인을 보호합니다.
+  - 에르베 관문 시리즈 (Lv.30)
+  - "특수: 모든 피해 감소 +5%"
+  icon_material: NETHERITE_CHESTPLATE
+  sources:
+  - 제작 — 뒤틀린 다이아몬드 ×8 + 불사조의 깃털 ×4 + 몬스터 정수 ×4
+  uses: []
+- id: dimensional_cloak
+  name: 차원의 여행자 망토
+  category: 무기·도구·장비
+  stats:
+    활력: 20.0
+    의지: 12.0
+    이동 속도: 15.0
+  description:
+  - 차원의 틈새에서 건져 올린 신비로운 망토.
+  - 착용자의 생명력과 기동력을 극대화합니다.
+  - 에르베 관문 시리즈 (Lv.30)
+  icon_material: ELYTRA
+  sources:
+  - 제작 — 그림자 수정 ×2 + 뒤틀린 다이아몬드 ×2 + 몬스터 정수 ×2
+  uses: []
+- id: heal_potion_1
+  name: 하급 회복 물약
+  category: 소비 아이템
+  description:
+  - 상처를 아물게 하는 붉은 물약.
+  - "효과: 체력 20 + 최대 체력의 15% 회복"
+  - 재사용 12초 (회복 물약 공유)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.1) — 들풀 ×2 + 유리병 ×3
+  - 상점 구매 25G
+  uses: []
+- id: heal_potion_2
+  name: 중급 회복 물약
+  category: 소비 아이템
+  description:
+  - 진하게 달인 붉은 물약.
+  - "효과: 체력 40 + 최대 체력의 25% 회복"
+  - 재사용 12초 (회복 물약 공유)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.5) — 붉은 약초 ×2 + 들풀 ×2 + 유리병 ×3
+  - 상점 구매 90G
+  uses: []
+- id: heal_potion_3
+  name: 상급 회복 물약
+  category: 소비 아이템
+  description:
+  - 요괴의 정수를 녹인 검붉은 물약.
+  - "효과: 체력 80 + 최대 체력의 35% 회복"
+  - 재사용 12초 (회복 물약 공유)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.10) — 산삼 뿌리 ×2 + 붉은 약초 ×2 + 나무 수액 ×1 + 유리병 ×3
+  - 상점 구매 300G
+  uses: []
+- id: mana_potion_1
+  name: 하급 마나 물약
+  category: 소비 아이템
+  description:
+  - 맑은 푸른 물약.
+  - "효과: 마나 15 + 최대 마나의 15% 회복"
+  - 재사용 12초 (마나 물약 공유)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.1) — 들풀 ×2 + 청금석 ×1 + 유리병 ×3
+  - 상점 구매 25G
+  uses: []
+- id: mana_potion_2
+  name: 중급 마나 물약
+  category: 소비 아이템
+  description:
+  - 짙게 우려낸 푸른 물약.
+  - "효과: 마나 30 + 최대 마나의 25% 회복"
+  - 재사용 12초 (마나 물약 공유)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.5) — 붉은 약초 ×1 + 나무 수액 ×1 + 청금석 ×2 + 유리병 ×3
+  - 상점 구매 90G
+  uses: []
+- id: mana_potion_3
+  name: 상급 마나 물약
+  category: 소비 아이템
+  description:
+  - 여우불이 일렁이는 남색 물약.
+  - "효과: 마나 60 + 최대 마나의 35% 회복"
+  - 재사용 12초 (마나 물약 공유)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.10) — 산삼 뿌리 ×1 + 송진 ×2 + 청금석 ×3 + 유리병 ×3
+  - 상점 구매 300G
+  uses: []
+- id: elixir_strength
+  name: 힘의 비약
+  category: 소비 아이템
+  description:
+  - 오니의 봉인석을 갈아 넣은 비약.
+  - "효과: 물리 공격력 +10% (5분)"
+  - 다시 마시면 시간 갱신
+  icon_material: POTION
+  sources:
+  - 제작 — 오니의 봉인석 ×1 + 미혹된 넋 ×4 + 유리병 ×1 + 네더 사마귀 ×8
+  uses: []
+- id: elixir_wisdom
+  name: 지혜의 비약
+  category: 소비 아이템
+  description:
+  - 여우불의 정수가 녹아든 비약.
+  - "효과: 마법 공격력 +10% (5분)"
+  - 다시 마시면 시간 갱신
+  icon_material: POTION
+  sources:
+  - 제작 — 여우불 정수 ×2 + 미혹된 넋 ×4 + 유리병 ×1 + 사탕수수 ×8
+  uses: []
+- id: elixir_iron
+  name: 철벽의 비약
+  category: 소비 아이템
+  description:
+  - 저주받은 이끼로 굳힌 비약.
+  - "효과: 물리·마법 방어력 +15% (5분)"
+  - 다시 마시면 시간 갱신
+  icon_material: POTION
+  sources:
+  - 제작 — 저주받은 이끼 ×2 + 철 주괴 ×4 + 유리병 ×1 + 밀 ×8
+  uses: []
+- id: elixir_swift
+  name: 질풍의 비약
+  category: 소비 아이템
+  description:
+  - 죠로구모의 실처럼 가벼워지는 비약.
+  - "효과: 이동 속도 +10%, 치명타 확률 +5% (5분)"
+  - 다시 마시면 시간 갱신
+  icon_material: POTION
+  sources:
+  - 제작 — 죠로구모의 실 ×2 + 설탕 ×8 + 유리병 ×1 + 당근 ×8
+  uses: []
+- id: elixir_vigor
+  name: 활기의 비약
+  category: 소비 아이템
+  description:
+  - 몸 안의 기운을 돌게 하는 비약.
+  - "효과: 체력·마나 재생 +50% (5분)"
+  - 다시 마시면 시간 갱신
+  icon_material: POTION
+  sources:
+  - 제작 — 미혹된 넋 ×2 + 수박 조각 ×16 + 유리병 ×1 + 비트 ×8
+  uses: []
+- id: return_stone
+  name: 귀환석
+  category: 재료·기타
+  description:
+  - 사용하면 3초 후 마지막으로 방문한
+  - 마을로 귀환합니다.
+  - 이동하거나 피해를 받으면 취소됩니다.
+  icon_material: ENDER_PEARL
+  sources:
+  - 상점 구매 150G
+  uses: []
+- id: bog_resin
+  name: 늪지 수지
+  category: 재료·기타
+  level_band: Lv.16~25
+  description:
+  - 신비한 늪의 몹이 흘리는 끈적한 수지.
+  - 신비한 늪 (Lv.16~25)
+  icon_material: SLIME_BALL
+  sources:
+  - 늪 구울 처치 18.0% · 신비의 늪
+  - 수렁 거미 처치 18.0% · 신비의 늪
+  - 이끼 궁수 처치 18.0% · 신비의 늪
+  - 늪 저주술사 처치 18.0% · 신비의 늪
+  - 썩은 거한 처치 30.0% · 신비의 늪
+  - 늪지 잠복자 처치 18.0% · 신비의 늪
+  - 늪 밀렵꾼 처치 18.0% · 신비의 늪
+  - 늪 사냥꾼 처치 18.0% · 신비의 늪
+  - 이끼 골렘 처치 30.0% · 신비의 늪
+  - 늪의 공포 처치 30.0% · 신비의 늪
+  sell_price: 40
+  uses:
+  - ✦ 수호 정령 소환 주문서 제작
+  - 갈대 단검 제작
+  - 갈대 두건 제작
+  - 갈대 매듭 반지 제작
+  - 갈대 바지 제작
+  - 갈대 신발 제작
+  - 갈대 조끼 제작
+  - 늪뱀 반지 제작
+  - 늪안개 두건 제작
+  - 늪안개 로브 제작
+  - 늪안개 신발 제작
+  - 늪안개 지팡이 제작
+  - 늪안개 하의 제작
+  - 늪지 수호 목걸이 제작
+  - 맹그로브 각반 제작
+  - 맹그로브 대검 제작
+  - 맹그로브 장화 제작
+  - 맹그로브 투구 제작
+  - 맹그로브 흉갑 제작
+  - 맹독 송곳니 목걸이 제작
+  - 반딧불 두건 제작
+  - 반딧불 로브 제작
+  - 반딧불 막대 제작
+  - 반딧불 신발 제작
+  - 반딧불 하의 제작
+  - 생명의 룬 제작
+  - 수렁 가죽 벨트 제작
+  - 수렁 진흙 각반 제작
+  - 수렁 진흙 장화 제작
+  - 수렁 진흙 철퇴 제작
+  - 수렁 진흙 투구 제작
+  - 수렁 진흙 흉갑 제작
+  - 예리함의 룬 제작
+  - 이끼 엮음 띠 제작
+  - 자수정 반지 제작
+  - 지혜의 비약 II 양조
+  - 철벽의 비약 II 양조
+  - 흐름의 룬 제작
+  - 힘의 비약 II 양조
+- id: sunbaked_shard
+  name: 햇볕에 구운 파편
+  category: 재료·기타
+  level_band: Lv.26~35
+  description:
+  - 메사의 폐허에서 떨어져 나온 단단한 파편.
+  - 버려진 메사 (Lv.26~35)
+  icon_material: BRICK
+  sources:
+  - 모래 미라 처치 18.0% · 버려진 메사
+  - 모래 전갈 처치 18.0% · 버려진 메사
+  - 폐허 도적 처치 18.0% · 버려진 메사
+  - 도적 저격수 처치 18.0% · 버려진 메사
+  - 태양 숭배자 처치 18.0% · 버려진 메사
+  - 유랑 해골 처치 18.0% · 버려진 메사
+  - 메사 골렘 처치 30.0% · 버려진 메사
+  - 저주받은 근위병 처치 18.0% · 버려진 메사
+  - 모래 폭풍 정령 처치 18.0% · 버려진 메사
+  - 사막 거수 처치 30.0% · 버려진 메사
+  sell_price: 60
+  uses:
+  - 거인의 비약 양조
+  - 관통의 룬 제작
+  - 광폭의 비약 양조
+  - 모래바람 단검 제작
+  - 모래바람 두건 제작
+  - 모래바람 바지 제작
+  - 모래바람 신발 제작
+  - 모래바람 조끼 제작
+  - 붉은 사암 각반 제작
+  - 붉은 사암 대도 제작
+  - 붉은 사암 장화 제작
+  - 붉은 사암 투구 제작
+  - 붉은 사암 흉갑 제작
+  - 사막 전사의 목걸이 제작
+  - 사암 판 벨트 제작
+  - 석류석 반지 제작
+  - 수호의 룬 제작
+  - 신기루 두건 제작
+  - 신기루 로브 제작
+  - 신기루 목걸이 제작
+  - 신기루 신발 제작
+  - 신기루 하의 제작
+  - 신기루 홀 제작
+  - 유목민 허리띠 제작
+  - 질풍의 룬 제작
+  - 청옥 반지 제작
+  - 테라코타 각반 제작
+  - 테라코타 망치 제작
+  - 테라코타 인장 반지 제작
+  - 테라코타 장화 제작
+  - 테라코타 투구 제작
+  - 테라코타 흉갑 제작
+  - 햇살 유리 두건 제작
+  - 햇살 유리 로브 제작
+  - 햇살 유리 신발 제작
+  - 햇살 유리 지팡이 제작
+  - 햇살 유리 하의 제작
+  - 현자의 비약 양조
+- id: spore_cap
+  name: 포자 갓
+  category: 재료·기타
+  level_band: Lv.36~44
+  description:
+  - 은은하게 빛나는 거대 버섯의 갓 조각.
+  - 버섯 숲 (Lv.36~44)
+  icon_material: RED_MUSHROOM
+  sources:
+  - 포자 보행자 처치 18.0% · 버섯 숲
+  - 균사 거미 처치 18.0% · 버섯 숲
+  - 버섯갓 궁수 처치 18.0% · 버섯 숲
+  - 균류 연금술사 처치 18.0% · 버섯 숲
+  - 버섯 파수병 처치 18.0% · 버섯 숲
+  - 썩은 포복자 처치 18.0% · 버섯 숲
+  - 포자 떠돌이 처치 18.0% · 버섯 숲
+  - 버섯 골렘 처치 30.0% · 버섯 숲
+  - 균사 짐승 처치 30.0% · 버섯 숲
+  sell_price: 85
+  uses:
+  - 갓 껍질 각반 제작
+  - 갓 껍질 벨트 제작
+  - 갓 껍질 장화 제작
+  - 갓 껍질 철퇴 제작
+  - 갓 껍질 투구 제작
+  - 갓 껍질 흉갑 제작
+  - 균사 강철 각반 제작
+  - 균사 강철 대검 제작
+  - 균사 강철 장화 제작
+  - 균사 강철 투구 제작
+  - 균사 강철 흉갑 제작
+  - 대현자의 영약 양조
+  - 발광 균사 두건 제작
+  - 발광 균사 로브 제작
+  - 발광 균사 신발 제작
+  - 발광 균사 지팡이 제작
+  - 발광 균사 하의 제작
+  - 별빛 균사 목걸이 제작
+  - 별의 반지 제작
+  - 불멸의 룬 제작
+  - 영겁의 룬 제작
+  - 은빛 포자 두건 제작
+  - 은빛 포자 로브 제작
+  - 은빛 포자 신발 제작
+  - 은빛 포자 하의 제작
+  - 은빛 포자 홀 제작
+  - 진홍 균사 반지 제작
+  - 파멸의 룬 제작
+  - 포자 군주의 목걸이 제작
+  - 포자바람 단검 제작
+  - 포자바람 두건 제작
+  - 포자바람 바지 제작
+  - 포자바람 신발 제작
+  - 포자바람 조끼 제작
+  - 흑요 사슬 벨트 제작
+  - 흑요핵 반지 제작
+- id: hellforge_ember
+  name: 지옥불 잉걸
+  category: 재료·기타
+  level_band: Lv.45~54
+  description:
+  - 식지 않는 네더 협곡의 불씨.
+  - 네더 협곡 (Lv.45~54)
+  icon_material: BLAZE_POWDER
+  sources:
+  - 잿빛 망자 처치 18.0% · 네더 협곡
+  - 잿불 멧돼지 처치 30.0% · 네더 협곡
+  - 피글린 약탈자 처치 18.0% · 네더 협곡
+  - 영혼 궁수 처치 18.0% · 네더 협곡
+  - 블레이즈 파수꾼 처치 18.0% · 네더 협곡
+  - 피글린 선봉대 처치 18.0% · 네더 협곡
+  - 위더 약탈자 처치 18.0% · 네더 협곡
+  - 흑요석 골렘 처치 30.0% · 네더 협곡
+  - 지옥불 마녀 처치 18.0% · 네더 협곡
+  - 협곡 폭군 처치 30.0% · 네더 협곡
+  sell_price: 120
+  uses: []
+- id: mangrove_greatsword
+  name: 맹그로브 대검
+  category: 장비 세트
+  set: 맹그로브
+  level_band: Lv.16~25
+  stats:
+    힘: 22.4
+    민첩: 9.6
+  description:
+  - 물에 잠긴 맹그로브 뿌리처럼
+  - 휘어 감기는 무거운 대검.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: DIAMOND_SWORD
+  sources:
+  - 제작 — 철 주괴 ×16 + 몬스터 정수 ×4 + 늪지 수지 ×6 + 뒤틀린 철 ×3
+  uses: []
+- id: mangrove_helmet
+  name: 맹그로브 투구
+  category: 장비 세트
+  set: 맹그로브
+  level_band: Lv.16~25
+  stats:
+    힘: 9.8
+    민첩: 4.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: DIAMOND_HELMET
+  sources:
+  - 제작 — 철 주괴 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4 + 뒤틀린 철 ×1
+  uses: []
+- id: mangrove_chestplate
+  name: 맹그로브 흉갑
+  category: 장비 세트
+  set: 맹그로브
+  level_band: Lv.16~25
+  stats:
+    힘: 16.8
+    민첩: 7.2
+  description:
+  - 뿌리를 엮어 굳힌 갑옷.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: DIAMOND_CHESTPLATE
+  sources:
+  - 제작 — 철 주괴 ×16 + 몬스터 정수 ×3 + 늪지 수지 ×8 + 뒤틀린 철 ×2
+  uses: []
+- id: mangrove_leggings
+  name: 맹그로브 각반
+  category: 장비 세트
+  set: 맹그로브
+  level_band: Lv.16~25
+  stats:
+    힘: 12.6
+    민첩: 5.4
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: DIAMOND_LEGGINGS
+  sources:
+  - 제작 — 철 주괴 ×32 + 늪지 수지 ×6 + 뒤틀린 철 ×2
+  uses: []
+- id: mangrove_boots
+  name: 맹그로브 장화
+  category: 장비 세트
+  set: 맹그로브
+  level_band: Lv.16~25
+  stats:
+    힘: 8.4
+    민첩: 3.6
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: DIAMOND_BOOTS
+  sources:
+  - 제작 — 철 주괴 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4
+  uses: []
+- id: reed_dagger
+  name: 갈대 단검
+  category: 장비 세트
+  set: 갈대
+  level_band: Lv.16~25
+  stats:
+    민첩: 22.4
+    힘: 9.6
+  description:
+  - 바람에 눕는 갈대처럼 가볍고
+  - 빠른 단검.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: DIAMOND_SWORD
+  sources:
+  - 제작 — 실 ×16 + 몬스터 정수 ×4 + 늪지 수지 ×6 + 뒤틀린 철 ×3
+  uses: []
+- id: reed_helmet
+  name: 갈대 두건
+  category: 장비 세트
+  set: 갈대
+  level_band: Lv.16~25
+  stats:
+    민첩: 9.8
+    힘: 4.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: CHAINMAIL_HELMET
+  sources:
+  - 제작 — 실 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4 + 뒤틀린 철 ×1
+  uses: []
+- id: reed_chestplate
+  name: 갈대 조끼
+  category: 장비 세트
+  set: 갈대
+  level_band: Lv.16~25
+  stats:
+    민첩: 16.8
+    힘: 7.2
+  description:
+  - 갈대를 촘촘히 엮은 사슬 조끼.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: CHAINMAIL_CHESTPLATE
+  sources:
+  - 제작 — 실 ×16 + 몬스터 정수 ×3 + 늪지 수지 ×8 + 뒤틀린 철 ×2
+  uses: []
+- id: reed_leggings
+  name: 갈대 바지
+  category: 장비 세트
+  set: 갈대
+  level_band: Lv.16~25
+  stats:
+    민첩: 12.6
+    힘: 5.4
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: CHAINMAIL_LEGGINGS
+  sources:
+  - 제작 — 실 ×32 + 늪지 수지 ×6 + 뒤틀린 철 ×2
+  uses: []
+- id: reed_boots
+  name: 갈대 신발
+  category: 장비 세트
+  set: 갈대
+  level_band: Lv.16~25
+  stats:
+    민첩: 8.4
+    힘: 3.6
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: CHAINMAIL_BOOTS
+  sources:
+  - 제작 — 실 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4
+  uses: []
+- id: bog_mist_staff
+  name: 늪안개 지팡이
+  category: 장비 세트
+  set: 늪안개
+  level_band: Lv.16~25
+  stats:
+    지능: 22.4
+    의지: 9.6
+  description:
+  - 끝에서 옅은 안개가 피어오르는 지팡이.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: BLAZE_ROD
+  sources:
+  - 제작 — 청금석 ×16 + 몬스터 정수 ×4 + 늪지 수지 ×6 + 뒤틀린 철 ×3
+  uses: []
+- id: bog_mist_helmet
+  name: 늪안개 두건
+  category: 장비 세트
+  set: 늪안개
+  level_band: Lv.16~25
+  stats:
+    지능: 9.8
+    의지: 4.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 청금석 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4 + 뒤틀린 철 ×1
+  uses: []
+- id: bog_mist_chestplate
+  name: 늪안개 로브
+  category: 장비 세트
+  set: 늪안개
+  level_band: Lv.16~25
+  stats:
+    지능: 16.8
+    의지: 7.2
+  description:
+  - 늪의 안개를 머금은 로브.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 청금석 ×16 + 몬스터 정수 ×3 + 늪지 수지 ×8 + 뒤틀린 철 ×2
+  uses: []
+- id: bog_mist_leggings
+  name: 늪안개 하의
+  category: 장비 세트
+  set: 늪안개
+  level_band: Lv.16~25
+  stats:
+    지능: 12.6
+    의지: 5.4
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 청금석 ×32 + 늪지 수지 ×6 + 뒤틀린 철 ×2
+  uses: []
+- id: bog_mist_boots
+  name: 늪안개 신발
+  category: 장비 세트
+  set: 늪안개
+  level_band: Lv.16~25
+  stats:
+    지능: 8.4
+    의지: 3.6
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 청금석 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4
+  uses: []
+- id: mire_mace
+  name: 수렁 진흙 철퇴
+  category: 장비 세트
+  set: 수렁 진흙
+  level_band: Lv.16~25
+  stats:
+    활력: 8.4
+    의지: 3.6
+  description:
+  - 진흙이 굳어 바위처럼 단단해진 철퇴.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: MACE
+  sources:
+  - 제작 — 흙 ×16 + 몬스터 정수 ×4 + 늪지 수지 ×6 + 뒤틀린 철 ×3
+  uses: []
+- id: mire_mud_helmet
+  name: 수렁 진흙 투구
+  category: 장비 세트
+  set: 수렁 진흙
+  level_band: Lv.16~25
+  stats:
+    활력: 12.6
+    의지: 5.4
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: IRON_HELMET
+  sources:
+  - 제작 — 흙 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4 + 뒤틀린 철 ×1
+  uses: []
+- id: mire_mud_chestplate
+  name: 수렁 진흙 흉갑
+  category: 장비 세트
+  set: 수렁 진흙
+  level_band: Lv.16~25
+  stats:
+    활력: 22.4
+    의지: 9.6
+  description:
+  - 두꺼운 진흙층이 충격을 흡수한다.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: IRON_CHESTPLATE
+  sources:
+  - 제작 — 흙 ×16 + 몬스터 정수 ×3 + 늪지 수지 ×8 + 뒤틀린 철 ×2
+  uses: []
+- id: mire_mud_leggings
+  name: 수렁 진흙 각반
+  category: 장비 세트
+  set: 수렁 진흙
+  level_band: Lv.16~25
+  stats:
+    활력: 16.8
+    의지: 7.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: IRON_LEGGINGS
+  sources:
+  - 제작 — 흙 ×32 + 늪지 수지 ×6 + 뒤틀린 철 ×2
+  uses: []
+- id: mire_mud_boots
+  name: 수렁 진흙 장화
+  category: 장비 세트
+  set: 수렁 진흙
+  level_band: Lv.16~25
+  stats:
+    활력: 9.8
+    의지: 4.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: IRON_BOOTS
+  sources:
+  - 제작 — 흙 ×16 + 몬스터 정수 ×2 + 늪지 수지 ×4
+  uses: []
+- id: firefly_rod
+  name: 반딧불 막대
+  category: 장비 세트
+  set: 반딧불
+  level_band: Lv.16~25
+  stats:
+    의지: 8.4
+    지능: 3.6
+  description:
+  - 반딧불이 맴도는 가느다란 막대.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: STICK
+  sources:
+  - 제작 — 발광석 ×4 + 몬스터 정수 ×4 + 늪지 수지 ×6 + 뒤틀린 철 ×3
+  uses: []
+- id: firefly_helmet
+  name: 반딧불 두건
+  category: 장비 세트
+  set: 반딧불
+  level_band: Lv.16~25
+  stats:
+    의지: 12.6
+    지능: 5.4
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 발광석 ×4 + 몬스터 정수 ×2 + 늪지 수지 ×4 + 뒤틀린 철 ×1
+  uses: []
+- id: firefly_chestplate
+  name: 반딧불 로브
+  category: 장비 세트
+  set: 반딧불
+  level_band: Lv.16~25
+  stats:
+    의지: 22.4
+    지능: 9.6
+  description:
+  - 밤의 늪을 밝히는 빛이 스며든 로브.
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 발광석 ×4 + 몬스터 정수 ×3 + 늪지 수지 ×8 + 뒤틀린 철 ×2
+  uses: []
+- id: firefly_leggings
+  name: 반딧불 하의
+  category: 장비 세트
+  set: 반딧불
+  level_band: Lv.16~25
+  stats:
+    의지: 16.8
+    지능: 7.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 발광석 ×8 + 늪지 수지 ×6 + 뒤틀린 철 ×2
+  uses: []
+- id: firefly_boots
+  name: 반딧불 신발
+  category: 장비 세트
+  set: 반딧불
+  level_band: Lv.16~25
+  stats:
+    의지: 9.8
+    지능: 4.2
+  description:
+  - 늪 시리즈 (Lv.16~25)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 발광석 ×4 + 몬스터 정수 ×2 + 늪지 수지 ×4
+  uses: []
+- id: wild_herb_seed
+  name: 들풀 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 들풀이(가) 자란다.
+  - 농사 Lv.1부터 심을 수 있음
+  icon_material: WHEAT_SEEDS
+  sources:
+  - 상점 구매 15G
+  uses: []
+- id: wild_herb
+  name: 들풀
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.1)
+  icon_material: FERN
+  sources:
+  - 섬 약초 수확 (농사 Lv.1)
+  sell_price: 2
+  uses:
+  - 깃털 물약 양조
+  - 농부의 강장제 양조
+  - 올빼미 물약 양조
+  - 조화의 물약 양조
+  - 중급 회복 물약 양조
+  - 하급 마나 물약 양조
+  - 하급 회복 물약 양조
+- id: red_herb_seed
+  name: 붉은 약초 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 붉은 약초이(가) 자란다.
+  - 농사 Lv.5부터 심을 수 있음
+  icon_material: BEETROOT_SEEDS
+  sources:
+  - 상점 구매 30G
+  uses: []
+- id: red_herb
+  name: 붉은 약초
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.5)
+  icon_material: RED_TULIP
+  sources:
+  - 섬 약초 수확 (농사 Lv.5)
+  sell_price: 3
+  uses:
+  - 광부의 강장제 양조
+  - 나무꾼의 강장제 양조
+  - 상급 회복 물약 양조
+  - 아가미 물약 양조
+  - 조화의 물약 양조
+  - 중급 마나 물약 양조
+  - 중급 회복 물약 양조
+  - 질풍의 비약 II 양조
+- id: ginseng_root_seed
+  name: 산삼 뿌리 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 산삼 뿌리이(가) 자란다.
+  - 농사 Lv.10부터 심을 수 있음
+  icon_material: CARROT
+  sources:
+  - 상점 구매 60G
+  uses: []
+- id: ginseng_root
+  name: 산삼 뿌리
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.10)
+  icon_material: GOLDEN_CARROT
+  sources:
+  - 섬 약초 수확 (농사 Lv.10)
+  sell_price: 4
+  uses:
+  - ✦ 신성한 방벽 주문서 제작
+  - ✦ 치유 정령 소환 주문서 제작
+  - 사냥꾼의 강장제 양조
+  - 상급 마나 물약 양조
+  - 상급 조화의 물약 양조
+  - 상급 회복 물약 양조
+  - 수호의 비약 양조
+  - 철벽의 비약 II 양조
+  - 최상급 회복 물약 양조
+  - 학자의 강장제 양조
+  - 활기의 비약 II 양조
+- id: fire_shroom_seed
+  name: 화염 버섯 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 화염 버섯이(가) 자란다.
+  - 농사 Lv.15부터 심을 수 있음
+  icon_material: NETHER_WART
+  sources:
+  - 상점 구매 100G
+  uses: []
+- id: fire_shroom
+  name: 화염 버섯
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.15)
+  icon_material: CRIMSON_FUNGUS
+  sources:
+  - 섬 약초 수확 (농사 Lv.15)
+  sell_price: 5
+  uses:
+  - ✦ 불꽃 정령 소환 주문서 제작
+  - 관통의 비약 양조
+  - 광폭의 비약 양조
+  - 사냥꾼의 비약 양조
+  - 정밀의 비약 양조
+  - 화염 저항 물약 양조
+  - 힘의 비약 II 양조
+  - 🔥 플레임 버스트 주문서 제작
+- id: moonflower_seed
+  name: 달빛 꽃 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 달빛 꽃이(가) 자란다.
+  - 농사 Lv.20부터 심을 수 있음
+  icon_material: POTATO
+  sources:
+  - 상점 구매 150G
+  uses: []
+- id: moonflower
+  name: 달빛 꽃
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.20)
+  icon_material: TORCHFLOWER
+  sources:
+  - 섬 약초 수확 (농사 Lv.20)
+  sell_price: 7
+  uses:
+  - ✦ 천벌 주문서 제작
+  - 결계의 비약 양조
+  - 교감의 비약 양조
+  - 상급 조화의 물약 양조
+  - 지혜의 비약 II 양조
+  - 집중의 비약 양조
+  - 최상급 마나 물약 양조
+  - 학자의 강장제 양조
+- id: frost_lily_seed
+  name: 서리 백합 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 서리 백합이(가) 자란다.
+  - 농사 Lv.25부터 심을 수 있음
+  icon_material: WHEAT_SEEDS
+  sources:
+  - 상점 구매 220G
+  uses: []
+- id: frost_lily
+  name: 서리 백합
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.25)
+  icon_material: LILY_OF_THE_VALLEY
+  sources:
+  - 섬 약초 수확 (농사 Lv.25)
+  sell_price: 8
+  uses:
+  - ❄ 블리자드 주문서 제작
+  - 연격의 비약 양조
+  - 최상급 마나 물약 양조
+  - 현자의 비약 양조
+- id: star_root_seed
+  name: 별 인삼 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 별 인삼이(가) 자란다.
+  - 농사 Lv.30부터 심을 수 있음
+  icon_material: CARROT
+  sources:
+  - 상점 구매 300G
+  uses: []
+- id: star_root
+  name: 별 인삼
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.30)
+  icon_material: GLOW_BERRIES
+  sources:
+  - 섬 약초 수확 (농사 Lv.30)
+  sell_price: 11
+  uses:
+  - ⚡ 선더볼트 주문서 제작
+  - ✦ 폭풍 정령 소환 주문서 제작
+  - 거인의 비약 양조
+  - 사냥꾼의 비약 양조
+  - 최상급 회복 물약 양조
+- id: void_bloom_seed
+  name: 공허 꽃 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 공허 꽃이(가) 자란다.
+  - 농사 Lv.35부터 심을 수 있음
+  icon_material: BEETROOT_SEEDS
+  sources:
+  - 상점 구매 400G
+  uses: []
+- id: void_bloom
+  name: 공허 꽃
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.35)
+  icon_material: WITHER_ROSE
+  sources:
+  - 섬 약초 수확 (농사 Lv.35)
+  sell_price: 14
+  uses:
+  - ✦ 그림자 늑대 무리 주문서 제작
+  - 대현자의 영약 양조
+  - 장인의 영약 양조
+  - 💀 공허 폭발 주문서 제작
+- id: dragon_pepper_seed
+  name: 용 고추 씨앗
+  category: 재료·기타
+  description:
+  - 심으면 용 고추이(가) 자란다.
+  - 농사 Lv.40부터 심을 수 있음
+  icon_material: NETHER_WART
+  sources:
+  - 상점 구매 520G
+  uses: []
+- id: dragon_pepper
+  name: 용 고추
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 섬 약초 (농사 Lv.40)
+  icon_material: RED_DYE
+  sources:
+  - 섬 약초 수확 (농사 Lv.40)
+  sell_price: 17
+  uses:
+  - ☄ 메테오 스트라이크 주문서 제작
+  - 대현자의 영약 양조
+  - 장인의 영약 양조
+- id: tree_sap
+  name: 나무 수액
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.0)
+  icon_material: HONEYCOMB
+  sources:
+  - 참나무 원목 벌목 (20%)
+  - 자작나무 원목 벌목 (25%)
+  sell_price: 4
+  uses:
+  - 나무꾼의 강장제 양조
+  - 상급 회복 물약 양조
+  - 조화의 물약 양조
+  - 중급 마나 물약 양조
+  - 질풍의 비약 II 양조
+  - 학자의 강장제 양조
+  - 활기의 비약 II 양조
+- id: pine_resin
+  name: 송진
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.6)
+  icon_material: ORANGE_DYE
+  sources:
+  - 가문비나무 원목 벌목 (25%)
+  sell_price: 7
+  uses:
+  - 상급 마나 물약 양조
+  - 정밀의 비약 양조
+  - 화염 저항 물약 양조
+  - 🌀 게일 포스 주문서 제작
+- id: jungle_nectar
+  name: 정글 꿀
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.10)
+  icon_material: GLOW_INK_SAC
+  sources:
+  - 정글나무 원목 벌목 (25%)
+  sell_price: 10
+  uses:
+  - 늪지 수호 목걸이 제작
+  - 맹독 송곳니 목걸이 제작
+  - 상급 조화의 물약 양조
+  - 수렁 가죽 벨트 제작
+  - 이끼 엮음 띠 제작
+  - 지혜의 비약 II 양조
+  - 집중의 비약 양조
+  - 🌿 재생 주문서 제작
+- id: acacia_bark
+  name: 아카시아 껍질
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.14)
+  icon_material: BROWN_DYE
+  sources:
+  - 아카시아나무 원목 벌목 (25%)
+  sell_price: 13
+  uses:
+  - 관통의 비약 양조
+  - 철벽의 비약 II 양조
+  - 힘의 비약 II 양조
+- id: dark_sap
+  name: 검은 수액
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.18)
+  icon_material: INK_SAC
+  sources:
+  - 짙은 참나무 원목 벌목 (25%)
+  sell_price: 16
+  uses:
+  - ✦ 그림자 늑대 무리 주문서 제작
+  - 결계의 비약 양조
+  - 광폭의 비약 양조
+  - 수호의 비약 양조
+  - 최상급 마나 물약 양조
+  - 🌑 생명력 흡수 주문서 제작
+- id: cherry_nectar
+  name: 벚꽃 꿀
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.22)
+  icon_material: PINK_DYE
+  sources:
+  - 벚나무 원목 벌목 (25%)
+  sell_price: 20
+  uses:
+  - 교감의 비약 양조
+  - 사막 전사의 목걸이 제작
+  - 사암 판 벨트 제작
+  - 신기루 목걸이 제작
+  - 연격의 비약 양조
+  - 유목민 허리띠 제작
+  - 최상급 회복 물약 양조
+  - 현자의 비약 양조
+  - 🌿 속박 주문서 제작
+- id: mangrove_extract
+  name: 맹그로브 진액
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.26)
+  icon_material: GREEN_DYE
+  sources:
+  - 맹그로브나무 원목 벌목 (25%)
+  sell_price: 25
+  uses:
+  - 거인의 비약 양조
+  - 사냥꾼의 비약 양조
+  - 🌀 토네이도 주문서 제작
+- id: pale_moss
+  name: 창백한 이끼
+  category: 재료·기타
+  description:
+  - 양조기 재료.
+  - 자연산 나무를 베면 가끔 나온다 (벌목 Lv.30)
+  icon_material: LIGHT_GRAY_DYE
+  sources:
+  - 창백한 참나무 원목 벌목 (25%)
+  sell_price: 30
+  uses:
+  - 대현자의 영약 양조
+  - 장인의 영약 양조
+- id: heal_potion_4
+  name: 최상급 회복 물약
+  category: 소비 아이템
+  description:
+  - 별 인삼으로 달인 짙은 물약.
+  - "효과: 체력 150 + 최대 체력의 45% 회복"
+  - 재사용 12초 (회복 물약 공유)
+  - 양조기 (농사 Lv.30)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.30) — 별 인삼 ×2 + 산삼 뿌리 ×2 + 벚꽃 꿀 ×1 + 유리병 ×3
+  uses: []
+- id: mana_potion_4
+  name: 최상급 마나 물약
+  category: 소비 아이템
+  description:
+  - 서리 백합이 녹아든 남빛 물약.
+  - "효과: 마나 100 + 최대 마나의 45% 회복"
+  - 재사용 12초 (마나 물약 공유)
+  - 양조기 (농사 Lv.30)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.30) — 서리 백합 ×2 + 달빛 꽃 ×2 + 검은 수액 ×1 + 유리병 ×3
+  uses: []
+- id: hybrid_potion_1
+  name: 조화의 물약
+  category: 소비 아이템
+  description:
+  - 체력과 마나를 함께 채운다.
+  - "효과: 체력 30 + 최대 체력의 15% 회복"
+  - "효과: 마나 20 + 최대 마나의 15% 회복"
+  - 재사용 15초 (조화의 물약 공유)
+  - 양조기 (농사 Lv.8)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.8) — 들풀 ×2 + 붉은 약초 ×1 + 나무 수액 ×1 + 유리병 ×3
+  uses: []
+- id: hybrid_potion_2
+  name: 상급 조화의 물약
+  category: 소비 아이템
+  description:
+  - 체력과 마나를 함께 크게 채운다.
+  - "효과: 체력 60 + 최대 체력의 25% 회복"
+  - "효과: 마나 40 + 최대 마나의 25% 회복"
+  - 재사용 15초 (조화의 물약 공유)
+  - 양조기 (농사 Lv.20)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.20) — 산삼 뿌리 ×2 + 달빛 꽃 ×1 + 정글 꿀 ×1 + 유리병 ×3
+  uses: []
+- id: elixir_strength_2
+  name: 힘의 비약 II
+  category: 소비 아이템
+  description:
+  - 늪지 수지로 효과를 붙잡은 비약.
+  - "효과: 물리 공격력 +18% (8분)"
+  - 같은 계열 비약은 덮어씀(시간 갱신)
+  - 양조기 (농사 Lv.15)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.15) — 화염 버섯 ×2 + 늪지 수지 ×2 + 아카시아 껍질 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_wisdom_2
+  name: 지혜의 비약 II
+  category: 소비 아이템
+  description:
+  - 달빛 꽃의 기운이 머리를 맑게 한다.
+  - "효과: 마법 공격력 +18% (8분)"
+  - 같은 계열 비약은 덮어씀(시간 갱신)
+  - 양조기 (농사 Lv.20)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.20) — 달빛 꽃 ×2 + 늪지 수지 ×2 + 정글 꿀 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_iron_2
+  name: 철벽의 비약 II
+  category: 소비 아이템
+  description:
+  - 살갗이 나무껍질처럼 단단해진다.
+  - "효과: 물리 방어력 +25%, 마법 방어력 +25% (8분)"
+  - 같은 계열 비약은 덮어씀(시간 갱신)
+  - 양조기 (농사 Lv.15)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.15) — 산삼 뿌리 ×2 + 늪지 수지 ×2 + 아카시아 껍질 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_swift_2
+  name: 질풍의 비약 II
+  category: 소비 아이템
+  description:
+  - 발걸음이 바람처럼 가벼워진다.
+  - "효과: 이동 속도 +15%, 치명타 확률 +8% (8분)"
+  - 같은 계열 비약은 덮어씀(시간 갱신)
+  - 양조기 (농사 Lv.12)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.12) — 붉은 약초 ×3 + 죠로구모의 실 ×2 + 나무 수액 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_vigor_2
+  name: 활기의 비약 II
+  category: 소비 아이템
+  description:
+  - 몸 안의 기운이 쉼 없이 돈다.
+  - "효과: 체력 재생 +100%, 마나 재생 +100% (8분)"
+  - 같은 계열 비약은 덮어씀(시간 갱신)
+  - 양조기 (농사 Lv.12)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.12) — 산삼 뿌리 ×3 + 나무 수액 ×2 + 유리병 ×2
+  uses: []
+- id: elixir_precision
+  name: 정밀의 비약
+  category: 소비 아이템
+  description:
+  - 빈틈이 눈에 들어온다.
+  - "효과: 치명타 확률 +8%, 치명타 피해 +20% (5분)"
+  - 양조기 (농사 Lv.16)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.16) — 화염 버섯 ×2 + 송진 ×1 + 죠로구모의 실 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_pierce
+  name: 관통의 비약
+  category: 소비 아이템
+  description:
+  - 갑옷의 이음매를 꿰뚫는 감각.
+  - "효과: 물리 관통력 +10%, 마법 관통력 +10% (5분)"
+  - 양조기 (농사 Lv.18)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.18) — 화염 버섯 ×2 + 뒤틀린 철 ×1 + 아카시아 껍질 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_focus
+  name: 집중의 비약
+  category: 소비 아이템
+  description:
+  - 주문이 손끝에서 빠르게 맺힌다.
+  - "효과: 마나 재생 +50%, 쿨타임 감소 +10% (5분)"
+  - 양조기 (농사 Lv.20)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.20) — 달빛 꽃 ×2 + 여우불 정수 ×2 + 정글 꿀 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_bulwark
+  name: 수호의 비약
+  category: 소비 아이템
+  description:
+  - 칼날이 미끄러져 나간다.
+  - "효과: 물리 방어력 +35% (5분)"
+  - 양조기 (농사 Lv.18)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.18) — 산삼 뿌리 ×2 + 저주받은 이끼 ×2 + 검은 수액 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_ward
+  name: 결계의 비약
+  category: 소비 아이템
+  description:
+  - 주문을 튕겨 내는 얇은 막이 덮인다.
+  - "효과: 마법 방어력 +35% (5분)"
+  - 양조기 (농사 Lv.20)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.20) — 달빛 꽃 ×2 + 저주받은 이끼 ×2 + 검은 수액 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_spirit
+  name: 교감의 비약
+  category: 소비 아이템
+  description:
+  - 정령의 목소리가 또렷해진다.
+  - "효과: 소환수 능력치 +25 (5분)"
+  - 양조기 (농사 Lv.22)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.22) — 달빛 꽃 ×2 + 미혹된 넋 ×3 + 벚꽃 꿀 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_tempo
+  name: 연격의 비약
+  category: 소비 아이템
+  description:
+  - 손놀림이 한 박자 빨라진다.
+  - "효과: 타격 간격 감소 +10% (5분)"
+  - 양조기 (농사 Lv.25)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.25) — 서리 백합 ×2 + 죠로구모의 실 ×2 + 벚꽃 꿀 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_berserk
+  name: 광폭의 비약
+  category: 소비 아이템
+  description:
+  - 피가 끓는다. 방어는 잊는다.
+  - "효과: 물리 공격력 +25%, 물리 방어력 −15%, 마법 방어력 −15% (5분)"
+  - 양조기 (농사 Lv.28)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.28) — 화염 버섯 ×3 + 햇볕에 구운 파편 ×2 + 검은 수액 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_sage
+  name: 현자의 비약
+  category: 소비 아이템
+  description:
+  - 머리가 맑아지는 대신 몸이 무거워진다.
+  - "효과: 마법 공격력 +25%, 물리 방어력 −15% (5분)"
+  - 양조기 (농사 Lv.28)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.28) — 서리 백합 ×3 + 햇볕에 구운 파편 ×2 + 벚꽃 꿀 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_titan
+  name: 거인의 비약
+  category: 소비 아이템
+  description:
+  - 바위처럼 버티지만 발은 느려진다.
+  - "효과: 물리 방어력 +20%, 마법 방어력 +20%, 체력 재생 +50%, 이동 속도 −10% (5분)"
+  - 양조기 (농사 Lv.30)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.30) — 별 인삼 ×2 + 햇볕에 구운 파편 ×2 + 맹그로브 진액 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_hunter
+  name: 사냥꾼의 비약
+  category: 소비 아이템
+  description:
+  - 사냥감의 급소가 보인다.
+  - "효과: 치명타 피해 +30%, 물리 관통력 +8% (5분)"
+  - 양조기 (농사 Lv.32)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.32) — 별 인삼 ×2 + 화염 버섯 ×2 + 맹그로브 진액 ×1 + 유리병 ×2
+  uses: []
+- id: elixir_grand
+  name: 대현자의 영약
+  category: 소비 아이템
+  description:
+  - 전설 속 현자가 남긴 처방.
+  - "효과: 물리 공격력 +12%, 마법 공격력 +12%, 물리 방어력 +12%, 마법 방어력 +12%, 체력 재생 +30%, 마나 재생 +30% (15분)"
+  - 양조기 (농사 Lv.40)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.40) — 용 고추 ×2 + 공허 꽃 ×2 + 포자 갓 ×2 + 창백한 이끼 ×1 + 유리병 ×1
+  uses: []
+- id: tonic_farmer
+  name: 농부의 강장제
+  category: 소비 아이템
+  description:
+  - 흙냄새가 나는 진한 차.
+  - "효과: 농사 숙련도 경험치 +20% (10분)"
+  - 양조기 (농사 Lv.3)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.3) — 들풀 ×3 + 밀 ×8 + 유리병 ×2
+  uses: []
+- id: tonic_lumber
+  name: 나무꾼의 강장제
+  category: 소비 아이템
+  description:
+  - 도끼질이 힘 있게 들어간다.
+  - "효과: 벌목 숙련도 경험치 +20% (10분)"
+  - 양조기 (농사 Lv.6)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.6) — 붉은 약초 ×2 + 나무 수액 ×2 + 유리병 ×2
+  uses: []
+- id: tonic_miner
+  name: 광부의 강장제
+  category: 소비 아이템
+  description:
+  - 곡괭이가 손에 붙는다.
+  - "효과: 채굴 숙련도 경험치 +20%, 성급함 (10분)"
+  - 양조기 (농사 Lv.6)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.6) — 붉은 약초 ×2 + 석탄 ×8 + 유리병 ×2
+  uses: []
+- id: tonic_hunter
+  name: 사냥꾼의 강장제
+  category: 소비 아이템
+  description:
+  - 사냥의 감각이 날카로워진다.
+  - "효과: 사냥 숙련도 경험치 +20% (10분)"
+  - 양조기 (농사 Lv.10)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.10) — 산삼 뿌리 ×2 + 몬스터 정수 ×2 + 유리병 ×2
+  uses: []
+- id: tonic_scholar
+  name: 학자의 강장제
+  category: 소비 아이템
+  description:
+  - 무엇이든 빨리 익힌다.
+  - "효과: 모든 숙련도 경험치 +10% (10분)"
+  - 양조기 (농사 Lv.20)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.20) — 달빛 꽃 ×2 + 산삼 뿌리 ×2 + 나무 수액 ×2 + 유리병 ×2
+  uses: []
+- id: tonic_master
+  name: 장인의 영약
+  category: 소비 아이템
+  description:
+  - 장인들이 대대로 숨겨 온 비법.
+  - "효과: 모든 숙련도 경험치 +25% (15분)"
+  - 양조기 (농사 Lv.40)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.40) — 용 고추 ×1 + 공허 꽃 ×2 + 창백한 이끼 ×1 + 유리병 ×1
+  uses: []
+- id: potion_nightvision
+  name: 올빼미 물약
+  category: 소비 아이템
+  description:
+  - 어둠이 낮처럼 밝아진다.
+  - "효과: 야간 투시 (10분)"
+  - 양조기 (농사 Lv.4)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.4) — 들풀 ×2 + 발광석 가루 ×2 + 유리병 ×2
+  uses: []
+- id: potion_feather
+  name: 깃털 물약
+  category: 소비 아이템
+  description:
+  - 떨어질 때 깃털처럼 내려앉는다.
+  - "효과: 느린 낙하 (5분)"
+  - 양조기 (농사 Lv.6)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.6) — 들풀 ×2 + 깃털 ×4 + 유리병 ×2
+  uses: []
+- id: potion_gills
+  name: 아가미 물약
+  category: 소비 아이템
+  description:
+  - 물속에서도 숨이 차지 않는다.
+  - "효과: 수중 호흡, 돌고래의 가호 (8분)"
+  - 양조기 (농사 Lv.7)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.7) — 붉은 약초 ×2 + 켈프 ×8 + 유리병 ×2
+  uses: []
+- id: potion_fireward
+  name: 화염 저항 물약
+  category: 소비 아이템
+  description:
+  - 네더 협곡의 열기를 견딘다.
+  - "효과: 화염 저항 (8분)"
+  - 양조기 (농사 Lv.15)
+  icon_material: POTION
+  sources:
+  - 양조(농사 Lv.15) — 화염 버섯 ×2 + 송진 ×1 + 유리병 ×2
+  uses: []
+- id: red_sandstone_blade
+  name: 붉은 사암 대도
+  category: 장비 세트
+  set: 붉은 사암
+  level_band: Lv.26~35
+  stats:
+    힘: 32.5
+    민첩: 13.9
+  description:
+  - 협곡의 붉은 바위를 갈아 만든 육중한 칼.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: GOLDEN_SWORD
+  sources:
+  - 제작 — 금 주괴 ×12 + 몬스터 정수 ×5 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×3
+  uses: []
+- id: red_sandstone_helmet
+  name: 붉은 사암 투구
+  category: 장비 세트
+  set: 붉은 사암
+  level_band: Lv.26~35
+  stats:
+    힘: 14.2
+    민첩: 6.1
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: GOLDEN_HELMET
+  sources:
+  - 제작 — 금 주괴 ×12 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6 + 뒤틀린 레드스톤 ×1
+  uses: []
+- id: red_sandstone_chestplate
+  name: 붉은 사암 흉갑
+  category: 장비 세트
+  set: 붉은 사암
+  level_band: Lv.26~35
+  stats:
+    힘: 24.4
+    민첩: 10.4
+  description:
+  - 햇볕에 달궈진 사암판을 이어 붙였다.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: GOLDEN_CHESTPLATE
+  sources:
+  - 제작 — 금 주괴 ×12 + 몬스터 정수 ×4 + 햇볕에 구운 파편 ×12 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: red_sandstone_leggings
+  name: 붉은 사암 각반
+  category: 장비 세트
+  set: 붉은 사암
+  level_band: Lv.26~35
+  stats:
+    힘: 18.3
+    민첩: 7.8
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: GOLDEN_LEGGINGS
+  sources:
+  - 제작 — 금 주괴 ×24 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: red_sandstone_boots
+  name: 붉은 사암 장화
+  category: 장비 세트
+  set: 붉은 사암
+  level_band: Lv.26~35
+  stats:
+    힘: 12.2
+    민첩: 5.2
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: GOLDEN_BOOTS
+  sources:
+  - 제작 — 금 주괴 ×12 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6
+  uses: []
+- id: sandstorm_dagger
+  name: 모래바람 단검
+  category: 장비 세트
+  set: 모래바람
+  level_band: Lv.26~35
+  stats:
+    민첩: 32.5
+    힘: 13.9
+  description:
+  - 모래 폭풍처럼 소리 없이 파고드는 칼날.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: DIAMOND_SWORD
+  sources:
+  - 제작 — 실 ×24 + 몬스터 정수 ×5 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×3
+  uses: []
+- id: sandstorm_helmet
+  name: 모래바람 두건
+  category: 장비 세트
+  set: 모래바람
+  level_band: Lv.26~35
+  stats:
+    민첩: 14.2
+    힘: 6.1
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 실 ×24 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6 + 뒤틀린 레드스톤 ×1
+  uses: []
+- id: sandstorm_chestplate
+  name: 모래바람 조끼
+  category: 장비 세트
+  set: 모래바람
+  level_band: Lv.26~35
+  stats:
+    민첩: 24.4
+    힘: 10.4
+  description:
+  - 바람을 가르는 얇은 천 조끼.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 실 ×24 + 몬스터 정수 ×4 + 햇볕에 구운 파편 ×12 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: sandstorm_leggings
+  name: 모래바람 바지
+  category: 장비 세트
+  set: 모래바람
+  level_band: Lv.26~35
+  stats:
+    민첩: 18.3
+    힘: 7.8
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 실 ×48 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: sandstorm_boots
+  name: 모래바람 신발
+  category: 장비 세트
+  set: 모래바람
+  level_band: Lv.26~35
+  stats:
+    민첩: 12.2
+    힘: 5.2
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 실 ×24 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6
+  uses: []
+- id: sunglass_staff
+  name: 햇살 유리 지팡이
+  category: 장비 세트
+  set: 햇살 유리
+  level_band: Lv.26~35
+  stats:
+    지능: 32.5
+    의지: 13.9
+  description:
+  - 끝의 유리알이 햇빛을 모아 불태운다.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: BLAZE_ROD
+  sources:
+  - 제작 — 레드스톤 가루 ×24 + 몬스터 정수 ×5 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×3
+  uses: []
+- id: sunglass_helmet
+  name: 햇살 유리 두건
+  category: 장비 세트
+  set: 햇살 유리
+  level_band: Lv.26~35
+  stats:
+    지능: 14.2
+    의지: 6.1
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 레드스톤 가루 ×24 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6 + 뒤틀린 레드스톤 ×1
+  uses: []
+- id: sunglass_chestplate
+  name: 햇살 유리 로브
+  category: 장비 세트
+  set: 햇살 유리
+  level_band: Lv.26~35
+  stats:
+    지능: 24.4
+    의지: 10.4
+  description:
+  - 유리 가루를 엮어 빛을 머금은 로브.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 레드스톤 가루 ×24 + 몬스터 정수 ×4 + 햇볕에 구운 파편 ×12 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: sunglass_leggings
+  name: 햇살 유리 하의
+  category: 장비 세트
+  set: 햇살 유리
+  level_band: Lv.26~35
+  stats:
+    지능: 18.3
+    의지: 7.8
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 레드스톤 가루 ×48 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: sunglass_boots
+  name: 햇살 유리 신발
+  category: 장비 세트
+  set: 햇살 유리
+  level_band: Lv.26~35
+  stats:
+    지능: 12.2
+    의지: 5.2
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 레드스톤 가루 ×24 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6
+  uses: []
+- id: terracotta_hammer
+  name: 테라코타 망치
+  category: 장비 세트
+  set: 테라코타
+  level_band: Lv.26~35
+  stats:
+    활력: 12.2
+    의지: 5.2
+  description:
+  - 구운 흙덩이를 쇠자루에 박은 망치.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: MACE
+  sources:
+  - 제작 — 철 주괴 ×24 + 몬스터 정수 ×5 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×3
+  uses: []
+- id: terracotta_helmet
+  name: 테라코타 투구
+  category: 장비 세트
+  set: 테라코타
+  level_band: Lv.26~35
+  stats:
+    활력: 18.3
+    의지: 7.8
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: IRON_HELMET
+  sources:
+  - 제작 — 철 주괴 ×24 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6 + 뒤틀린 레드스톤 ×1
+  uses: []
+- id: terracotta_chestplate
+  name: 테라코타 흉갑
+  category: 장비 세트
+  set: 테라코타
+  level_band: Lv.26~35
+  stats:
+    활력: 32.5
+    의지: 13.9
+  description:
+  - 두껍게 구운 흙판이 충격을 받아낸다.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: IRON_CHESTPLATE
+  sources:
+  - 제작 — 철 주괴 ×24 + 몬스터 정수 ×4 + 햇볕에 구운 파편 ×12 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: terracotta_leggings
+  name: 테라코타 각반
+  category: 장비 세트
+  set: 테라코타
+  level_band: Lv.26~35
+  stats:
+    활력: 24.4
+    의지: 10.4
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: IRON_LEGGINGS
+  sources:
+  - 제작 — 철 주괴 ×48 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: terracotta_boots
+  name: 테라코타 장화
+  category: 장비 세트
+  set: 테라코타
+  level_band: Lv.26~35
+  stats:
+    활력: 14.2
+    의지: 6.1
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: IRON_BOOTS
+  sources:
+  - 제작 — 철 주괴 ×24 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6
+  uses: []
+- id: mirage_rod
+  name: 신기루 홀
+  category: 장비 세트
+  set: 신기루
+  level_band: Lv.26~35
+  stats:
+    의지: 12.2
+    지능: 5.2
+  description:
+  - 쥔 손마저 흔들려 보이는 홀.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: BREEZE_ROD
+  sources:
+  - 제작 — 발광석 ×6 + 몬스터 정수 ×5 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×3
+  uses: []
+- id: mirage_helmet
+  name: 신기루 두건
+  category: 장비 세트
+  set: 신기루
+  level_band: Lv.26~35
+  stats:
+    의지: 18.3
+    지능: 7.8
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 발광석 ×6 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6 + 뒤틀린 레드스톤 ×1
+  uses: []
+- id: mirage_chestplate
+  name: 신기루 로브
+  category: 장비 세트
+  set: 신기루
+  level_band: Lv.26~35
+  stats:
+    의지: 32.5
+    지능: 13.9
+  description:
+  - 보는 사람마다 다른 색으로 보이는 로브.
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 발광석 ×6 + 몬스터 정수 ×4 + 햇볕에 구운 파편 ×12 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: mirage_leggings
+  name: 신기루 하의
+  category: 장비 세트
+  set: 신기루
+  level_band: Lv.26~35
+  stats:
+    의지: 24.4
+    지능: 10.4
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 발광석 ×12 + 햇볕에 구운 파편 ×8 + 뒤틀린 레드스톤 ×2
+  uses: []
+- id: mirage_boots
+  name: 신기루 신발
+  category: 장비 세트
+  set: 신기루
+  level_band: Lv.26~35
+  stats:
+    의지: 14.2
+    지능: 6.1
+  description:
+  - 메사 시리즈 (Lv.26~35)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 발광석 ×6 + 몬스터 정수 ×3 + 햇볕에 구운 파편 ×6
+  uses: []
+- id: mycel_steel_greatsword
+  name: 균사 강철 대검
+  category: 장비 세트
+  set: 균사 강철
+  level_band: Lv.36~44
+  stats:
+    힘: 44.8
+    민첩: 19.2
+  description:
+  - 균사가 스며들어 살아 있는 듯 맥동하는 대검.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: NETHERITE_SWORD
+  sources:
+  - 제작 — 다이아몬드 ×4 + 몬스터 정수 ×6 + 포자 갓 ×10 + 뒤틀린 청금석 ×4
+  uses: []
+- id: mycel_steel_helmet
+  name: 균사 강철 투구
+  category: 장비 세트
+  set: 균사 강철
+  level_band: Lv.36~44
+  stats:
+    힘: 19.6
+    민첩: 8.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: NETHERITE_HELMET
+  sources:
+  - 제작 — 다이아몬드 ×4 + 몬스터 정수 ×4 + 포자 갓 ×8 + 뒤틀린 청금석 ×1
+  uses: []
+- id: mycel_steel_chestplate
+  name: 균사 강철 흉갑
+  category: 장비 세트
+  set: 균사 강철
+  level_band: Lv.36~44
+  stats:
+    힘: 33.6
+    민첩: 14.4
+  description:
+  - 강철 틈으로 균사가 자라 상처를 메운다.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: NETHERITE_CHESTPLATE
+  sources:
+  - 제작 — 다이아몬드 ×4 + 몬스터 정수 ×5 + 포자 갓 ×16 + 뒤틀린 청금석 ×3
+  uses: []
+- id: mycel_steel_leggings
+  name: 균사 강철 각반
+  category: 장비 세트
+  set: 균사 강철
+  level_band: Lv.36~44
+  stats:
+    힘: 25.2
+    민첩: 10.8
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: NETHERITE_LEGGINGS
+  sources:
+  - 제작 — 다이아몬드 ×8 + 포자 갓 ×10 + 뒤틀린 청금석 ×3
+  uses: []
+- id: mycel_steel_boots
+  name: 균사 강철 장화
+  category: 장비 세트
+  set: 균사 강철
+  level_band: Lv.36~44
+  stats:
+    힘: 16.8
+    민첩: 7.2
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: NETHERITE_BOOTS
+  sources:
+  - 제작 — 다이아몬드 ×4 + 몬스터 정수 ×4 + 포자 갓 ×8
+  uses: []
+- id: sporewind_dagger
+  name: 포자바람 단검
+  category: 장비 세트
+  set: 포자바람
+  level_band: Lv.36~44
+  stats:
+    민첩: 44.8
+    힘: 19.2
+  description:
+  - 휘두를 때마다 포자가 흩날린다.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: DIAMOND_SWORD
+  sources:
+  - 제작 — 실 ×32 + 몬스터 정수 ×6 + 포자 갓 ×10 + 뒤틀린 청금석 ×4
+  uses: []
+- id: sporewind_helmet
+  name: 포자바람 두건
+  category: 장비 세트
+  set: 포자바람
+  level_band: Lv.36~44
+  stats:
+    민첩: 19.6
+    힘: 8.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: CHAINMAIL_HELMET
+  sources:
+  - 제작 — 실 ×32 + 몬스터 정수 ×4 + 포자 갓 ×8 + 뒤틀린 청금석 ×1
+  uses: []
+- id: sporewind_chestplate
+  name: 포자바람 조끼
+  category: 장비 세트
+  set: 포자바람
+  level_band: Lv.36~44
+  stats:
+    민첩: 33.6
+    힘: 14.4
+  description:
+  - 가볍게 엮은 사슬에 포자가 앉았다.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: CHAINMAIL_CHESTPLATE
+  sources:
+  - 제작 — 실 ×32 + 몬스터 정수 ×5 + 포자 갓 ×16 + 뒤틀린 청금석 ×3
+  uses: []
+- id: sporewind_leggings
+  name: 포자바람 바지
+  category: 장비 세트
+  set: 포자바람
+  level_band: Lv.36~44
+  stats:
+    민첩: 25.2
+    힘: 10.8
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: CHAINMAIL_LEGGINGS
+  sources:
+  - 제작 — 실 ×64 + 포자 갓 ×10 + 뒤틀린 청금석 ×3
+  uses: []
+- id: sporewind_boots
+  name: 포자바람 신발
+  category: 장비 세트
+  set: 포자바람
+  level_band: Lv.36~44
+  stats:
+    민첩: 16.8
+    힘: 7.2
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: CHAINMAIL_BOOTS
+  sources:
+  - 제작 — 실 ×32 + 몬스터 정수 ×4 + 포자 갓 ×8
+  uses: []
+- id: glowcap_staff
+  name: 발광 균사 지팡이
+  category: 장비 세트
+  set: 발광 균사
+  level_band: Lv.36~44
+  stats:
+    지능: 44.8
+    의지: 19.2
+  description:
+  - 어둠 속에서 푸르게 빛나는 지팡이.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: BLAZE_ROD
+  sources:
+  - 제작 — 청금석 ×32 + 몬스터 정수 ×6 + 포자 갓 ×10 + 뒤틀린 청금석 ×4
+  uses: []
+- id: glowcap_helmet
+  name: 발광 균사 두건
+  category: 장비 세트
+  set: 발광 균사
+  level_band: Lv.36~44
+  stats:
+    지능: 19.6
+    의지: 8.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 청금석 ×32 + 몬스터 정수 ×4 + 포자 갓 ×8 + 뒤틀린 청금석 ×1
+  uses: []
+- id: glowcap_chestplate
+  name: 발광 균사 로브
+  category: 장비 세트
+  set: 발광 균사
+  level_band: Lv.36~44
+  stats:
+    지능: 33.6
+    의지: 14.4
+  description:
+  - 빛나는 균사로 짠 로브.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 청금석 ×32 + 몬스터 정수 ×5 + 포자 갓 ×16 + 뒤틀린 청금석 ×3
+  uses: []
+- id: glowcap_leggings
+  name: 발광 균사 하의
+  category: 장비 세트
+  set: 발광 균사
+  level_band: Lv.36~44
+  stats:
+    지능: 25.2
+    의지: 10.8
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 청금석 ×64 + 포자 갓 ×10 + 뒤틀린 청금석 ×3
+  uses: []
+- id: glowcap_boots
+  name: 발광 균사 신발
+  category: 장비 세트
+  set: 발광 균사
+  level_band: Lv.36~44
+  stats:
+    지능: 16.8
+    의지: 7.2
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 청금석 ×32 + 몬스터 정수 ×4 + 포자 갓 ×8
+  uses: []
+- id: capshell_mace
+  name: 갓 껍질 철퇴
+  category: 장비 세트
+  set: 갓 껍질
+  level_band: Lv.36~44
+  stats:
+    활력: 16.8
+    의지: 7.2
+  description:
+  - 거대 버섯 갓을 굳혀 만든 철퇴.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: MACE
+  sources:
+  - 제작 — 철 주괴 ×32 + 몬스터 정수 ×6 + 포자 갓 ×10 + 뒤틀린 청금석 ×4
+  uses: []
+- id: capshell_helmet
+  name: 갓 껍질 투구
+  category: 장비 세트
+  set: 갓 껍질
+  level_band: Lv.36~44
+  stats:
+    활력: 25.2
+    의지: 10.8
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: DIAMOND_HELMET
+  sources:
+  - 제작 — 철 주괴 ×32 + 몬스터 정수 ×4 + 포자 갓 ×8 + 뒤틀린 청금석 ×1
+  uses: []
+- id: capshell_chestplate
+  name: 갓 껍질 흉갑
+  category: 장비 세트
+  set: 갓 껍질
+  level_band: Lv.36~44
+  stats:
+    활력: 44.8
+    의지: 19.2
+  description:
+  - 버섯 갓처럼 둥글게 휘어 충격을 흘린다.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: DIAMOND_CHESTPLATE
+  sources:
+  - 제작 — 철 주괴 ×32 + 몬스터 정수 ×5 + 포자 갓 ×16 + 뒤틀린 청금석 ×3
+  uses: []
+- id: capshell_leggings
+  name: 갓 껍질 각반
+  category: 장비 세트
+  set: 갓 껍질
+  level_band: Lv.36~44
+  stats:
+    활력: 33.6
+    의지: 14.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: DIAMOND_LEGGINGS
+  sources:
+  - 제작 — 철 주괴 ×64 + 포자 갓 ×10 + 뒤틀린 청금석 ×3
+  uses: []
+- id: capshell_boots
+  name: 갓 껍질 장화
+  category: 장비 세트
+  set: 갓 껍질
+  level_band: Lv.36~44
+  stats:
+    활력: 19.6
+    의지: 8.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: DIAMOND_BOOTS
+  sources:
+  - 제작 — 철 주괴 ×32 + 몬스터 정수 ×4 + 포자 갓 ×8
+  uses: []
+- id: silverspore_rod
+  name: 은빛 포자 홀
+  category: 장비 세트
+  set: 은빛 포자
+  level_band: Lv.36~44
+  stats:
+    의지: 16.8
+    지능: 7.2
+  description:
+  - 은빛 포자가 맴도는 홀.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: BREEZE_ROD
+  sources:
+  - 제작 — 발광석 ×8 + 몬스터 정수 ×6 + 포자 갓 ×10 + 뒤틀린 청금석 ×4
+  uses: []
+- id: silverspore_helmet
+  name: 은빛 포자 두건
+  category: 장비 세트
+  set: 은빛 포자
+  level_band: Lv.36~44
+  stats:
+    의지: 25.2
+    지능: 10.8
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_HELMET
+  sources:
+  - 제작 — 발광석 ×8 + 몬스터 정수 ×4 + 포자 갓 ×8 + 뒤틀린 청금석 ×1
+  uses: []
+- id: silverspore_chestplate
+  name: 은빛 포자 로브
+  category: 장비 세트
+  set: 은빛 포자
+  level_band: Lv.36~44
+  stats:
+    의지: 44.8
+    지능: 19.2
+  description:
+  - 은빛 포자가 소리 없이 내려앉은 로브.
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_CHESTPLATE
+  sources:
+  - 제작 — 발광석 ×8 + 몬스터 정수 ×5 + 포자 갓 ×16 + 뒤틀린 청금석 ×3
+  uses: []
+- id: silverspore_leggings
+  name: 은빛 포자 하의
+  category: 장비 세트
+  set: 은빛 포자
+  level_band: Lv.36~44
+  stats:
+    의지: 33.6
+    지능: 14.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_LEGGINGS
+  sources:
+  - 제작 — 발광석 ×16 + 포자 갓 ×10 + 뒤틀린 청금석 ×3
+  uses: []
+- id: silverspore_boots
+  name: 은빛 포자 신발
+  category: 장비 세트
+  set: 은빛 포자
+  level_band: Lv.36~44
+  stats:
+    의지: 19.6
+    지능: 8.4
+  description:
+  - 버섯 숲 시리즈 (Lv.36~44)
+  icon_material: LEATHER_BOOTS
+  sources:
+  - 제작 — 발광석 ×8 + 몬스터 정수 ×4 + 포자 갓 ×8
+  uses: []
+- id: quartz_crystal
+  name: 석영 결정
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 섬 생성기 광석을 캐면 가끔 나온다 (채굴 Lv.5)
+  icon_material: QUARTZ
+  sources:
+  - 섬 광석 채굴 시 보석 (채굴 Lv.5)
+  sell_price: 25
+  uses:
+  - ✦ 서리 정령 소환 주문서 제작
+  - ❄ 프로스트 노바 주문서 제작
+  - 석영 룬 제작
+  - 석영 반지 제작
+- id: amethyst_fragment
+  name: 자수정 조각
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 섬 생성기 광석을 캐면 가끔 나온다 (채굴 Lv.12)
+  icon_material: AMETHYST_SHARD
+  sources:
+  - 섬 광석 채굴 시 보석 (채굴 Lv.12)
+  sell_price: 40
+  uses:
+  - ✧ 마나 폭발 주문서 제작
+  - 갈대 매듭 반지 제작
+  - 늪뱀 반지 제작
+  - 늪지 수호 목걸이 제작
+  - 맹독 송곳니 목걸이 제작
+  - 생명의 룬 제작
+  - 수렁 가죽 벨트 제작
+  - 예리함의 룬 제작
+  - 이끼 엮음 띠 제작
+  - 자수정 반지 제작
+  - 흐름의 룬 제작
+- id: garnet_shard
+  name: 석류석
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 섬 생성기 광석을 캐면 가끔 나온다 (채굴 Lv.20)
+  icon_material: NETHER_BRICK
+  sources:
+  - 섬 광석 채굴 시 보석 (채굴 Lv.20)
+  sell_price: 60
+  uses:
+  - ✦ 수호 정령 소환 주문서 제작
+  - 갈대 매듭 반지 제작
+  - 관통의 룬 제작
+  - 늪뱀 반지 제작
+  - 사막 전사의 목걸이 제작
+  - 사암 판 벨트 제작
+  - 생명의 룬 제작
+  - 석류석 반지 제작
+  - 수호의 룬 제작
+  - 신기루 목걸이 제작
+  - 예리함의 룬 제작
+  - 유목민 허리띠 제작
+  - 자수정 반지 제작
+  - 질풍의 룬 제작
+  - 청옥 반지 제작
+  - 테라코타 인장 반지 제작
+  - 흐름의 룬 제작
+  - 🔥 인페르노 주문서 제작
+- id: sapphire_shard
+  name: 청옥
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 섬 생성기 광석을 캐면 가끔 나온다 (채굴 Lv.28)
+  icon_material: PRISMARINE_CRYSTALS
+  sources:
+  - 섬 광석 채굴 시 보석 (채굴 Lv.28)
+  sell_price: 85
+  uses:
+  - ❄ 절대영도 주문서 제작
+  - 관통의 룬 제작
+  - 석류석 반지 제작
+  - 수호의 룬 제작
+  - 질풍의 룬 제작
+  - 청옥 반지 제작
+  - 테라코타 인장 반지 제작
+- id: obsidian_core
+  name: 흑요핵
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 섬 생성기 광석을 캐면 가끔 나온다 (채굴 Lv.35)
+  icon_material: ECHO_SHARD
+  sources:
+  - 섬 광석 채굴 시 보석 (채굴 Lv.35)
+  sell_price: 115
+  uses:
+  - ✦ 고대 골렘 소환 주문서 제작
+  - ✧ 차원의 균열 주문서 제작
+  - 갓 껍질 벨트 제작
+  - 별빛 균사 목걸이 제작
+  - 별의 반지 제작
+  - 불멸의 룬 제작
+  - 영겁의 룬 제작
+  - 진홍 균사 반지 제작
+  - 파멸의 룬 제작
+  - 포자 군주의 목걸이 제작
+  - 흑요 사슬 벨트 제작
+  - 흑요핵 반지 제작
+  - 💀 사형선고 주문서 제작
+- id: star_core
+  name: 별의 핵
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 섬 생성기 광석을 캐면 가끔 나온다 (채굴 Lv.42)
+  icon_material: NETHER_STAR
+  sources:
+  - 섬 광석 채굴 시 보석 (채굴 Lv.42)
+  sell_price: 150
+  uses:
+  - ⚖ 심판 주문서 제작
+  - ⚡ 스톰 콜 주문서 제작
+  - ✦ 고대 골렘 소환 주문서 제작
+  - 별의 반지 제작
+  - 불멸의 룬 제작
+  - 영겁의 룬 제작
+  - 진홍 균사 반지 제작
+  - 파멸의 룬 제작
+  - 흑요핵 반지 제작
+- id: crimson_ember
+  name: 진홍 불씨
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 자연산 거대 균류를 베면 가끔 나온다 (벌목 Lv.34)
+  icon_material: BLAZE_POWDER
+  sources:
+  - 진홍빛 자루 벌목 (25%)
+  sell_price: 36
+  uses:
+  - 갓 껍질 벨트 제작
+  - 별빛 균사 목걸이 제작
+  - 포자 군주의 목걸이 제작
+  - 흑요 사슬 벨트 제작
+- id: warped_hypha
+  name: 청록 균사
+  category: 재료·기타
+  description:
+  - 장신구 제작 재료.
+  - 자연산 거대 균류를 베면 가끔 나온다 (벌목 Lv.40)
+  icon_material: CYAN_DYE
+  sources:
+  - 뒤틀린 자루 벌목 (25%)
+  sell_price: 42
+  uses: []
+- id: quartz_ring
+  name: 석영 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.5~15
+  stats:
+    활력: 4.2
+    의지: 1.8
+  description:
+  - 맑은 석영을 박은 소박한 반지.
+  - 입문 장신구 (Lv.5~15)
+  icon_material: IRON_NUGGET
+  sources:
+  - 제작 — 석영 결정 ×2 + 석영 결정 ×2 + 몬스터 정수 ×2
+  uses: []
+- id: quartz_rune
+  name: 석영 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.5~15
+  stats:
+    치명타 확률: 2
+    치명타 피해: 4
+  description:
+  - 석영에 새긴 첫 번째 룬.
+  - 입문 장신구 (Lv.5~15)
+  icon_material: QUARTZ_SLAB
+  sources:
+  - 제작 — 몬스터 정수 ×4 + 석영 결정 ×2 + 석영 결정 ×2 + 몬스터 정수 ×1
+  uses: []
+- id: fang_necklace
+  name: 맹독 송곳니 목걸이
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.16~25
+  stats:
+    힘: 12.2
+    민첩: 5.2
+  description:
+  - 늪 괴물의 송곳니를 꿰었다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: BONE
+  sources:
+  - 제작 — 자수정 조각 ×3 + 늪지 수지 ×9 + 정글 꿀 ×2
+  uses: []
+- id: ferryman_lantern
+  name: 사공의 등불
+  category: 장신구
+  slot: 목걸이
+  stats:
+    힘: 13.5
+    활력: 9.0
+    의지: 5.0
+  description:
+  - 뱃삯을 셀 때마다 들어 올리던 등불.
+  - 마른 땅 한 칸 값이 모였을 때도, 불은 꺼지지 않았다.
+  - 보스 장신구 (Lv.20)
+  icon_material: LANTERN
+  sources:
+  - 보스 레이드 수렁의 사공 처치 15%
+  uses: []
+- id: bog_ward_necklace
+  name: 늪지 수호 목걸이
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.16~25
+  stats:
+    활력: 12.2
+    의지: 5.2
+  description:
+  - 늪의 정령이 깃든 부적.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: LILY_PAD
+  sources:
+  - 제작 — 자수정 조각 ×3 + 늪지 수지 ×9 + 정글 꿀 ×2
+  uses: []
+- id: mire_belt
+  name: 수렁 가죽 벨트
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.16~25
+  stats:
+    활력: 9.8
+    힘: 4.2
+  description:
+  - 수렁 짐승의 질긴 가죽.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: LEATHER
+  sources:
+  - 제작 — 몬스터 정수 ×3 + 자수정 조각 ×4 + 늪지 수지 ×6 + 정글 꿀 ×1
+  uses: []
+- id: moss_sash
+  name: 이끼 엮음 띠
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.16~25
+  stats:
+    지능: 9.8
+    의지: 4.2
+  description:
+  - 마력을 머금은 이끼를 엮었다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: MOSS_CARPET
+  sources:
+  - 제작 — 몬스터 정수 ×3 + 자수정 조각 ×4 + 늪지 수지 ×6 + 정글 꿀 ×1
+  uses: []
+- id: amethyst_ring
+  name: 자수정 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.16~25
+  stats:
+    지능: 7.3
+    의지: 3.1
+  description:
+  - 자수정이 마력을 증폭한다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: AMETHYST_CLUSTER
+  sources:
+  - 제작 — 자수정 조각 ×3 + 석류석 ×2 + 늪지 수지 ×3
+  uses: []
+- id: serpent_ring
+  name: 늪뱀 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.16~25
+  stats:
+    민첩: 7.3
+    힘: 3.1
+  description:
+  - 똬리 튼 뱀 모양의 반지.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: SLIME_BALL
+  sources:
+  - 제작 — 자수정 조각 ×3 + 석류석 ×2 + 늪지 수지 ×3
+  uses: []
+- id: reed_knot_ring
+  name: 갈대 매듭 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.16~25
+  stats:
+    힘: 7.3
+    활력: 3.1
+  description:
+  - 질긴 갈대를 매듭지어 만들었다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: SUGAR_CANE
+  sources:
+  - 제작 — 자수정 조각 ×3 + 석류석 ×2 + 늪지 수지 ×3
+  uses: []
+- id: keen_rune
+  name: 예리함의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.16~25
+  stats:
+    치명타 확률: 3
+    치명타 피해: 8
+  description:
+  - 칼끝이 급소를 찾는다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: AMETHYST_SHARD
+  sources:
+  - 제작 — 몬스터 정수 ×8 + 자수정 조각 ×4 + 석류석 ×2 + 늪지 수지 ×2
+  uses: []
+- id: flow_rune
+  name: 흐름의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.16~25
+  stats:
+    쿨타임 감소: 3
+    마나 재생: 1
+  description:
+  - 마력이 막힘 없이 흐른다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: LAPIS_LAZULI
+  sources:
+  - 제작 — 몬스터 정수 ×8 + 자수정 조각 ×4 + 석류석 ×2 + 늪지 수지 ×2
+  uses: []
+- id: life_rune
+  name: 생명의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.16~25
+  stats:
+    체력 재생: 2
+    최대 체력: 20
+  description:
+  - 상처가 빨리 아문다.
+  - 늪 장신구 (Lv.16~25)
+  icon_material: GLISTERING_MELON_SLICE
+  sources:
+  - 제작 — 몬스터 정수 ×8 + 자수정 조각 ×4 + 석류석 ×2 + 늪지 수지 ×2
+  uses: []
+- id: desert_warrior_necklace
+  name: 사막 전사의 목걸이
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.26~35
+  stats:
+    힘: 17.7
+    민첩: 7.6
+  description:
+  - 사막 전사가 목숨처럼 지닌 징표.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: GOLD_NUGGET
+  sources:
+  - 제작 — 석류석 ×4 + 햇볕에 구운 파편 ×12 + 벚꽃 꿀 ×2
+  uses: []
+- id: mirage_necklace
+  name: 신기루 목걸이
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.26~35
+  stats:
+    지능: 17.7
+    의지: 7.6
+  description:
+  - 보는 각도마다 색이 바뀐다.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: PRISMARINE_SHARD
+  sources:
+  - 제작 — 석류석 ×4 + 햇볕에 구운 파편 ×12 + 벚꽃 꿀 ×2
+  uses: []
+- id: sandplate_belt
+  name: 사암 판 벨트
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.26~35
+  stats:
+    활력: 14.1
+    힘: 6.1
+  description:
+  - 구운 사암판을 덧댄 벨트.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: RABBIT_HIDE
+  sources:
+  - 제작 — 몬스터 정수 ×4 + 석류석 ×6 + 햇볕에 구운 파편 ×8 + 벚꽃 꿀 ×1
+  uses: []
+- id: nomad_sash
+  name: 유목민 허리띠
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.26~35
+  stats:
+    민첩: 14.1
+    활력: 6.1
+  description:
+  - 모래바람 속을 걷던 유목민의 띠.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: STRING
+  sources:
+  - 제작 — 몬스터 정수 ×4 + 석류석 ×6 + 햇볕에 구운 파편 ×8 + 벚꽃 꿀 ×1
+  uses: []
+- id: garnet_ring
+  name: 석류석 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.26~35
+  stats:
+    힘: 10.6
+    민첩: 4.5
+  description:
+  - 핏빛 석류석이 박혀 있다.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: REDSTONE
+  sources:
+  - 제작 — 석류석 ×4 + 청옥 ×2 + 햇볕에 구운 파편 ×4
+  uses: []
+- id: sapphire_ring
+  name: 청옥 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.26~35
+  stats:
+    지능: 10.6
+    의지: 4.5
+  description:
+  - 깊은 바다색 청옥.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: HEART_OF_THE_SEA
+  sources:
+  - 제작 — 석류석 ×4 + 청옥 ×2 + 햇볕에 구운 파편 ×4
+  uses: []
+- id: clay_seal_ring
+  name: 테라코타 인장 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.26~35
+  stats:
+    활력: 10.6
+    의지: 4.5
+  description:
+  - 옛 왕국의 인장이 찍혀 있다.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: BRICK
+  sources:
+  - 제작 — 석류석 ×4 + 청옥 ×2 + 햇볕에 구운 파편 ×4
+  uses: []
+- id: pierce_rune
+  name: 관통의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.26~35
+  stats:
+    물리 관통력: 5
+    마법 관통력: 5
+  description:
+  - 갑옷의 틈을 꿰뚫는다.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: FLINT
+  sources:
+  - 제작 — 몬스터 정수 ×12 + 석류석 ×6 + 청옥 ×2 + 햇볕에 구운 파편 ×3
+  uses: []
+- id: gale_rune
+  name: 질풍의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.26~35
+  stats:
+    이동 속도: 4
+    타격 간격 감소: 3
+  description:
+  - 바람이 등을 떠민다.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: FEATHER
+  sources:
+  - 제작 — 몬스터 정수 ×12 + 석류석 ×6 + 청옥 ×2 + 햇볕에 구운 파편 ×3
+  uses: []
+- id: guard_rune
+  name: 수호의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.26~35
+  stats:
+    보호막: 10
+    물리 방어력: 12
+  description:
+  - 보이지 않는 방패가 감싼다.
+  - 메사 장신구 (Lv.26~35)
+  icon_material: TURTLE_SCUTE
+  sources:
+  - 제작 — 몬스터 정수 ×12 + 석류석 ×6 + 청옥 ×2 + 햇볕에 구운 파편 ×3
+  uses: []
+- id: spore_lord_necklace
+  name: 포자 군주의 목걸이
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.36~45
+  stats:
+    힘: 24.5
+    민첩: 10.5
+  description:
+  - 포자 군주의 왕관에서 떼어 냈다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: BROWN_MUSHROOM
+  sources:
+  - 제작 — 흑요핵 ×6 + 포자 갓 ×18 + 진홍 불씨 ×4
+  uses: []
+- id: starlit_necklace
+  name: 별빛 균사 목걸이
+  category: 장신구
+  slot: 목걸이
+  level_band: Lv.36~45
+  stats:
+    지능: 24.5
+    의지: 10.5
+  description:
+  - 별빛을 먹고 자란 균사.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: END_ROD
+  sources:
+  - 제작 — 흑요핵 ×6 + 포자 갓 ×18 + 진홍 불씨 ×4
+  uses: []
+- id: capshell_belt
+  name: 갓 껍질 벨트
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.36~45
+  stats:
+    활력: 19.6
+    의지: 8.4
+  description:
+  - 거대 버섯의 갓을 잘라 만들었다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: RED_MUSHROOM
+  sources:
+  - 제작 — 몬스터 정수 ×6 + 흑요핵 ×8 + 포자 갓 ×12 + 진홍 불씨 ×2
+  uses: []
+- id: obsidian_chain_belt
+  name: 흑요 사슬 벨트
+  category: 장신구
+  slot: 벨트
+  level_band: Lv.36~45
+  stats:
+    힘: 19.6
+    활력: 8.4
+  description:
+  - 흑요핵을 사슬로 엮었다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: IRON_CHAIN
+  sources:
+  - 제작 — 몬스터 정수 ×6 + 흑요핵 ×8 + 포자 갓 ×12 + 진홍 불씨 ×2
+  uses: []
+- id: obsidian_ring
+  name: 흑요핵 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.36~45
+  stats:
+    힘: 14.7
+    민첩: 6.3
+  description:
+  - 빛을 삼키는 검은 핵.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: ECHO_SHARD
+  sources:
+  - 제작 — 흑요핵 ×6 + 별의 핵 ×4 + 포자 갓 ×6
+  uses: []
+- id: star_ring
+  name: 별의 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.36~45
+  stats:
+    지능: 14.7
+    의지: 6.3
+  description:
+  - 작은 별 조각이 박혀 있다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: NETHER_STAR
+  sources:
+  - 제작 — 흑요핵 ×6 + 별의 핵 ×4 + 포자 갓 ×6
+  uses: []
+- id: crimson_ring
+  name: 진홍 균사 반지
+  category: 장신구
+  slot: 반지
+  level_band: Lv.36~45
+  stats:
+    활력: 14.7
+    힘: 6.3
+  description:
+  - 진홍 균사가 손가락을 감싼다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: CRIMSON_ROOTS
+  sources:
+  - 제작 — 흑요핵 ×6 + 별의 핵 ×4 + 포자 갓 ×6
+  uses: []
+- id: ruin_rune
+  name: 파멸의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.36~45
+  stats:
+    치명타 확률: 6
+    치명타 피해: 15
+  description:
+  - 일격에 끝을 낸다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: WITHER_ROSE
+  sources:
+  - 제작 — 몬스터 정수 ×16 + 흑요핵 ×8 + 별의 핵 ×4 + 포자 갓 ×4
+  uses: []
+- id: eternity_rune
+  name: 영겁의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.36~45
+  stats:
+    쿨타임 감소: 6
+    마나 재생: 2
+    최대 마나: 40
+  description:
+  - 시간이 느리게 흐른다.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: CLOCK
+  sources:
+  - 제작 — 몬스터 정수 ×16 + 흑요핵 ×8 + 별의 핵 ×4 + 포자 갓 ×4
+  uses: []
+- id: undying_rune
+  name: 불멸의 룬
+  category: 장신구
+  slot: 룬
+  level_band: Lv.36~45
+  stats:
+    체력 재생: 4
+    최대 체력: 50
+    보호막: 10
+  description:
+  - 쓰러지지 않는 자의 각인.
+  - 버섯 숲 장신구 (Lv.36~45)
+  icon_material: GHAST_TEAR
+  sources:
+  - 제작 — 몬스터 정수 ×16 + 흑요핵 ×8 + 별의 핵 ×4 + 포자 갓 ×4
+  uses: []
+- id: fish_crucian
+  name: 붕어
+  category: 생선
+  description:
+  - 어디서나 잡히는 민물고기.
+  icon_material: COD
+  sources:
+  - 낚시 (일반)
+  uses: []
+- id: fish_mackerel
+  name: 고등어
+  category: 생선
+  description:
+  - 등이 푸른 근해 물고기.
+  icon_material: COD
+  sources:
+  - 낚시 (일반)
+  uses: []
+- id: fish_trout
+  name: 송어
+  category: 생선
+  description:
+  - 섬의 맑은 물에 산다.
+  icon_material: SALMON
+  sources:
+  - 낚시 (일반)
+  uses: []
+- id: fish_sweetfish
+  name: 은어
+  category: 생선
+  description:
+  - 요괴 계곡 개울의 작은 물고기.
+  icon_material: SALMON
+  sources:
+  - 낚시 (일반)
+  uses: []
+- id: fish_loach
+  name: 미꾸라지
+  category: 생선
+  description:
+  - 늪 진흙 속에 숨어 지낸다.
+  icon_material: COD
+  sources:
+  - 낚시 (일반)
+  uses: []
+- id: fish_catfish
+  name: 메기
+  category: 생선
+  description:
+  - 밤이 되면 바닥에서 올라온다.
+  icon_material: COD
+  sources:
+  - 낚시 (고급)
+  uses: []
+- id: fish_sea_bream
+  name: 참돔
+  category: 생선
+  description:
+  - 섬 앞바다의 붉은 물고기.
+  icon_material: SALMON
+  sources:
+  - 낚시 (고급)
+  uses: []
+- id: fish_koi
+  name: 비단잉어
+  category: 생선
+  description:
+  - 계곡 연못을 수놓는 잉어.
+  icon_material: TROPICAL_FISH
+  sources:
+  - 낚시 (고급)
+  uses: []
+- id: fish_snakehead
+  name: 가물치
+  category: 생선
+  description:
+  - 늪의 사나운 포식자.
+  icon_material: COD
+  sources:
+  - 낚시 (고급)
+  uses: []
+- id: fish_eel
+  name: 뱀장어
+  category: 생선
+  description:
+  - 비 오는 날 물가로 올라온다.
+  icon_material: COD
+  sources:
+  - 낚시 (희귀)
+  uses: []
+- id: fish_golden_puffer
+  name: 황복
+  category: 생선
+  description:
+  - 독이 있지만 귀한 진미.
+  icon_material: PUFFERFISH
+  sources:
+  - 낚시 (희귀)
+  uses: []
+- id: fish_ghost_carp
+  name: 유령 잉어
+  category: 생선
+  description:
+  - 밤의 계곡에서만 보이는 반투명한 잉어.
+  icon_material: TROPICAL_FISH
+  sources:
+  - 낚시 (희귀)
+  uses: []
+- id: fish_bog_pike
+  name: 늪 강꼬치
+  category: 생선
+  description:
+  - 늪의 깊은 물웅덩이에 산다.
+  icon_material: COD
+  sources:
+  - 낚시 (희귀)
+  uses: []
+- id: fish_sturgeon
+  name: 철갑상어
+  category: 생선
+  description:
+  - 갑옷 같은 비늘을 두른 오래된 물고기.
+  icon_material: SALMON
+  sources:
+  - 낚시 (영웅)
+  uses: []
+- id: fish_abyss_angler
+  name: 심해 아귀
+  category: 생선
+  description:
+  - 밤에 불빛을 흔들며 먹이를 꾄다.
+  icon_material: PUFFERFISH
+  sources:
+  - 낚시 (영웅)
+  uses: []
+- id: fish_golden_koi
+  name: 황금 잉어
+  category: 생선
+  description:
+  - 계곡의 전설 속 잉어. 행운을 부른다.
+  icon_material: TROPICAL_FISH
+  sources:
+  - 낚시 (영웅)
+  uses: []
+- id: fish_dragon_carp
+  name: 용잉어
+  category: 생선
+  description:
+  - 폭우 속에서 폭포를 거슬러 오른다는 잉어.
+  icon_material: TROPICAL_FISH
+  sources:
+  - 낚시 (전설)
+  uses: []
+- id: fish_whale_shark
+  name: 고래상어
+  category: 생선
+  description:
+  - 바다에서 가장 큰 물고기.
+  icon_material: COD
+  sources:
+  - 낚시 (전설)
+  uses: []
+- id: abyss_ink
+  name: 심해 먹물
+  category: 재료·기타
+  description:
+  - 주문서를 쓰는 잉크의 바탕. 낚시로만 얻는다.
+  - 주문서 제작 재료 (마법사 아이리스)
+  icon_material: INK_SAC
+  sources:
+  - 낚시 (고급)
+  uses:
+  - ☄ 메테오 스트라이크 주문서 제작
+  - ⚖ 심판 주문서 제작
+  - ⚡ 선더볼트 주문서 제작
+  - ⚡ 스톰 콜 주문서 제작
+  - ⚡ 체인 라이트닝 주문서 제작
+  - ✦ 고대 골렘 소환 주문서 제작
+  - ✦ 그림자 늑대 무리 주문서 제작
+  - ✦ 불꽃 정령 소환 주문서 제작
+  - ✦ 서리 정령 소환 주문서 제작
+  - ✦ 수호 정령 소환 주문서 제작
+  - ✦ 신성한 방벽 주문서 제작
+  - ✦ 천벌 주문서 제작
+  - ✦ 치유 정령 소환 주문서 제작
+  - ✦ 폭풍 정령 소환 주문서 제작
+  - ✧ 마나 폭발 주문서 제작
+  - ✧ 아케인 일제사격 주문서 제작
+  - ✧ 차원의 균열 주문서 제작
+  - ❄ 블리자드 주문서 제작
+  - ❄ 절대영도 주문서 제작
+  - ❄ 프로스트 노바 주문서 제작
+  - 🌀 게일 포스 주문서 제작
+  - 🌀 토네이도 주문서 제작
+  - 🌑 생명력 흡수 주문서 제작
+  - 🌿 속박 주문서 제작
+  - 🌿 재생 주문서 제작
+  - 💀 공허 폭발 주문서 제작
+  - 💀 사형선고 주문서 제작
+  - 🔥 인페르노 주문서 제작
+  - 🔥 플레임 버스트 주문서 제작
+- id: moon_pearl
+  name: 달빛 진주
+  category: 재료·기타
+  description:
+  - 밤에만 낚인다. 희귀 주문서 재료.
+  - 주문서 제작 재료 (마법사 아이리스)
+  icon_material: NAUTILUS_SHELL
+  sources:
+  - 낚시 (희귀 · 낚시 Lv.15)
+  uses:
+  - ⚡ 선더볼트 주문서 제작
+  - ✦ 수호 정령 소환 주문서 제작
+  - ✦ 천벌 주문서 제작
+  - ✦ 폭풍 정령 소환 주문서 제작
+  - ✧ 아케인 일제사격 주문서 제작
+  - ❄ 블리자드 주문서 제작
+  - 🌀 토네이도 주문서 제작
+  - 🌿 속박 주문서 제작
+  - 💀 공허 폭발 주문서 제작
+  - 🔥 인페르노 주문서 제작
+- id: storm_scale
+  name: 폭풍 비늘
+  category: 재료·기타
+  description:
+  - 비 오는 날에만 낚인다. 희귀 주문서 재료.
+  - 주문서 제작 재료 (마법사 아이리스)
+  icon_material: PRISMARINE_SHARD
+  sources:
+  - 낚시 (희귀 · 낚시 Lv.20)
+  uses:
+  - ⚡ 선더볼트 주문서 제작
+  - ✦ 수호 정령 소환 주문서 제작
+  - ✦ 천벌 주문서 제작
+  - ✦ 폭풍 정령 소환 주문서 제작
+  - ✧ 아케인 일제사격 주문서 제작
+  - ❄ 블리자드 주문서 제작
+  - 🌀 토네이도 주문서 제작
+  - 🌿 속박 주문서 제작
+  - 💀 공허 폭발 주문서 제작
+  - 🔥 인페르노 주문서 제작
+- id: mermaid_tear
+  name: 인어의 눈물
+  category: 재료·기타
+  description:
+  - 영웅 등급 낚시 재료. 상위 주문서 재료.
+  - 주문서 제작 재료 (마법사 아이리스)
+  icon_material: GHAST_TEAR
+  sources:
+  - 낚시 (영웅 · 낚시 Lv.30)
+  uses:
+  - ☄ 메테오 스트라이크 주문서 제작
+  - ⚖ 심판 주문서 제작
+  - ⚡ 스톰 콜 주문서 제작
+  - ✦ 고대 골렘 소환 주문서 제작
+  - ✦ 그림자 늑대 무리 주문서 제작
+  - ✧ 차원의 균열 주문서 제작
+  - ❄ 절대영도 주문서 제작
+  - 💀 사형선고 주문서 제작
+- id: leviathan_scale
+  name: 리바이어던 비늘
+  category: 재료·기타
+  description:
+  - 전설 등급 낚시 재료. 최상위 주문서 재료.
+  - 주문서 제작 재료 (마법사 아이리스)
+  icon_material: ARMADILLO_SCUTE
+  sources:
+  - 낚시 (전설 · 낚시 Lv.40)
+  uses:
+  - ☄ 메테오 스트라이크 주문서 제작
+  - ⚖ 심판 주문서 제작
+  - ⚡ 스톰 콜 주문서 제작
+  - ✦ 고대 골렘 소환 주문서 제작
+  - ✦ 그림자 늑대 무리 주문서 제작
+  - ✧ 차원의 균열 주문서 제작
+  - ❄ 절대영도 주문서 제작
+  - 💀 사형선고 주문서 제작
+vanilla_materials:
+- id: LEATHER
+  name: 가죽
+  sources:
+  - 상점 구매 8G
+  uses:
+  - 안정화된 마력 벨트 제작
+  - 여우불 각반 제작
+  - 여우불 두건 제작
+  - 여우불 로브 제작
+  - 여우불 신발 제작
+  - 이끼 각반 제작
+  - 이끼 갑옷 제작
+  - 이끼 두건 제작
+  - 이끼 장화 제작
+- id: GOLD_NUGGET
+  name: 금 조각
+  sources:
+  - 금 주괴 분해
+  uses:
+  - 가문 문장 펜던트 제작
+- id: GOLD_INGOT
+  name: 금 주괴
+  sources:
+  - 금 원석 굽기
+  uses:
+  - 붉은 사암 각반 제작
+  - 붉은 사암 대도 제작
+  - 붉은 사암 장화 제작
+  - 붉은 사암 투구 제작
+  - 붉은 사암 흉갑 제작
+- id: FEATHER
+  name: 깃털
+  sources:
+  - 상점 구매 5G
+  uses:
+  - 깃털 물약 양조
+- id: NETHER_WART
+  name: 네더 사마귀
+  sources:
+  - 상점 구매 25G
+  uses:
+  - 힘의 비약 제작
+- id: DIAMOND
+  name: 다이아몬드
+  sources:
+  - 섬 생성기 채굴
+  - 자동 채굴기
+  uses:
+  - 강화된 텅스텐 낫 제작
+  - 개량형 개척자 흉갑 제작
+  - 균사 강철 각반 제작
+  - 균사 강철 대검 제작
+  - 균사 강철 장화 제작
+  - 균사 강철 투구 제작
+  - 균사 강철 흉갑 제작
+  - 연구소 배급 지팡이 제작
+  - 정밀한 합금 곡괭이 제작
+- id: CARROT
+  name: 당근
+  sources:
+  - 상점 구매 6G
+  uses:
+  - 질풍의 비약 제작
+- id: REDSTONE
+  name: 레드스톤 가루
+  sources:
+  - 섬 생성기 채굴
+  uses:
+  - 햇살 유리 두건 제작
+  - 햇살 유리 로브 제작
+  - 햇살 유리 신발 제작
+  - 햇살 유리 지팡이 제작
+  - 햇살 유리 하의 제작
+- id: STICK
+  name: 막대기
+  sources:
+  - 판자 제작
+  uses:
+  - 개척자의 나무 도끼 제작
+  - 결계의 지팡이 제작
+  - 낡은 가문용 낫 제작
+  - 녹슨 가문용 곡괭이 제작
+  - 뒤틀린 철 단검 제작
+  - 여우불 지팡이 제작
+  - 연구용 나무 지팡이 제작
+  - 이끼 몽둥이 제작
+  - 초보자의 곡괭이 제작
+- id: WHEAT
+  name: 밀
+  sources:
+  - 밀 씨앗을 심어 수확
+  uses:
+  - 농부의 강장제 양조
+  - 철벽의 비약 제작
+- id: GLOWSTONE
+  name: 발광석
+  sources:
+  - 상점 구매 15G
+  uses:
+  - 반딧불 두건 제작
+  - 반딧불 로브 제작
+  - 반딧불 막대 제작
+  - 반딧불 신발 제작
+  - 반딧불 하의 제작
+  - 신기루 두건 제작
+  - 신기루 로브 제작
+  - 신기루 신발 제작
+  - 신기루 하의 제작
+  - 신기루 홀 제작
+  - 은빛 포자 두건 제작
+  - 은빛 포자 로브 제작
+  - 은빛 포자 신발 제작
+  - 은빛 포자 하의 제작
+  - 은빛 포자 홀 제작
+- id: GLOWSTONE_DUST
+  name: 발광석 가루
+  sources:
+  - 발광석 블록 부수기
+  uses:
+  - 불안정한 마력 각반 제작
+  - 불안정한 마력 두건 제작
+  - 불안정한 마력 로브 제작
+  - 불안정한 마력 신발 제작
+  - 여우불 지팡이 제작
+  - 올빼미 물약 양조
+- id: CHERRY_PLANKS
+  name: 벚나무 판자
+  sources:
+  - 벚나무 원목 제작(벚나무 묘목)
+  uses:
+  - 벚나무 도 제작
+- id: BLAZE_ROD
+  name: 블레이즈 막대기
+  sources:
+  - 상점 구매 60G
+  uses:
+  - 불안정한 마력 지팡이 제작
+- id: BEETROOT
+  name: 비트
+  sources:
+  - 비트 씨앗을 심어 수확
+  uses:
+  - 활기의 비약 제작
+- id: SUGAR_CANE
+  name: 사탕수수
+  sources:
+  - 상점 구매 10G
+  uses:
+  - 지혜의 비약 제작
+- id: COAL
+  name: 석탄
+  sources:
+  - 섬 생성기 채굴
+  uses:
+  - 광부의 강장제 양조
+- id: SUGAR
+  name: 설탕
+  sources:
+  - 사탕수수 제작
+  uses:
+  - 질풍의 비약 제작
+- id: MELON_SLICE
+  name: 수박 조각
+  sources:
+  - 수박 씨앗을 심어 수확
+  uses:
+  - 활기의 비약 제작
+- id: STRING
+  name: 실
+  sources:
+  - 섬 밤 몹 처치(바닐라 드롭 2배) — 거미
+  uses:
+  - 갈대 단검 제작
+  - 갈대 두건 제작
+  - 갈대 바지 제작
+  - 갈대 신발 제작
+  - 갈대 조끼 제작
+  - 뒤틀린 파편 각반 제작
+  - 뒤틀린 파편 경갑 제작
+  - 뒤틀린 파편 두건 제작
+  - 뒤틀린 파편 신발 제작
+  - 모래바람 단검 제작
+  - 모래바람 두건 제작
+  - 모래바람 바지 제작
+  - 모래바람 신발 제작
+  - 모래바람 조끼 제작
+  - 억새 각반 제작
+  - 억새 경갑 제작
+  - 억새 두건 제작
+  - 억새 신발 제작
+  - 억새검 제작
+  - 포자바람 단검 제작
+  - 포자바람 두건 제작
+  - 포자바람 바지 제작
+  - 포자바람 신발 제작
+  - 포자바람 조끼 제작
+- id: EMERALD
+  name: 에메랄드
+  sources:
+  - 섬 생성기 채굴
+  uses:
+  - 뒤틀린 덩굴 반지 제작
+- id: GLASS_BOTTLE
+  name: 유리병
+  sources:
+  - 상점 구매 3G
+  uses:
+  - 거인의 비약 양조
+  - 결계의 비약 양조
+  - 관통의 비약 양조
+  - 광부의 강장제 양조
+  - 광폭의 비약 양조
+  - 교감의 비약 양조
+  - 깃털 물약 양조
+  - 나무꾼의 강장제 양조
+  - 농부의 강장제 양조
+  - 대현자의 영약 양조
+  - 사냥꾼의 강장제 양조
+  - 사냥꾼의 비약 양조
+  - 상급 마나 물약 양조
+  - 상급 조화의 물약 양조
+  - 상급 회복 물약 양조
+  - 수호의 비약 양조
+  - 아가미 물약 양조
+  - 연격의 비약 양조
+  - 올빼미 물약 양조
+  - 장인의 영약 양조
+  - 정밀의 비약 양조
+  - 조화의 물약 양조
+  - 중급 마나 물약 양조
+  - 중급 회복 물약 양조
+  - 지혜의 비약 II 양조
+  - 지혜의 비약 제작
+  - 질풍의 비약 II 양조
+  - 질풍의 비약 제작
+  - 집중의 비약 양조
+  - 철벽의 비약 II 양조
+  - 철벽의 비약 제작
+  - 최상급 마나 물약 양조
+  - 최상급 회복 물약 양조
+  - 하급 마나 물약 양조
+  - 하급 회복 물약 양조
+  - 학자의 강장제 양조
+  - 현자의 비약 양조
+  - 화염 저항 물약 양조
+  - 활기의 비약 II 양조
+  - 활기의 비약 제작
+  - 힘의 비약 II 양조
+  - 힘의 비약 제작
+- id: MOSS_BLOCK
+  name: 이끼 블록
+  sources:
+  - 상점 구매 15G
+  uses:
+  - 이끼 각반 제작
+  - 이끼 갑옷 제작
+  - 이끼 두건 제작
+  - 이끼 몽둥이 제작
+  - 이끼 장화 제작
+- id: COBBLESTONE
+  name: 조약돌
+  sources:
+  - 섬 생성기 채굴
+  uses:
+  - 압축된 코블스톤 제작
+  - 폐허 탐사자의 각반 제작
+  - 폐허 탐사자의 곡괭이 제작
+  - 폐허 탐사자의 투구 제작
+- id: PAPER
+  name: 종이
+  sources:
+  - 사탕수수 제작
+  uses:
+  - 결계의 각반 제작
+  - 결계의 로브 제작
+  - 결계의 부적 제작
+  - 결계의 신발 제작
+  - 결계의 지팡이 제작
+  - 뒤틀린 봉인 각반 제작
+  - 뒤틀린 봉인 두건 제작
+  - 뒤틀린 봉인 로브 제작
+  - 뒤틀린 봉인 신발 제작
+  - 뒤틀린 봉인 지팡이 제작
+- id: OAK_PLANKS
+  name: 참나무 판자
+  sources:
+  - 상점 구매 3G
+  - 원목 제작
+  uses:
+  - 개척자의 나무 도끼 제작
+  - 낡은 가문용 낫 제작
+  - 녹슨 가문용 곡괭이 제작
+  - 연구용 나무 지팡이 제작
+- id: IRON_INGOT
+  name: 철 주괴
+  sources:
+  - 상점 구매 17G
+  - 철 원석 굽기
+  uses:
+  - 갓 껍질 각반 제작
+  - 갓 껍질 장화 제작
+  - 갓 껍질 철퇴 제작
+  - 갓 껍질 투구 제작
+  - 갓 껍질 흉갑 제작
+  - 뒤틀린 강철 각반 제작
+  - 뒤틀린 강철 신발 제작
+  - 뒤틀린 강철 투구 제작
+  - 뒤틀린 강철 흉갑 제작
+  - 뒤틀린 전투도끼 제작
+  - 맹그로브 각반 제작
+  - 맹그로브 대검 제작
+  - 맹그로브 장화 제작
+  - 맹그로브 투구 제작
+  - 맹그로브 흉갑 제작
+  - 벚나무 각반 제작
+  - 벚나무 도 제작
+  - 벚나무 신발 제작
+  - 벚나무 투구 제작
+  - 벚나무 흉갑 제작
+  - 억새검 제작
+  - 철벽의 비약 제작
+  - 테라코타 각반 제작
+  - 테라코타 망치 제작
+  - 테라코타 장화 제작
+  - 테라코타 투구 제작
+  - 테라코타 흉갑 제작
+- id: LAPIS_LAZULI
+  name: 청금석
+  sources:
+  - 섬 생성기 채굴
+  uses:
+  - 늪안개 두건 제작
+  - 늪안개 로브 제작
+  - 늪안개 신발 제작
+  - 늪안개 지팡이 제작
+  - 늪안개 하의 제작
+  - 발광 균사 두건 제작
+  - 발광 균사 로브 제작
+  - 발광 균사 신발 제작
+  - 발광 균사 지팡이 제작
+  - 발광 균사 하의 제작
+  - 상급 마나 물약 양조
+  - 중급 마나 물약 양조
+  - 하급 마나 물약 양조
+- id: KELP
+  name: 켈프
+  sources:
+  - 상점 구매 5G
+  uses:
+  - 아가미 물약 양조
+- id: DIRT
+  name: 흙
+  sources:
+  - 상점 구매 15G
+  uses:
+  - 수렁 진흙 각반 제작
+  - 수렁 진흙 장화 제작
+  - 수렁 진흙 철퇴 제작
+  - 수렁 진흙 투구 제작
+  - 수렁 진흙 흉갑 제작

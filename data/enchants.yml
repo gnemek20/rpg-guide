@@ -1,0 +1,999 @@
+# 잠재능력
+# 장비에 무작위로 붙는 추가 효과. for = 붙는 장비 종류.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+rules:
+  npc: 잠재능력 재설정 NPC
+  grades:
+  - 일반
+  - 희귀
+  - 영웅
+  - 전설
+  lines_per_grade:
+    일반: 1
+    희귀: 1
+    영웅: 2
+    전설: 3
+  grade_up_chance:
+    일반→희귀: 25%
+    희귀→영웅: 12%
+    영웅→전설: 5%
+    전설(최고): 0%
+  cost: 100G + 등급 순번(0~3)×100G, 뒤틀린 청금석 1개 + 등급 순번×1개 (도구는 ×0.5)
+  line_lock: 잠근 줄은 유지하고 나머지만 다시 뽑음. 1줄 잠글 때마다 기본 골드 ×1.0 추가, 잠그는 동안 등급업 없음, 모든 줄은 못 잠금
+  grade_bonus: 아이템 등급이 잠재능력 등급보다 한 단계 높을 때마다 효과 +45%
+  note: effect_at_max는 최고 레벨·등급 보너스 없음(배율 1.0) 기준입니다. any_grade=true면 아이템 등급과 상관없이 나옵니다.
+enchants:
+- id: power
+  name: 강타
+  for: 무기
+  grade: 일반
+  max_level: 5
+  effect_at_max: 데미지 +15%
+  any_grade: false
+- id: vital_strike
+  name: 생기타격
+  for: 무기
+  grade: 일반
+  max_level: 3
+  effect_at_max: 공격 시 체력 3 회복
+  any_grade: false
+- id: swift_strike
+  name: 쾌속타격
+  for: 무기
+  grade: 일반
+  max_level: 3
+  effect_at_max: 45% 확률로 대상 둔화 1초
+  any_grade: false
+- id: sharpness_blessing
+  name: 예리함
+  for: 무기
+  grade: 일반
+  max_level: 5
+  effect_at_max: 물리 공격력 +10 (상시)
+  any_grade: false
+- id: precision_blessing
+  name: 필중의 축복
+  for: 무기
+  grade: 일반
+  max_level: 3
+  effect_at_max: 치명타 확률 +12 (상시)
+  any_grade: false
+- id: keen_edge
+  name: 예리한 칼날
+  for: 무기
+  grade: 일반
+  max_level: 5
+  effect_at_max: 물리 관통력 +15% (상시)
+  any_grade: false
+- id: arcane_edge
+  name: 마력 관통
+  for: 무기
+  grade: 일반
+  max_level: 5
+  effect_at_max: 마법 관통력 +15% (상시)
+  any_grade: false
+- id: bounty_hunter
+  name: 현상금 사냥꾼
+  for: 무기
+  grade: 일반
+  max_level: 5
+  effect_at_max: 몬스터 처치 골드 +15%
+  any_grade: false
+- id: hunter_instinct
+  name: 사냥 본능
+  for: 무기
+  grade: 일반
+  max_level: 5
+  effect_at_max: 사냥 숙련도 경험치 +25%
+  any_grade: false
+- id: venom_blade
+  name: 독날
+  for: 무기
+  grade: 일반
+  max_level: 3
+  effect_at_max: 30% 확률로 대상 중독 2초
+  any_grade: false
+- id: flame_weapon
+  name: 화염부여
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 대상 화상 6초
+  any_grade: false
+- id: frost_weapon
+  name: 냉기부여
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 25% 확률로 대상 둔화 2초 (강도 2)
+  any_grade: false
+- id: static_shock
+  name: 정전기
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 30% 확률로 대상 행동불능 0.5초
+  any_grade: false
+- id: mana_flow
+  name: 마력 순환
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 마법 공격력 +9 (상시)
+  any_grade: false
+- id: cruel_edge
+  name: 잔혹함
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 치명타 피해 +15% (상시)
+  any_grade: false
+- id: first_strike
+  name: 선제공격
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 체력 90% 이상인 대상에게 데미지 +30%
+  any_grade: false
+- id: weakening_blow
+  name: 약화의 일격
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 30% 확률로 대상 나약함 3초
+  any_grade: false
+- id: mana_siphon
+  name: 마나 흡수
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 공격 시 마나 4.5 회복
+  any_grade: false
+- id: blinding_strike
+  name: 눈멀게 하기
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 24% 확률로 대상 실명 2초
+  any_grade: false
+- id: repel_blow
+  name: 밀쳐내기
+  for: 무기
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 45% 확률로 대상을 강하게 밀쳐냄
+  any_grade: false
+- id: lifesteal
+  name: 흡혈
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 가한 데미지의 15% 회복
+  any_grade: false
+- id: chain_strike
+  name: 연쇄타격
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 60% 확률로 근처 적에게 50% 전이
+  any_grade: false
+- id: mortal_strike
+  name: 필멸의일격
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 대상이 잃은 체력 비율 × 90% 추가 데미지
+  any_grade: false
+- id: swift_blessing
+  name: 쾌속의 축복
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 몹당 타격 간격 −15% (상시)
+  any_grade: false
+- id: golden_touch
+  name: 황금손
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 몬스터 처치 골드 +18%
+  any_grade: false
+- id: bleed
+  name: 출혈
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 45% 확률로 3초간 매초 이번 피해의 10% 출혈
+  any_grade: false
+- id: armor_break
+  name: 갑옷 파쇄
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 방어력이 있는 대상에게 데미지 +24%
+  any_grade: false
+- id: berserker
+  name: 광전사
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 내 잃은 체력 비율 × 75% 추가 데미지
+  any_grade: false
+- id: momentum
+  name: 연격
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 같은 대상을 2초 안에 연속 타격 시 스택당 +9% (최대 5스택)
+  any_grade: false
+- id: vampiric_kill
+  name: 흡혼
+  for: 무기
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 처치 시 최대 체력의 15% 회복
+  any_grade: false
+- id: execute
+  name: 처형
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 대상 HP 20% 이하 시 데미지 +45%
+  any_grade: false
+- id: soul_drain
+  name: 영혼흡수
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 처치 시 15초간 속도+재생
+  any_grade: false
+- id: divine_wrath
+  name: 천벌
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 15% 확률로 데미지 2배
+  any_grade: false
+- id: infinity_edge
+  name: 무한의 검
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 치명타 피해 +45% (상시)
+  any_grade: false
+- id: annihilate
+  name: 섬멸
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 15% 확률로 주변 3칸의 적에게 이번 피해의 60%
+  any_grade: false
+- id: death_mark
+  name: 사형선고
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 타격한 대상에 5초 표식 — 표식 대상에게 내 데미지 +30%
+  any_grade: false
+- id: reaper
+  name: 사신의 낫
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 처치 시 5초 안의 다음 공격 데미지 +120%
+  any_grade: false
+- id: spellblade
+  name: 마검
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 공격 시 마법 공격력의 60%를 추가 피해로
+  any_grade: false
+- id: absolute_zero
+  name: 절대영도
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 15% 확률로 대상 2초 빙결 + 주변 3칸 둔화
+  any_grade: false
+- id: soul_harvest
+  name: 영혼 수확
+  for: 무기
+  grade: 전설
+  max_level: 3
+  effect_at_max: 사냥 숙련도 경험치 +60%, 처치 골드 +15%
+  any_grade: false
+- id: iron_skin
+  name: 철갑
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 받는 피해 −15%
+  any_grade: false
+- id: vital_ward
+  name: 생명의 가호
+  for: 방어구
+  grade: 일반
+  max_level: 3
+  effect_at_max: 피격 시 체력 1.5 회복
+  any_grade: false
+- id: light_step
+  name: 가벼운 몸놀림
+  for: 방어구
+  grade: 일반
+  max_level: 3
+  effect_at_max: 30% 확률로 받는 피해 절반
+  any_grade: false
+- id: vitality_blessing
+  name: 체력의 축복
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 최대 체력 +40 (상시)
+  any_grade: false
+- id: regen_weave
+  name: 재생의 실
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 체력 재생 +1.5 (상시)
+  any_grade: false
+- id: mana_weave
+  name: 마력의 실
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 최대 마나 +25 (상시)
+  any_grade: false
+- id: swift_step
+  name: 질풍
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 이동 속도 +10% (상시)
+  any_grade: false
+- id: spirit_weave
+  name: 정신의 실
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 마나 재생 +2 (상시)
+  any_grade: false
+- id: warding
+  name: 보호 부적
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 마법 방어력 +15 (상시)
+  any_grade: false
+- id: padding
+  name: 완충재
+  for: 방어구
+  grade: 일반
+  max_level: 5
+  effect_at_max: 받는 피해 5 고정 감소
+  any_grade: false
+- id: thorn_mail
+  name: 가시 갑옷
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 받은 피해의 30% 반사
+  any_grade: false
+- id: frost_ward
+  name: 서릿발 보호막
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 25% 확률로 공격자 둔화 2초 (강도 2)
+  any_grade: false
+- id: stone_hide
+  name: 돌가죽
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 받는 피해 −15%
+  any_grade: false
+- id: guardian_blessing
+  name: 수호의 축복
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 물리 방어력 +15 (상시)
+  any_grade: false
+- id: time_weave
+  name: 시간의 실
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 쿨타임 감소 +6% (상시)
+  any_grade: false
+- id: spiked_shell
+  name: 독가시
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 30% 확률로 공격자 중독 3초
+  any_grade: false
+- id: adrenaline
+  name: 아드레날린
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 45% 확률로 피격 시 신속 2초
+  any_grade: false
+- id: bulwark
+  name: 방벽
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 한 번에 최대 체력의 35% 넘는 피해를 받지 않음
+  any_grade: false
+- id: second_wind
+  name: 재기
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 체력이 30% 아래로 떨어지면 최대 체력의 15% 회복 (30초 쿨타임)
+  any_grade: false
+- id: mana_shield
+  name: 마나 보호막
+  for: 방어구
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 받는 피해의 30%를 마나로 대신 받음 (마나가 있을 때)
+  any_grade: false
+- id: guardian_spirit
+  name: 수호령
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 21% 확률로 피해 완전 무효
+  any_grade: false
+- id: last_stand
+  name: 최후의 저항
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 체력이 낮을수록 피해 추가 감소 (최대 60%)
+  any_grade: false
+- id: retaliation
+  name: 반격의 오라
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 20% 확률로 최대체력 24% 반격
+  any_grade: false
+- id: arcane_barrier
+  name: 비전 방벽
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 마법 방어력 +18 (상시)
+  any_grade: false
+- id: shield_aura
+  name: 보호막 강화
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 보호막 +15 (상시)
+  any_grade: false
+- id: regen_field
+  name: 재생 결계
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 체력 재생 +3 (상시)
+  any_grade: false
+- id: flash_ward
+  name: 섬광
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 24% 확률로 공격자 실명·나약함 3초
+  any_grade: false
+- id: vengeance
+  name: 복수
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 피격 후 5초 안의 다음 공격 데미지 +45%
+  any_grade: false
+- id: life_link
+  name: 생명 연결
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 받은 피해의 24%를 즉시 회복
+  any_grade: false
+- id: counter_stance
+  name: 반격 자세
+  for: 방어구
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 30% 확률로 공격자에게 내 물리 공격력만큼 반격
+  any_grade: false
+- id: phoenix_blessing
+  name: 불사조의 가호
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 치명적인 피해 시 14% 확률로 1HP 생존
+  any_grade: false
+- id: abyssal_ward
+  name: 심연의 방패
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 받는 피해 −24%
+  any_grade: false
+- id: divine_aegis
+  name: 천벌의 가호
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 15% 확률로 피해 무효 + 50% 반격
+  any_grade: false
+- id: omnipotent_blessing
+  name: 만능의 축복
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 최대 체력 +45 (상시)
+  any_grade: false
+- id: titan_hide
+  name: 거인의 피부
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 물리 방어력 +36 (상시)
+  any_grade: false
+- id: void_walker
+  name: 공허 보행
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 이동 속도 +18% (상시)
+  any_grade: false
+- id: eternal_guard
+  name: 불멸의 수호
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 30초마다 피해 한 번을 완전히 막음
+  any_grade: false
+- id: mirror_shield
+  name: 반사의 거울
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 받는 피해 −30%, 받은 피해의 75% 반사
+  any_grade: false
+- id: celestial_grace
+  name: 천상의 은총
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 체력 50% 이하에서 피격 시 최대 체력의 9% 회복 (5초 쿨타임)
+  any_grade: false
+- id: undying_rage
+  name: 불사의 분노
+  for: 방어구
+  grade: 전설
+  max_level: 3
+  effect_at_max: 피격 시 5초간 내 데미지 +30%
+  any_grade: false
+- id: ore_sense
+  name: 광맥 감각
+  for: 곡괭이
+  grade: 일반
+  max_level: 5
+  effect_at_max: 뒤틀린 광물 확률 ×1.2
+  any_grade: false
+- id: miner_lore
+  name: 광부의 지혜
+  for: 곡괭이
+  grade: 일반
+  max_level: 5
+  effect_at_max: 채굴 숙련도 경험치 +25%
+  any_grade: false
+- id: steady_grip
+  name: 숙련된 손놀림
+  for: 곡괭이
+  grade: 일반
+  max_level: 3
+  effect_at_max: 채굴 시 성급함 3단계 3초
+  any_grade: false
+- id: double_vein
+  name: 풍부한 광맥
+  for: 곡괭이
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 12% 확률로 채굴물 2배
+  any_grade: false
+- id: gold_dust
+  name: 금가루
+  for: 곡괭이
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 12% 확률로 1~3G 발견
+  any_grade: false
+- id: smelting_touch
+  name: 제련의 손길
+  for: 곡괭이
+  grade: 희귀
+  max_level: 1
+  effect_at_max: 철·금 광석을 주괴로 바로 제련
+  any_grade: false
+- id: deep_vein
+  name: 심층 광맥
+  for: 곡괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 뒤틀린 광물 확률 ×1.4
+  any_grade: false
+- id: prospector
+  name: 탐광가
+  for: 곡괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 24% 확률로 채굴물 2배
+  any_grade: false
+- id: quarry_mind
+  name: 채석장의 지혜
+  for: 곡괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 채굴 숙련도 경험치 +45%
+  any_grade: false
+- id: rift_resonance
+  name: 균열 공명
+  for: 곡괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 뒤틀린 광물 확률 ×1.8
+  any_grade: false
+- id: midas_pick
+  name: 황금 곡괭이
+  for: 곡괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 30% 확률로 1~3G 발견
+  any_grade: false
+- id: bountiful_earth
+  name: 대지의 풍요
+  for: 곡괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 45% 확률로 채굴물 2배
+  any_grade: false
+- id: keen_pick
+  name: 날카로운 날
+  for: 곡괭이
+  grade: 일반
+  max_level: 5
+  effect_at_max: 채굴 효율 2단계 (효율 마법부여 상당)
+  any_grade: false
+- id: excavator
+  name: 굴착
+  for: 곡괭이
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 채굴 효율 3단계 (효율 마법부여 상당)
+  any_grade: false
+- id: bedrock_breaker
+  name: 암반 분쇄
+  for: 곡괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 채굴 효율 4단계 (효율 마법부여 상당)
+  any_grade: false
+- id: earth_splitter
+  name: 대지 가르기
+  for: 곡괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 채굴 효율 5단계 (효율 마법부여 상당)
+  any_grade: false
+- id: magnet_pick
+  name: 자력 곡괭이
+  for: 곡괭이
+  grade: 일반
+  max_level: 1
+  effect_at_max: 캔 블록이 바로 인벤토리로 (가득 차면 바닥에)
+  any_grade: true
+- id: lumber_lore
+  name: 나무꾼의 지혜
+  for: 도끼
+  grade: 일반
+  max_level: 5
+  effect_at_max: 벌목 숙련도 경험치 +25%
+  any_grade: false
+- id: sapling_luck
+  name: 묘목 행운
+  for: 도끼
+  grade: 일반
+  max_level: 5
+  effect_at_max: 나무당 50% 확률로 묘목 획득
+  any_grade: false
+- id: quick_chop
+  name: 재빠른 도끼질
+  for: 도끼
+  grade: 일반
+  max_level: 3
+  effect_at_max: 벌목 시 성급함 3단계 3초
+  any_grade: false
+- id: twin_logs
+  name: 겹나무
+  for: 도끼
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 원목마다 12% 확률로 1개 더
+  any_grade: false
+- id: forest_gold
+  name: 숲의 보물
+  for: 도끼
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 나무당 12% 확률로 5~15G 발견
+  any_grade: false
+- id: giant_feller
+  name: 거목 벌목
+  for: 도끼
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 한 번에 벌목하는 원목 수 +48
+  any_grade: false
+- id: apple_harvest
+  name: 사과 수확
+  for: 도끼
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 나무당 30% 확률로 사과 (10%는 황금 사과)
+  any_grade: false
+- id: timber_mind
+  name: 벌목왕의 지혜
+  for: 도끼
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 벌목 숙련도 경험치 +45%
+  any_grade: false
+- id: lumberjack
+  name: 벌목왕
+  for: 도끼
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 원목마다 24% 확률로 1개 더
+  any_grade: false
+- id: world_tree
+  name: 세계수의 축복
+  for: 도끼
+  grade: 전설
+  max_level: 3
+  effect_at_max: 원목마다 45% 확률로 1개 더
+  any_grade: false
+- id: golden_bark
+  name: 황금 나무껍질
+  for: 도끼
+  grade: 전설
+  max_level: 3
+  effect_at_max: 나무당 30% 확률로 5~15G 발견
+  any_grade: false
+- id: ancient_grove
+  name: 고대의 숲
+  for: 도끼
+  grade: 전설
+  max_level: 3
+  effect_at_max: 나무당 75% 확률로 사과 (10%는 황금 사과)
+  any_grade: false
+- id: sharp_axe
+  name: 예리한 도끼날
+  for: 도끼
+  grade: 일반
+  max_level: 5
+  effect_at_max: 벌목 효율 2단계 (효율 마법부여 상당)
+  any_grade: false
+- id: mighty_swing
+  name: 힘찬 도끼질
+  for: 도끼
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 벌목 효율 3단계 (효율 마법부여 상당)
+  any_grade: false
+- id: woodsman_rhythm
+  name: 나무꾼의 리듬
+  for: 도끼
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 벌목 효율 4단계 (효율 마법부여 상당)
+  any_grade: false
+- id: one_strike
+  name: 일격 벌목
+  for: 도끼
+  grade: 전설
+  max_level: 3
+  effect_at_max: 벌목 효율 5단계 (효율 마법부여 상당)
+  any_grade: false
+- id: timber_sack
+  name: 나무꾼의 자루
+  for: 도끼
+  grade: 일반
+  max_level: 1
+  effect_at_max: 벤 원목이 바로 인벤토리로 (가득 차면 바닥에)
+  any_grade: true
+- id: green_thumb
+  name: 초록 손가락
+  for: 괭이
+  grade: 일반
+  max_level: 5
+  effect_at_max: 농사 숙련도 경험치 +25%
+  any_grade: false
+- id: seed_saver
+  name: 씨앗 절약
+  for: 괭이
+  grade: 일반
+  max_level: 5
+  effect_at_max: 작물마다 50% 확률로 씨앗 1개 더
+  any_grade: false
+- id: wide_reap
+  name: 넓은 수확
+  for: 괭이
+  grade: 일반
+  max_level: 2
+  effect_at_max: 범위 수확 반경 +2칸
+  any_grade: false
+- id: bumper_crop
+  name: 풍작
+  for: 괭이
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 작물마다 12% 확률로 수확량 2배
+  any_grade: false
+- id: harvest_coin
+  name: 수확의 동전
+  for: 괭이
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 작물마다 6% 확률로 1~2G 발견
+  any_grade: false
+- id: fertile_soil
+  name: 비옥한 땅
+  for: 괭이
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 30% 확률로 재파종 작물이 절반 자란 채 시작
+  any_grade: false
+- id: golden_harvest
+  name: 황금 들판
+  for: 괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 작물마다 24% 확률로 수확량 2배
+  any_grade: false
+- id: harvest_basket
+  name: 수확 바구니
+  for: 괭이
+  grade: 일반
+  max_level: 1
+  effect_at_max: 수확한 작물·씨앗이 바로 인벤토리로 (가득 차면 바닥에)
+  any_grade: true
+- id: farmer_mind
+  name: 농부의 지혜
+  for: 괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 농사 숙련도 경험치 +45%
+  any_grade: false
+- id: rich_soil
+  name: 풍요로운 흙
+  for: 괭이
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 45% 확률로 재파종 작물이 절반 자란 채 시작
+  any_grade: false
+- id: demeter
+  name: 대지모신의 축복
+  for: 괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 작물마다 45% 확률로 수확량 2배
+  any_grade: false
+- id: golden_scythe
+  name: 황금 낫
+  for: 괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 작물마다 15% 확률로 1~2G 발견
+  any_grade: false
+- id: eternal_spring
+  name: 영원한 봄
+  for: 괭이
+  grade: 전설
+  max_level: 3
+  effect_at_max: 75% 확률로 재파종 작물이 절반 자란 채 시작
+  any_grade: false
+- id: lure_charm
+  name: 미끼 부적
+  for: 낚싯대
+  grade: 일반
+  max_level: 5
+  effect_at_max: 입질 대기 시간 −40%
+  any_grade: false
+- id: angler_lore
+  name: 낚시꾼의 지혜
+  for: 낚싯대
+  grade: 일반
+  max_level: 5
+  effect_at_max: 낚시 숙련도 경험치 +25%
+  any_grade: false
+- id: coin_hook
+  name: 동전 낚시
+  for: 낚싯대
+  grade: 일반
+  max_level: 5
+  effect_at_max: 25% 확률로 5~15G 추가
+  any_grade: false
+- id: double_hook
+  name: 쌍바늘
+  for: 낚싯대
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 15% 확률로 한 번 더 낚음
+  any_grade: false
+- id: treasure_sense
+  name: 보물 감각
+  for: 낚싯대
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 희귀 등급 가중치 +3
+  any_grade: false
+- id: swift_reel
+  name: 빠른 감기
+  for: 낚싯대
+  grade: 희귀
+  max_level: 3
+  effect_at_max: 입질 대기 시간 −45%
+  any_grade: false
+- id: deep_sea
+  name: 심해
+  for: 낚싯대
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 희귀 등급 가중치 +6
+  any_grade: false
+- id: master_angler
+  name: 명인의 손맛
+  for: 낚싯대
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 낚시 숙련도 경험치 +45%
+  any_grade: false
+- id: twin_catch
+  name: 겹입질
+  for: 낚싯대
+  grade: 영웅
+  max_level: 3
+  effect_at_max: 30% 확률로 한 번 더 낚음
+  any_grade: false
+- id: poseidon
+  name: 포세이돈의 축복
+  for: 낚싯대
+  grade: 전설
+  max_level: 3
+  effect_at_max: 희귀 등급 가중치 +12
+  any_grade: false
+- id: golden_hook
+  name: 황금 바늘
+  for: 낚싯대
+  grade: 전설
+  max_level: 3
+  effect_at_max: 45% 확률로 5~15G 추가
+  any_grade: false
+- id: abyss_lure
+  name: 심연의 미끼
+  for: 낚싯대
+  grade: 전설
+  max_level: 3
+  effect_at_max: 입질 대기 시간 −60%
+  any_grade: false

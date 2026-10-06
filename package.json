@@ -1,0 +1,36 @@
+{
+  "name": "rpg-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run prepare:assets && next dev",
+    "validate": "tsx scripts/validate.ts",
+    "assets": "tsx scripts/assets.ts",
+    "prepare:assets": "npm run validate && npm run assets",
+    "build": "npm run prepare:assets && next build && node scripts/postbuild.mjs",
+    "preview": "node scripts/preview.mjs",
+    "lint:rules": "node scripts/lint-rules.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "galmuri": "^2.40.3",
+    "marked": "^18.1.0",
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.186.1",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "pngjs": "^7.0.0",
+    "subset-font": "^2.9.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,39 @@
+# 기본 정보
+# 사이트 이름·주소, 표시용 이름표(능력치·희귀도 색).
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+site_name: 모험 안내서
+current_url: "https://perdume.github.io/rpg-guide/"
+game: 마인크래프트 RPG 서버(개인 섬·사냥터·장비 빌드·마법·낚시·시련의 탑·보스 레이드). 직업(전직) 없음.
+level_rule: 레벨 = 채굴·농사·벌목·사냥 숙련도 중 가장 낮은 레벨(낚시 제외)
+alpha_level_range: Lv.30~45
+stat_names:
+  MAX_HEALTH: 최대 체력
+  MAX_MANA: 최대 마나
+  HEALTH_REGEN: 체력 재생
+  MANA_REGEN: 마나 재생
+  PHYSICAL_ATK: 물리 공격력
+  MAGIC_ATK: 마법 공격력
+  CRIT_CHANCE: 치명타 확률
+  CRIT_DAMAGE: 치명타 피해
+  PHYSICAL_PEN: 물리 관통력
+  MAGIC_PEN: 마법 관통력
+  PHYSICAL_DEF: 물리 방어력
+  MAGIC_DEF: 마법 방어력
+  MOVE_SPEED: 이동 속도
+  HIT_INTERVAL: 타격 간격 감소
+  COOLDOWN_REDUCTION: 쿨타임 감소
+  SHIELD: 보호막
+  SUMMON_POWER: 소환수 능력치
+  STRENGTH: 힘
+  DEXTERITY: 민첩
+  INTELLIGENCE: 지능
+  VITALITY: 활력
+  WILL: 의지
+rarity:
+  일반: "#aaaaaa"
+  고급: "#55ff55"
+  희귀: "#5555ff"
+  영웅: "#aa00aa"
+  전설: "#ffaa00"
+equip_slots: 투구·흉갑·각반·신발 + 목걸이 1 · 벨트 1 · 반지 2 · 룬 2

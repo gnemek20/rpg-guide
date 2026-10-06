@@ -1,0 +1,2013 @@
+# 사냥터·몬스터
+# 마을의 차원문지기 엘론에게 말을 걸어 사냥터로 갑니다.
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+regions:
+- id: SakuraValley
+  name: 요괴 계곡
+  levels: Lv.1~14
+  monsters:
+  - id: lost_wanderer
+    name: 미혹된 나그네
+    level: 1
+    health: 35.0
+    attack: 3.0
+    boss: false
+    gold:
+    - 6
+    - 20
+    exp:
+    - 4
+    - 10
+    looks_like: ZOMBIE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 10.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: lost_soul
+        name: 미혹된 넋
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 1
+  - id: cursed_samurai
+    name: 저주받은 사무라이
+    level: 4
+    health: 125.0
+    attack: 6.0
+    boss: false
+    gold:
+    - 15
+    - 40
+    exp:
+    - 8
+    - 18
+    looks_like: HUSK
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: twisted_coal
+        name: 뒤틀린 석탄
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: lost_soul
+        name: 미혹된 넋
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: onryo_archer
+    name: 원혼 궁수
+    level: 5
+    health: 165.0
+    attack: 5.0
+    boss: false
+    gold:
+    - 18
+    - 45
+    exp:
+    - 10
+    - 22
+    looks_like: SKELETON
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 16.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: twisted_coal
+        name: 뒤틀린 석탄
+      chance_percent: 7.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: lost_soul
+        name: 미혹된 넋
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: fallen_priest
+    name: 타천 신관
+    level: 6
+    health: 315.0
+    attack: 9.0
+    boss: false
+    gold:
+    - 22
+    - 55
+    exp:
+    - 12
+    - 25
+    looks_like: ZOMBIE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: twisted_coal
+        name: 뒤틀린 석탄
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: foxfire_essence
+        name: 여우불 정수
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: venom_jorogumo
+    name: 독니 죠로구모
+    level: 7
+    health: 260.0
+    attack: 11.0
+    boss: false
+    gold:
+    - 25
+    - 65
+    exp:
+    - 14
+    - 28
+    looks_like: CAVE_SPIDER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 20.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: jorogumo_thread
+        name: 죠로구모의 실
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: mist_wraith
+    name: 안개 속 원혼
+    level: 8
+    health: 320.0
+    attack: 9.0
+    boss: false
+    gold:
+    - 30
+    - 75
+    exp:
+    - 16
+    - 32
+    looks_like: STRAY
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 22.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: cursed_moss
+        name: 저주받은 이끼
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: corrupted_ronin
+    name: 타락한 낭인
+    level: 9
+    health: 355.0
+    attack: 13.0
+    boss: false
+    gold:
+    - 35
+    - 85
+    exp:
+    - 18
+    - 35
+    looks_like: WITHER_SKELETON
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 22.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: jorogumo_thread
+        name: 죠로구모의 실
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: kitsunebi_miko
+    name: 여우불 무녀
+    level: 10
+    health: 350.0
+    attack: 11.0
+    boss: false
+    gold:
+    - 40
+    - 95
+    exp:
+    - 20
+    - 38
+    looks_like: WITCH
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 24.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: foxfire_essence
+        name: 여우불 정수
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: wandering_onryo
+    name: 떠도는 원령
+    level: 11
+    health: 525.0
+    attack: 12.0
+    boss: false
+    gold:
+    - 45
+    - 110
+    exp:
+    - 22
+    - 42
+    looks_like: ENDERMAN
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 24.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 3.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: cursed_moss
+        name: 저주받은 이끼
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: oni_warrior
+    name: 오니 무사
+    level: 13
+    health: 705.0
+    attack: 19.0
+    boss: false
+    gold:
+    - 60
+    - 140
+    exp:
+    - 28
+    - 52
+    looks_like: VINDICATOR
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 26.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: oni_sealstone
+        name: 오니의 봉인석
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+  - id: tengu_archer
+    name: 덴구 궁사
+    level: 14
+    health: 600.0
+    attack: 16.0
+    boss: false
+    gold:
+    - 65
+    - 155
+    exp:
+    - 30
+    - 55
+    looks_like: PILLAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 26.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: oni_sealstone
+        name: 오니의 봉인석
+      chance_percent: 15.0
+      amount:
+      - 1
+      - 1
+- id: MysticSwamp
+  name: 신비의 늪
+  levels: Lv.16~25
+  monsters:
+  - id: bog_ghoul
+    name: 늪 구울
+    level: 16
+    health: 1150.0
+    attack: 27.0
+    boss: false
+    gold:
+    - 74
+    - 176
+    exp:
+    - 34
+    - 62
+    looks_like: DROWNED
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: mire_spider
+    name: 수렁 거미
+    level: 17
+    health: 1040.0
+    attack: 32.0
+    boss: false
+    gold:
+    - 78
+    - 187
+    exp:
+    - 36
+    - 66
+    looks_like: SPIDER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: moss_archer
+    name: 이끼 궁수
+    level: 18
+    health: 1045.0
+    attack: 24.0
+    boss: false
+    gold:
+    - 83
+    - 198
+    exp:
+    - 38
+    - 70
+    looks_like: BOGGED
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: swamp_hexer
+    name: 늪 저주술사
+    level: 19
+    health: 1180.0
+    attack: 27.0
+    boss: false
+    gold:
+    - 92
+    - 219
+    exp:
+    - 42
+    - 78
+    looks_like: WITCH
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: rot_brute
+    name: 썩은 거한
+    level: 20
+    health: 2205.0
+    attack: 42.0
+    boss: false
+    gold:
+    - 120
+    - 286
+    exp:
+    - 55
+    - 101
+    looks_like: ZOMBIE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+  - id: bog_lurker
+    name: 늪지 잠복자
+    level: 21
+    health: 1325.0
+    attack: 43.0
+    boss: false
+    gold:
+    - 97
+    - 231
+    exp:
+    - 44
+    - 82
+    looks_like: HUSK
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: swamp_poacher
+    name: 늪 밀렵꾼
+    level: 22
+    health: 1315.0
+    attack: 32.0
+    boss: false
+    gold:
+    - 101
+    - 242
+    exp:
+    - 46
+    - 86
+    looks_like: PILLAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: bog_hunter
+    name: 늪 사냥꾼
+    level: 23
+    health: 1745.0
+    attack: 45.0
+    boss: false
+    gold:
+    - 106
+    - 253
+    exp:
+    - 48
+    - 90
+    looks_like: VINDICATOR
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: moss_golem
+    name: 이끼 골렘
+    level: 24
+    health: 2770.0
+    attack: 54.0
+    boss: false
+    gold:
+    - 144
+    - 343
+    exp:
+    - 66
+    - 122
+    looks_like: IRON_GOLEM
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+  - id: bog_horror
+    name: 늪의 공포
+    level: 25
+    health: 2920.0
+    attack: 58.0
+    boss: false
+    gold:
+    - 150
+    - 358
+    exp:
+    - 68
+    - 127
+    looks_like: RAVAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: bog_resin
+        name: 늪지 수지
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_iron
+        name: 뒤틀린 철
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+- id: AbandonedMesa
+  name: 버려진 메사
+  levels: Lv.26~35
+  monsters:
+  - id: sand_mummy
+    name: 모래 미라
+    level: 26
+    health: 2410.0
+    attack: 50.0
+    boss: false
+    gold:
+    - 120
+    - 286
+    exp:
+    - 55
+    - 101
+    looks_like: HUSK
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: dune_scorpion
+    name: 모래 전갈
+    level: 27
+    health: 2170.0
+    attack: 58.0
+    boss: false
+    gold:
+    - 124
+    - 297
+    exp:
+    - 57
+    - 105
+    looks_like: SPIDER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: ruin_bandit
+    name: 폐허 도적
+    level: 28
+    health: 2705.0
+    attack: 57.0
+    boss: false
+    gold:
+    - 129
+    - 308
+    exp:
+    - 59
+    - 109
+    looks_like: VINDICATOR
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: bandit_marksman
+    name: 도적 저격수
+    level: 29
+    health: 2285.0
+    attack: 45.0
+    boss: false
+    gold:
+    - 133
+    - 319
+    exp:
+    - 61
+    - 113
+    looks_like: PILLAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: sun_cultist
+    name: 태양 숭배자
+    level: 30
+    health: 2565.0
+    attack: 52.0
+    boss: false
+    gold:
+    - 145
+    - 346
+    exp:
+    - 66
+    - 123
+    looks_like: WITCH
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: bone_nomad
+    name: 유랑 해골
+    level: 31
+    health: 2550.0
+    attack: 51.0
+    boss: false
+    gold:
+    - 143
+    - 341
+    exp:
+    - 65
+    - 121
+    looks_like: SKELETON
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: mesa_golem
+    name: 메사 골렘
+    level: 32
+    health: 5045.0
+    attack: 84.0
+    boss: false
+    gold:
+    - 191
+    - 458
+    exp:
+    - 87
+    - 162
+    looks_like: IRON_GOLEM
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+  - id: pharaoh_guard
+    name: 저주받은 근위병
+    level: 33
+    health: 3550.0
+    attack: 77.0
+    boss: false
+    gold:
+    - 152
+    - 363
+    exp:
+    - 69
+    - 129
+    looks_like: WITHER_SKELETON
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: sandstorm_spirit
+    name: 모래 폭풍 정령
+    level: 34
+    health: 2995.0
+    attack: 60.0
+    boss: false
+    gold:
+    - 156
+    - 374
+    exp:
+    - 71
+    - 133
+    looks_like: BREEZE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: dune_behemoth
+    name: 사막 거수
+    level: 35
+    health: 5910.0
+    attack: 98.0
+    boss: false
+    gold:
+    - 209
+    - 500
+    exp:
+    - 96
+    - 177
+    looks_like: RAVAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: sunbaked_shard
+        name: 햇볕에 구운 파편
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_redstone
+        name: 뒤틀린 레드스톤
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+- id: MushroomGlade
+  name: 버섯 숲
+  levels: Lv.36~44
+  monsters:
+  - id: spore_shambler
+    name: 포자 보행자
+    level: 36
+    health: 4665.0
+    attack: 83.0
+    boss: false
+    gold:
+    - 166
+    - 396
+    exp:
+    - 76
+    - 140
+    looks_like: ZOMBIE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: mycelium_spider
+    name: 균사 거미
+    level: 37
+    health: 4195.0
+    attack: 98.0
+    boss: false
+    gold:
+    - 170
+    - 407
+    exp:
+    - 78
+    - 144
+    looks_like: SPIDER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: cap_archer
+    name: 버섯갓 궁수
+    level: 38
+    health: 4175.0
+    attack: 70.0
+    boss: false
+    gold:
+    - 175
+    - 418
+    exp:
+    - 80
+    - 148
+    looks_like: BOGGED
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: fungal_alchemist
+    name: 균류 연금술사
+    level: 39
+    health: 4680.0
+    attack: 79.0
+    boss: false
+    gold:
+    - 188
+    - 450
+    exp:
+    - 86
+    - 160
+    looks_like: WITCH
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: shroom_guard
+    name: 버섯 파수병
+    level: 40
+    health: 5820.0
+    attack: 106.0
+    boss: false
+    gold:
+    - 184
+    - 440
+    exp:
+    - 84
+    - 156
+    looks_like: VINDICATOR
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: rot_crawler
+    name: 썩은 포복자
+    level: 41
+    health: 5220.0
+    attack: 123.0
+    boss: false
+    gold:
+    - 189
+    - 451
+    exp:
+    - 86
+    - 160
+    looks_like: HUSK
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: spore_wanderer
+    name: 포자 떠돌이
+    level: 42
+    health: 5505.0
+    attack: 95.0
+    boss: false
+    gold:
+    - 203
+    - 485
+    exp:
+    - 93
+    - 172
+    looks_like: ENDERMAN
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: mushroom_golem
+    name: 버섯 골렘
+    level: 43
+    health: 10255.0
+    attack: 143.0
+    boss: false
+    gold:
+    - 257
+    - 615
+    exp:
+    - 117
+    - 218
+    looks_like: IRON_GOLEM
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+  - id: mycelium_beast
+    name: 균사 짐승
+    level: 44
+    health: 10820.0
+    attack: 152.0
+    boss: false
+    gold:
+    - 263
+    - 629
+    exp:
+    - 120
+    - 223
+    looks_like: RAVAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: spore_cap
+        name: 포자 갓
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_lapis
+        name: 뒤틀린 청금석
+      chance_percent: 6.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+- id: NetherCanyon
+  name: 네더 협곡
+  levels: Lv.45~54
+  monsters:
+  - id: ash_ghoul
+    name: 잿빛 망자
+    level: 45
+    health: 7600.0
+    attack: 139.0
+    boss: false
+    gold:
+    - 207
+    - 495
+    exp:
+    - 94
+    - 176
+    looks_like: ZOMBIFIED_PIGLIN
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: cinder_boar
+    name: 잿불 멧돼지
+    level: 46
+    health: 10795.0
+    attack: 138.0
+    boss: false
+    gold:
+    - 275
+    - 658
+    exp:
+    - 126
+    - 233
+    looks_like: HOGLIN
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+  - id: piglin_raider
+    name: 피글린 약탈자
+    level: 47
+    health: 6040.0
+    attack: 96.0
+    boss: false
+    gold:
+    - 216
+    - 517
+    exp:
+    - 99
+    - 183
+    looks_like: PIGLIN
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: soul_archer
+    name: 영혼 궁수
+    level: 48
+    health: 6345.0
+    attack: 100.0
+    boss: false
+    gold:
+    - 221
+    - 528
+    exp:
+    - 101
+    - 187
+    looks_like: SKELETON
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: blaze_warden
+    name: 블레이즈 파수꾼
+    level: 49
+    health: 7075.0
+    attack: 114.0
+    boss: false
+    gold:
+    - 237
+    - 566
+    exp:
+    - 108
+    - 201
+    looks_like: BLAZE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: brute_vanguard
+    name: 피글린 선봉대
+    level: 50
+    health: 8730.0
+    attack: 150.0
+    boss: false
+    gold:
+    - 230
+    - 550
+    exp:
+    - 105
+    - 195
+    looks_like: PIGLIN_BRUTE
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: wither_reaver
+    name: 위더 약탈자
+    level: 51
+    health: 7785.0
+    attack: 175.0
+    boss: false
+    gold:
+    - 235
+    - 561
+    exp:
+    - 107
+    - 199
+    looks_like: WITHER_SKELETON
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: obsidian_golem
+    name: 흑요석 골렘
+    level: 52
+    health: 14390.0
+    attack: 191.0
+    boss: false
+    gold:
+    - 311
+    - 744
+    exp:
+    - 142
+    - 264
+    looks_like: IRON_GOLEM
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1
+  - id: hellfire_witch
+    name: 지옥불 마녀
+    level: 53
+    health: 8550.0
+    attack: 140.0
+    boss: false
+    gold:
+    - 256
+    - 612
+    exp:
+    - 117
+    - 217
+    looks_like: WITCH
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 28.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 18.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 5.0
+      amount:
+      - 1
+      - 1
+  - id: canyon_tyrant
+    name: 협곡 폭군
+    level: 54
+    health: 15810.0
+    attack: 211.0
+    boss: false
+    gold:
+    - 323
+    - 772
+    exp:
+    - 147
+    - 274
+    looks_like: RAVAGER
+    drops:
+    - item:
+        id: monster_essence
+        name: 몬스터 정수
+      chance_percent: 40.0
+      amount:
+      - 1
+      - 3
+    - item:
+        id: hellforge_ember
+        name: 지옥불 잉걸
+      chance_percent: 30.0
+      amount:
+      - 1
+      - 2
+    - item:
+        id: twisted_diamond
+        name: 뒤틀린 다이아몬드
+      chance_percent: 2.0
+      amount:
+      - 1
+      - 1
+    - item:
+        id: shadow_crystal
+        name: 그림자 수정
+      chance_percent: 8.0
+      amount:
+      - 1
+      - 1

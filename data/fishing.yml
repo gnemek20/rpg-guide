@@ -1,0 +1,331 @@
+# 낚시
+# 넓은 강에 찌를 던지면 자동으로 낚입니다(미니게임 없음).
+# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+
+rules:
+  price_per_level: 낚시 레벨당 생선 판매가 +3.0%
+  trophy: 트로피 크기는 판매가 ×3.0, 경험치 ×2.0
+  pause: 채굴·벌목·수확·전투를 하면 잠시 낚시가 멈춥니다.
+  sell: 낚시꾼 파이크(/낚시)
+catches:
+- id: crucian
+  name: 붕어
+  kind: 생선
+  rarity: 일반
+  item: fish_crucian
+  size_cm:
+  - 12
+  - 30
+  price: 8
+  exp: 6
+- id: mackerel
+  name: 고등어
+  kind: 생선
+  rarity: 일반
+  item: fish_mackerel
+  size_cm:
+  - 20
+  - 45
+  price: 10
+  exp: 6
+- id: trout
+  name: 송어
+  kind: 생선
+  rarity: 일반
+  item: fish_trout
+  size_cm:
+  - 25
+  - 60
+  price: 12
+  exp: 8
+  conditions:
+    places:
+    - 섬
+- id: sweetfish
+  name: 은어
+  kind: 생선
+  rarity: 일반
+  item: fish_sweetfish
+  size_cm:
+  - 10
+  - 25
+  price: 12
+  exp: 8
+  conditions:
+    places:
+    - 요괴 계곡
+- id: loach
+  name: 미꾸라지
+  kind: 생선
+  rarity: 일반
+  item: fish_loach
+  size_cm:
+  - 8
+  - 20
+  price: 12
+  exp: 8
+  conditions:
+    places:
+    - 신비의 늪
+- id: common_gold
+  name: 가라앉은 주머니
+  kind: 골드
+  rarity: 일반
+  gold:
+  - 5
+  - 15
+  exp: 4
+- id: catfish
+  name: 메기
+  kind: 생선
+  rarity: 고급
+  item: fish_catfish
+  size_cm:
+  - 30
+  - 90
+  price: 34
+  exp: 14
+  conditions:
+    time: 밤
+- id: sea_bream
+  name: 참돔
+  kind: 생선
+  rarity: 고급
+  item: fish_sea_bream
+  size_cm:
+  - 25
+  - 70
+  price: 38
+  exp: 14
+  conditions:
+    fishing_level: 5
+    places:
+    - 섬
+- id: koi
+  name: 비단잉어
+  kind: 생선
+  rarity: 고급
+  item: fish_koi
+  size_cm:
+  - 30
+  - 80
+  price: 42
+  exp: 15
+  conditions:
+    fishing_level: 5
+    places:
+    - 요괴 계곡
+- id: snakehead
+  name: 가물치
+  kind: 생선
+  rarity: 고급
+  item: fish_snakehead
+  size_cm:
+  - 35
+  - 90
+  price: 42
+  exp: 15
+  conditions:
+    fishing_level: 8
+    places:
+    - 신비의 늪
+- id: abyss_ink
+  name: 심해 먹물
+  kind: 재료
+  rarity: 고급
+  item: abyss_ink
+  exp: 12
+- id: pouch_gold
+  name: 가라앉은 주머니
+  kind: 골드
+  rarity: 고급
+  gold:
+  - 20
+  - 50
+  exp: 10
+- id: eel
+  name: 뱀장어
+  kind: 생선
+  rarity: 희귀
+  item: fish_eel
+  size_cm:
+  - 40
+  - 120
+  price: 95
+  exp: 28
+  conditions:
+    fishing_level: 10
+    weather: 비
+- id: golden_puffer
+  name: 황복
+  kind: 생선
+  rarity: 희귀
+  item: fish_golden_puffer
+  size_cm:
+  - 15
+  - 45
+  price: 110
+  exp: 28
+  conditions:
+    fishing_level: 10
+- id: ghost_carp
+  name: 유령 잉어
+  kind: 생선
+  rarity: 희귀
+  item: fish_ghost_carp
+  size_cm:
+  - 30
+  - 75
+  price: 130
+  exp: 31
+  conditions:
+    fishing_level: 15
+    time: 밤
+    places:
+    - 요괴 계곡
+- id: bog_pike
+  name: 늪 강꼬치
+  kind: 생선
+  rarity: 희귀
+  item: fish_bog_pike
+  size_cm:
+  - 50
+  - 130
+  price: 130
+  exp: 31
+  conditions:
+    fishing_level: 18
+    places:
+    - 신비의 늪
+- id: moon_pearl
+  name: 달빛 진주
+  kind: 재료
+  rarity: 희귀
+  item: moon_pearl
+  exp: 30
+  conditions:
+    fishing_level: 15
+    time: 밤
+- id: storm_scale
+  name: 폭풍 비늘
+  kind: 재료
+  rarity: 희귀
+  item: storm_scale
+  exp: 30
+  conditions:
+    fishing_level: 20
+    weather: 비
+- id: sunken_lapis
+  name: 뒤틀린 청금석
+  kind: 재료
+  rarity: 희귀
+  item: twisted_lapis
+  exp: 22
+  conditions:
+    fishing_level: 20
+- id: sunken_redstone
+  name: 뒤틀린 레드스톤
+  kind: 재료
+  rarity: 희귀
+  item: twisted_redstone
+  exp: 22
+  conditions:
+    fishing_level: 20
+- id: sturgeon
+  name: 철갑상어
+  kind: 생선
+  rarity: 영웅
+  item: fish_sturgeon
+  size_cm:
+  - 90
+  - 250
+  price: 320
+  exp: 56
+  conditions:
+    fishing_level: 25
+- id: abyss_angler
+  name: 심해 아귀
+  kind: 생선
+  rarity: 영웅
+  item: fish_abyss_angler
+  size_cm:
+  - 40
+  - 110
+  price: 360
+  exp: 60
+  conditions:
+    fishing_level: 28
+    time: 밤
+- id: golden_koi
+  name: 황금 잉어
+  kind: 생선
+  rarity: 영웅
+  item: fish_golden_koi
+  size_cm:
+  - 40
+  - 95
+  price: 420
+  exp: 62
+  conditions:
+    fishing_level: 30
+    places:
+    - 요괴 계곡
+- id: mermaid_tear
+  name: 인어의 눈물
+  kind: 재료
+  rarity: 영웅
+  item: mermaid_tear
+  exp: 62
+  conditions:
+    fishing_level: 30
+- id: sunken_diamond
+  name: 뒤틀린 다이아몬드
+  kind: 재료
+  rarity: 영웅
+  item: twisted_diamond
+  exp: 50
+  conditions:
+    fishing_level: 30
+- id: dragon_carp
+  name: 용잉어
+  kind: 생선
+  rarity: 전설
+  item: fish_dragon_carp
+  size_cm:
+  - 80
+  - 200
+  price: 1600
+  exp: 150
+  conditions:
+    fishing_level: 35
+    weather: 비
+- id: whale_shark
+  name: 고래상어
+  kind: 생선
+  rarity: 전설
+  item: fish_whale_shark
+  size_cm:
+  - 400
+  - 1200
+  price: 2200
+  exp: 175
+  conditions:
+    fishing_level: 40
+- id: leviathan_scale
+  name: 리바이어던 비늘
+  kind: 재료
+  rarity: 전설
+  item: leviathan_scale
+  exp: 162
+  conditions:
+    fishing_level: 40
+- id: sunken_chest
+  name: 가라앉은 보물 상자
+  kind: 골드
+  rarity: 전설
+  gold:
+  - 1000
+  - 2500
+  exp: 125
+  conditions:
+    fishing_level: 35

@@ -1,0 +1,254 @@
+.shell {
+  position: relative;
+  z-index: 1;
+  flex-direction: row;
+  min-height: 100dvh;
+}
+
+/* ---------- 왼쪽 메뉴 (넓은 화면) */
+.side {
+  position: sticky;
+  top: 0;
+  width: var(--side-w);
+  height: 100dvh;
+  flex: none;
+  background: var(--panel);
+  border-right: 2px solid #000;
+  box-shadow: inset -2px 0 0 var(--edge-hi);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.logo {
+  flex-direction: row;
+  gap: 8px;
+  height: 64px;
+  padding: 0 12px;
+  flex: none;
+  background-image: var(--tex-grass-side);
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+  border-bottom: 2px solid #000;
+}
+.logoText {
+  font-family: var(--f-head);
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #1b1b1b;
+  white-space: nowrap;
+}
+.nav {
+  padding: 12px 8px 24px;
+  gap: 12px;
+}
+.group {
+  gap: 4px;
+}
+.groupLabel {
+  padding: 0 8px;
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--ink-3);
+}
+.links {
+  gap: 2px;
+}
+.link {
+  flex-direction: row;
+  gap: 8px;
+  height: 28px;
+  padding: 0 6px;
+  border: 2px solid transparent;
+  color: var(--ink-2);
+  transition: transform 0.08s steps(2);
+}
+.linkIcon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+.linkLabel {
+  flex: 1;
+  white-space: nowrap;
+}
+.linkHint {
+  display: none;
+}
+.link[aria-current='page'] {
+  color: #fff;
+  background-image: var(--tex-dirt);
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+  border-color: #000;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.22), inset -2px -2px 0 rgba(0, 0, 0, 0.35), inset 6px 0 0 var(--grass);
+  text-shadow: 1px 1px 0 #2b1d12;
+  padding-left: 12px;
+}
+.link:focus-visible {
+  border-color: var(--gold);
+}
+@media (hover: hover) {
+  .link:hover {
+    color: #fff;
+    transform: translateX(4px);
+  }
+  .link[aria-current='page']:hover {
+    transform: none;
+  }
+}
+
+/* ---------- 본문 열 */
+.main {
+  flex: 1;
+}
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  height: var(--top-h);
+  padding: 0 16px;
+  flex: none;
+}
+.topLogo {
+  display: none;
+  gap: 8px;
+  flex: none;
+}
+.foot {
+  gap: 2px;
+  padding: 16px 16px 24px;
+  width: 100%;
+  max-width: 1120px;
+  margin: auto auto 0;
+  font-family: var(--f-tiny);
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--ink-3);
+}
+
+/* ---------- 아래 메뉴, 전체 메뉴 (좁은 화면) */
+.bar,
+.sheet {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .side {
+    display: none;
+  }
+  .top {
+    padding: 0 8px;
+    gap: 8px;
+    background: var(--panel);
+    border-bottom: 2px solid #000;
+    box-shadow: inset 0 -2px 0 var(--edge-hi);
+    justify-content: space-between;
+  }
+  .topLogo {
+    display: inline-flex;
+  }
+  .foot {
+    padding: 16px 12px 88px;
+  }
+  .bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    flex-direction: row;
+    height: calc(56px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background-image: var(--tex-deepslate);
+    background-size: 64px 64px;
+    image-rendering: pixelated;
+    border-top: 2px solid #000;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.16);
+  }
+  .barBtn {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    font-family: var(--f-tiny);
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--ink-2);
+    text-shadow: 1px 1px 0 #000;
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  .barBtn:last-child {
+    border-right: 0;
+  }
+  .barBtn[aria-current='page'],
+  .barBtn[aria-expanded='true'] {
+    color: #fff;
+    background: rgba(94, 154, 64, 0.55);
+    box-shadow: inset 0 4px 0 var(--grass-hi);
+  }
+  .barBtn:active {
+    background: rgba(0, 0, 0, 0.35);
+  }
+  .sheet {
+    display: flex;
+    position: fixed;
+    inset: var(--top-h) 0 calc(56px + env(safe-area-inset-bottom, 0px)) 0;
+    z-index: 40;
+    background: var(--panel);
+    animation: page-in 0.14s ease-out both;
+  }
+  .sheetStrip {
+    height: 16px;
+    flex: none;
+    background-image: var(--tex-grass-side);
+    background-size: 32px 32px;
+    image-rendering: pixelated;
+    border-bottom: 2px solid #000;
+  }
+  .sheetBody {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 8px 24px;
+    gap: 16px;
+  }
+  .linksGrid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .linksGrid li {
+    flex: 1 1 calc(50% - 6px);
+  }
+  .linksGrid .link {
+    height: 48px;
+    padding: 0 8px;
+    background: var(--panel-2);
+    border-color: #000;
+    box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 0;
+  }
+  .linksGrid .linkLabel {
+    color: #fff;
+  }
+  .linksGrid .linkHint {
+    display: block;
+    flex: 1 1 100%;
+    padding-left: 24px;
+    font-family: var(--f-tiny);
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--ink-3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

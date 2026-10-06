@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.playwright-mcp/
+shots/
+
+# 빌드 때 다시 만드는 파일
+src/generated/
+public/gen/
+
+# 의뢰 원본 (보관용)
+commission/
+
+# 작업 플랜과 진행 기록 (로컬 전용)
+PLAN.md
+scripts/plan.mjs
+scripts/shots.js
