@@ -1,0 +1,122 @@
+.fold {
+  background: var(--panel-2);
+  border: 2px solid var(--edge-lo);
+  box-shadow: inset 2px 2px 0 var(--edge-hi);
+}
+.head {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  text-align: left;
+}
+.headBody {
+  flex: 1;
+  gap: 8px;
+}
+.chev {
+  rotate: 90deg;
+  transition: rotate 0.16s ease-out;
+}
+.fold[data-open='true'] > .head .chev {
+  rotate: -90deg;
+}
+.body {
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+.inner {
+  gap: 4px;
+  padding: 0 10px 10px;
+  transition: transform 0.2s ease-out, opacity 0.16s linear;
+}
+.fold[data-open='false'] > .body > .inner {
+  transform: translateY(-16px);
+  opacity: 0;
+}
+.head:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+
+/* 어느 화면에서나 접히는 칸: 큰 묶음(패널)용 */
+.all {
+  background: var(--panel);
+  box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+}
+.all > .head {
+  min-height: 48px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.all > .head .headBody {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.all > .body > .inner {
+  gap: 12px;
+  padding: 4px 16px 16px;
+}
+.all[data-open='false'] > .body {
+  height: 0;
+}
+.allBtn {
+  width: 96px;
+  justify-content: center;
+}
+
+/* 좁은 화면에서만 접히는 칸: 넓은 화면에서는 항상 펼쳐 둔다 */
+@media (min-width: 720px) {
+  .narrow > .head {
+    cursor: default;
+    pointer-events: none;
+  }
+  .narrow > .head .chev {
+    display: none;
+  }
+  .narrow > .body {
+    height: auto !important;
+  }
+  .fold.narrow[data-open] > .body > .inner {
+    transform: none;
+    opacity: 1;
+  }
+}
+@media (max-width: 719px) {
+  .narrow > .head {
+    cursor: pointer;
+    min-height: 48px;
+  }
+  .narrow[data-open='false'] > .body {
+    height: 0;
+  }
+  .all > .head {
+    padding: 10px 12px;
+  }
+  .all > .body > .inner {
+    padding: 4px 12px 12px;
+  }
+  .allBtn {
+    display: none;
+  }
+}
+
+/* 검색 중에는 찾은 항목이 보이도록 전부 펼친다 */
+[data-searching='true'] .fold > .body {
+  height: auto !important;
+}
+[data-searching='true'] .fold > .body > .inner {
+  transform: none;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .all > .head:hover {
+    background: var(--panel-2);
+  }
+}
+@media (max-width: 719px) {
+  .head:active {
+    background: var(--panel-3);
+  }
+}

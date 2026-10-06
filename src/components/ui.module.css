@@ -480,6 +480,11 @@ a.ref {
   flex-wrap: wrap;
   gap: 4px;
 }
+@media (max-width: 719px) {
+  .wideOnly {
+    display: none;
+  }
+}
 .tools {
   flex-direction: row;
   flex-wrap: wrap;

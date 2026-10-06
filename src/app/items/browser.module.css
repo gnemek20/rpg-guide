@@ -1,0 +1,167 @@
+.browser {
+  gap: 16px;
+}
+.pane {
+  gap: 12px;
+}
+/* 넓은 화면: 종류 칸과 돌아가기 줄은 쓰지 않는다 */
+.grid,
+.bar {
+  display: none;
+}
+.items {
+  min-height: 72dvh;
+}
+.tileIcon {
+  display: flex;
+}
+
+@media (max-width: 719px) {
+  .browser {
+    overflow-x: clip;
+    min-height: 72dvh;
+  }
+  .pane {
+    transition: transform 0.16s ease-out, opacity 0.14s linear;
+  }
+  .browser[data-view='grid'] .grid,
+  .browser[data-view='list'] .list {
+    display: flex;
+  }
+  .browser[data-view='grid'] .list,
+  .browser[data-view='list'] .grid {
+    display: none;
+  }
+  /* 나가는 화면: 앞으로 갈 때는 왼쪽으로, 돌아갈 때는 오른쪽으로 밀리며 사라진다 */
+  .browser[data-phase='out'] .pane {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  .browser[data-phase='out'][data-dir='back'] .pane {
+    transform: translateX(28px);
+  }
+  /* 들어올 화면의 출발 자리. 여기서는 transition 없이 놓기만 한다 */
+  .browser[data-phase='pre'] .pane {
+    opacity: 0;
+    transform: translateX(28px);
+    transition: none;
+  }
+  .browser[data-phase='pre'][data-dir='back'] .pane {
+    transform: translateX(-28px);
+  }
+  .items [data-off='true'] {
+    display: none;
+  }
+  .items {
+    gap: 8px;
+    min-height: 0;
+  }
+
+  /* 종류: 3열 네모 칸 */
+  .tiles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tileWrap {
+    flex: 0 0 calc((100% - 16px) / 3);
+  }
+  .tile {
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 2px;
+    padding: 8px 4px 10px;
+    background: var(--panel);
+    border: 2px solid #000;
+    box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+    transition: transform 0.05s linear, background-color 0.05s linear;
+  }
+  .tileIcon {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 88px;
+    background: var(--slot);
+    box-shadow: inset 2px 2px 0 var(--slot-lo), inset -2px -2px 0 var(--slot-hi);
+    margin-bottom: 6px;
+  }
+  .tileIcon svg {
+    width: 48px;
+    height: 48px;
+  }
+  .tileCount {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #3f3f3f;
+  }
+  .tileLabel {
+    font-weight: 700;
+    text-align: center;
+  }
+  .tileSub {
+    min-height: 16px;
+    text-align: center;
+  }
+  .tile:active {
+    transform: translate(2px, 2px);
+    background: var(--panel-3);
+  }
+  .tile:focus-visible {
+    border-color: var(--gold);
+  }
+
+  /* 목록 위의 돌아가기 줄 */
+  .bar {
+    display: flex;
+    position: sticky;
+    top: var(--top-h);
+    z-index: 5;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    /* 다른 패널과 같은 틀: 검은 테두리, 안쪽 모서리 음영, 위쪽 텍스처 띠. 내용은 안쪽 여백 안에 둔다 */
+    padding: 22px 12px 10px 10px;
+    background-color: var(--panel);
+    background-image: var(--tex-dark-planks);
+    background-size: 32px 32px;
+    background-repeat: repeat-x;
+    image-rendering: pixelated;
+    border: 2px solid #000;
+    box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000, inset 0 14px 0 rgba(0, 0, 0, 0), 0 4px 0 rgba(0, 0, 0, 0.45);
+  }
+  .bar::before {
+    /* 텍스처 띠 아래 경계선 */
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    height: calc(100% - 12px);
+    background: var(--panel);
+    border-top: 2px solid #000;
+    box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+  }
+  .bar > * {
+    position: relative;
+  }
+  .barBack {
+    height: 40px;
+    margin: 0 4px 4px 0;
+  }
+  .flip {
+    scale: -1 1;
+  }
+  .barLabel {
+    flex: 1;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

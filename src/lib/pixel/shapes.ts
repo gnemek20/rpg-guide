@@ -1238,7 +1238,7 @@ export const UI_ICONS: [string, string][] = [
   ['tower', 'gray'], ['coin', 'gold'], ['search', 'gray'], ['close', 'gray'], ['menu', 'gray'], ['arrow', 'gray'],
   ['heart', 'gray'], ['shield', 'gray'], ['clock', 'gold'], ['scroll', 'sand'], ['scroll', 'blue'], ['scroll', 'purple'],
   ['scroll', 'gold'], ['scroll', 'green'], ['sword', 'iron'], ['pickaxe', 'iron'], ['axe', 'iron'], ['hoe', 'iron'],
-  ['chestplate', 'iron'], ['star', 'gold'], ['gem', 'diamond'], ['fish', 'sand'], ['fish', 'cyan'], ['fish', 'gold'],
+  ['chestplate', 'iron'], ['chestplate', 'leather'], ['chestplate', 'gold'], ['chestplate', 'netherite'], ['chestplate', 'diamond'], ['star', 'gold'], ['gem', 'diamond'], ['fish', 'sand'], ['fish', 'cyan'], ['fish', 'gold'],
   ['fish', 'purple'], ['fish', 'green'], ['lump', 'stone'], ['plant', 'green'], ['block', 'wood'], ['block', 'stone'],
   ['skull', 'red'], ['skull', 'green'], ['skull', 'sand'], ['skull', 'purple'], ['skull', 'nether'], ['orb', 'gold'],
 ]
