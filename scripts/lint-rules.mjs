@@ -26,6 +26,8 @@ for (const f of walk('src', ['.css'])) {
     if (/:hover/.test(line) && hoverDepth < 0) bad.push(`${at} hover가 미디어 쿼리 밖에 있음`)
     if (/outline\s*:/.test(line) && !/outline\s*:\s*(none|0)/.test(line)) bad.push(`${at} outline 사용`)
     if (/display\s*:\s*(inline-)?grid/.test(line)) bad.push(`${at} grid 사용`)
+    // 효과는 transition 으로만 만든다 (도중에 상태가 바뀌어도 자연스럽게 되돌아가도록)
+    if (/@keyframes|^\s*animation(-name)?\s*:/.test(line)) bad.push(`${at} animation 사용`)
     const r = line.match(/border-radius\s*:\s*([\d.]+)px/)
     if (r && Number(r[1]) > 2.5) bad.push(`${at} border-radius ${r[1]}px`)
     depth += (line.match(/{/g) ?? []).length - (line.match(/}/g) ?? []).length

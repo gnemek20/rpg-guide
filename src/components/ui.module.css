@@ -5,7 +5,13 @@
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  animation: page-in 0.16s ease-out both;
+  transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+}
+@starting-style {
+  .page {
+    opacity: 0;
+    transform: translateY(8px);
+  }
 }
 .head {
   flex-direction: row;
@@ -37,9 +43,14 @@
   color: var(--ink);
   text-shadow: 1px 1px 0 #000;
 }
+.crumb a {
+  padding: 4px 8px;
+  margin: -4px 0 -4px -8px;
+}
 .crumb {
   flex-direction: row;
-  gap: 6px;
+  align-items: center;
+  gap: 0;
   color: var(--ink-2);
   text-shadow: 1px 1px 0 #000;
 }
@@ -158,8 +169,8 @@
   background-image: var(--tex-grass-top);
 }
 .btnSm {
-  height: 24px;
-  padding: 0 8px;
+  height: 28px;
+  padding: 0 10px;
 }
 @media (hover: hover) {
   .btn:hover {
@@ -194,10 +205,24 @@
   height: 100%;
   color: #fff;
 }
+.field input::-webkit-search-cancel-button {
+  display: none;
+}
 .field input::placeholder {
   color: var(--ink-3);
 }
 @media (pointer: coarse) {
+  .btn {
+    height: 40px;
+    padding: 0 14px;
+  }
+  .btnSm {
+    height: 36px;
+    padding: 0 12px;
+  }
+  .field {
+    height: 40px;
+  }
   /* iOS 확대 방지 */
   .field input {
     font-size: 16px;
@@ -232,6 +257,19 @@
 }
 .tr:first-child {
   border-top: 0;
+}
+.trLink {
+  display: flex;
+  cursor: pointer;
+}
+.trLink:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+.go {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  color: var(--grass-hi);
 }
 .th {
   background: #141312;
@@ -353,6 +391,11 @@
   gap: 6px;
   flex: none;
   max-width: 100%;
+  min-height: 24px;
+}
+a.ref {
+  padding: 2px 6px;
+  margin: 0 -6px;
 }
 .refName {
   text-decoration: underline;
@@ -363,6 +406,12 @@
   text-decoration: none;
 }
 @media (hover: hover) {
+  a.ref:hover {
+    background: var(--panel-3);
+  }
+  .trLink:hover .go {
+    color: #fff;
+  }
   a.ref:hover .refName {
     color: var(--grass-hi);
     text-decoration-color: var(--grass-hi);

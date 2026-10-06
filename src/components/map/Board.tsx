@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { score } from '@/lib/hangul'
+import { usePresence } from '@/lib/usePresence'
 import { useShallowParam } from '@/lib/useShallowParam'
 import { BASE, Icon, cx, ui } from '../ui'
 import s from './board.module.css'
@@ -63,7 +64,7 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
     const k = Math.min(MAX, Math.max(MIN, Math.min(v.clientWidth / data.w, v.clientHeight / data.h)))
     // 너무 작아지면 읽을 수 없으니 높이에 맞추고 왼쪽부터 보여 준다
     const use = Math.max(k, Math.min(1, v.clientHeight / data.h), 0.45)
-    t.current = { k: use, x: use === k ? (v.clientWidth - data.w * use) / 2 : 8, y: Math.max(8, (v.clientHeight - data.h * use) / 2) }
+    t.current = { k: use, x: use === k ? (v.clientWidth - data.w * use) / 2 : 8, y: Math.max(52, (v.clientHeight - data.h * use) / 2) }
     apply(smooth)
   }, [apply, data.w, data.h])
 
@@ -181,6 +182,12 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
     return out
   }, [node, related, byId])
 
+  // 설명 칸: 닫히는 동안에는 마지막으로 보던 항목을 그대로 그린다
+  const sheet = usePresence(!!(node && detail))
+  const keptNode = useRef(node), keptDetail = useRef(detail)
+  if (node && detail) { keptNode.current = node; keptDetail.current = detail }
+  const sNode = keptNode.current, sDetail = keptDetail.current
+
   const hits = useMemo(() => {
     const k = q.trim()
     if (!k) return null
@@ -238,33 +245,34 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
             />
             <span className={s.hits}>{hits ? hits.size : ''}</span>
           </label>
-          <div className={cx('row', s.zoom)}>
-            <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => step(1.3)} aria-label="확대">+</button>
-            <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => step(1 / 1.3)} aria-label="축소">-</button>
-            <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => fit()}>전체</button>
-          </div>
+        </div>
+        {/* 확대 버튼: 넓은 화면은 위쪽, 좁은 화면은 오른손 엄지가 닿는 오른쪽 아래 */}
+        <div className={s.zoom} data-ui>
+          <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => step(1.3)} aria-label="확대">+</button>
+          <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => step(1 / 1.3)} aria-label="축소">-</button>
+          <button type="button" className={cx(ui.btn, ui.btnSm)} onClick={() => fit()}>전체</button>
         </div>
         <p className={s.hint} data-ui>끌어서 이동 / 휠, 두 손가락으로 확대</p>
 
-        {node && detail && (
-          <aside className={s.sheet} data-ui role="dialog" aria-label={node.name}>
+        {sheet.mounted && sNode && sDetail && (
+          <aside className={s.sheet} data-ui role="dialog" aria-label={sNode.name} data-shown={sheet.shown} onTransitionEnd={sheet.onTransitionEnd}>
             <div className={s.grip} />
             <header className={s.sheetHead}>
-              <span className={ui.slot}><svg className="ic" width={32} height={32} viewBox="0 0 16 16" aria-hidden="true"><use href={`${BASE}/gen/icons.svg#${node.ic}`} /></svg></span>
+              <span className={ui.slot}><svg className="ic" width={32} height={32} viewBox="0 0 16 16" aria-hidden="true"><use href={`${BASE}/gen/icons.svg#${sNode.ic}`} /></svg></span>
               <div className={s.sheetTitle}>
-                <h2 className={s.sheetName}>{node.name}</h2>
-                <div className={cx('wrap', ui.gap4)}>{detail.chips?.map((c) => <span key={c} className={ui.chip}>{c}</span>)}</div>
+                <h2 className={s.sheetName}>{sNode.name}</h2>
+                <div className={cx('wrap', ui.gap4)}>{sDetail.chips?.map((c) => <span key={c} className={ui.chip}>{c}</span>)}</div>
               </div>
               <button type="button" className={s.x} onClick={() => setSel('')} aria-label="닫기" data-hot><Icon shape="close" /></button>
             </header>
             <div className={s.sheetBody}>
-              {(detail.stats?.length || detail.desc?.length) ? (
+              {(sDetail.stats?.length || sDetail.desc?.length) ? (
                 <div className={s.tip}>
-                  {detail.stats?.map((x) => <span key={x} className="t-grass">{x}</span>)}
-                  {detail.desc?.map((x, i) => <span key={i} className="t-dim">{x}</span>)}
+                  {sDetail.stats?.map((x) => <span key={x} className="t-grass">{x}</span>)}
+                  {sDetail.desc?.map((x, i) => <span key={i} className="t-dim">{x}</span>)}
                 </div>
               ) : null}
-              {detail.sections?.map((sec) => (
+              {sDetail.sections?.map((sec) => (
                 <section key={sec.title} className={ui.gap4}>
                   <h3 className={ui.sub}>{sec.title}</h3>
                   <ul className={s.rows}>
@@ -287,7 +295,7 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
                   </ul>
                 </section>
               ))}
-              {detail.href && <Link href={detail.href} className={cx(ui.btn, ui.btnGrass)} style={{ alignSelf: 'flex-start' }}>상세 페이지</Link>}
+              {sDetail.href && <Link href={sDetail.href} className={cx(ui.btn, ui.btnGrass)} style={{ alignSelf: 'flex-start' }}>상세 페이지</Link>}
             </div>
           </aside>
         )}

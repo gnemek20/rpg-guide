@@ -1,4 +1,4 @@
-/* 선착장 장면: 물은 흐르고, 찌는 까닥이고, 물고기는 왼쪽에서 오른쪽으로 지나간다 */
+/* 선착장 장면. 움직임은 전부 transition 이고, 반복은 Pond.tsx 가 transitionend 를 받아 다시 건다 */
 .pond {
   position: relative;
   height: 160px;
@@ -15,7 +15,6 @@
   background-image: var(--tex-water);
   background-size: 64px 64px;
   image-rendering: pixelated;
-  animation: flow 6s linear infinite;
   box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.25), inset 0 -40px 40px rgba(0, 0, 20, 0.45);
 }
 .pier {
@@ -54,7 +53,10 @@
   top: 4px;
   width: 64px;
   height: 96px;
-  animation: tug 3.2s steps(2) infinite;
+  transition: transform 0.16s steps(2, end);
+}
+.rig[data-tug='true'] {
+  transform: translateY(-3px);
 }
 .rod {
   position: absolute;
@@ -78,25 +80,26 @@
   height: 12px;
   background: linear-gradient(#c8402e 0 50%, #fff 50% 100%);
   border: 2px solid #000;
-  animation: bob 1.6s steps(3) infinite alternate;
+  transition: transform 1.6s steps(3, end);
   pointer-events: none;
 }
+.bobber[data-up='true'] {
+  transform: translateY(4px);
+}
 
+/* 물고기는 왼쪽 밖에서 시작해 오른쪽으로 건너간다 */
 .fishA,
 .fishB {
   position: absolute;
   top: 28px;
   left: -40px;
   opacity: 0.85;
-  animation: swim 14s linear infinite;
 }
 .fishB {
   top: 52px;
-  animation-duration: 21s;
-  animation-delay: -8s;
 }
 
-/* 물 튀김: 네모난 물방울이 솟았다 떨어지고, 네모 물결이 퍼진다 */
+/* 물 튀김: 네모난 물방울이 솟았다(1) 떨어지고(2), 네모 물결이 퍼진다 */
 .splash {
   position: absolute;
   width: 0;
@@ -111,7 +114,15 @@
   height: 6px;
   background: #cfe3ff;
   border: 2px solid #2855b0;
-  animation: drop 0.6s steps(8, end) both;
+  transition: transform 0.26s ease-out, opacity 0.26s linear;
+}
+.splash[data-phase='1'] .drop {
+  transform: translate(var(--dx), var(--dy));
+}
+.splash[data-phase='2'] .drop {
+  transform: translate(calc(var(--dx) * 1.5), 6px);
+  opacity: 0;
+  transition-timing-function: ease-in, linear;
 }
 .ring {
   position: absolute;
@@ -120,61 +131,16 @@
   width: 12px;
   height: 6px;
   border: 2px solid rgba(255, 255, 255, 0.9);
-  animation: ring 0.6s steps(6, end) both;
+  transition: transform 0.5s ease-out, opacity 0.5s linear;
+}
+.splash:not([data-phase='0']) .ring {
+  transform: scale(6, 4);
+  opacity: 0;
 }
 
-@keyframes flow {
-  to {
-    background-position: 64px 32px;
-  }
-}
-@keyframes bob {
-  to {
-    transform: translateY(4px);
-  }
-}
-@keyframes tug {
-  0%,
-  70%,
-  100% {
-    transform: none;
-  }
-  80% {
-    transform: translateY(-2px);
-  }
-}
-@keyframes swim {
-  to {
-    transform: translateX(calc(100vw + 80px));
-  }
-}
-@keyframes drop {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  55% {
-    transform: translate(var(--dx), var(--dy));
-    opacity: 1;
-  }
-  100% {
-    transform: translate(calc(var(--dx) * 1.5), 6px);
-    opacity: 0;
-  }
-}
-@keyframes ring {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(6, 4);
-    opacity: 0;
-  }
-}
 @media (hover: hover) {
-  /* 올리면 낚싯대가 한 번 더 크게 움찔한다 */
+  /* 올리면 낚싯대가 움찔한다 */
   .rig:hover {
-    animation-duration: 0.5s;
+    transform: translateY(-3px);
   }
 }

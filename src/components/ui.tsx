@@ -90,7 +90,8 @@ export function Chip({ children, color }: { children: ReactNode; color?: string 
 // ---------------------------------------------------------------- 표
 export type Col = { label: string; w?: number; right?: boolean; main?: boolean }
 /** flex 행으로 만든 표. 좁은 화면에서는 행이 카드로 바뀌고 칸마다 라벨이 붙는다. */
-export function Table({ cols, rows, keys, keep }: { cols: Col[]; rows: ReactNode[][]; keys?: string[]; keep?: boolean }) {
+/** hrefs 를 주면 그 행 전체가 링크가 된다. 행 안에 다른 링크를 넣지 않는다. */
+export function Table({ cols, rows, keys, keep, hrefs }: { cols: Col[]; rows: ReactNode[][]; keys?: string[]; keep?: boolean; hrefs?: (string | undefined)[] }) {
   const style = (c: Col): CSSProperties => (c.w ? { flex: `${c.w} 1 0` } : {})
   return (
     <div className={cx(s.table, !keep && s.cards)} role="table">
@@ -101,9 +102,8 @@ export function Table({ cols, rows, keys, keep }: { cols: Col[]; rows: ReactNode
           </div>
         ))}
       </div>
-      {rows.map((r, i) => (
-        <div key={keys?.[i] ?? i} className={s.tr} role="row">
-          {r.map((cell, j) => {
+      {rows.map((r, i) => {
+        const cells = r.map((cell, j) => {
             const empty = cell === null || cell === undefined || cell === '' || cell === false
             return (
               <div key={j} className={cx(s.td, cols[j].right && s.tdR, cols[j].main && s.tdMain, empty && s.tdEmpty)} style={style(cols[j])} role="cell">
@@ -111,9 +111,14 @@ export function Table({ cols, rows, keys, keep }: { cols: Col[]; rows: ReactNode
                 <div className={s.cellBody}>{typeof cell === 'string' || typeof cell === 'number' ? <span>{cell}</span> : cell}</div>
               </div>
             )
-          })}
-        </div>
-      ))}
+          })
+        const href = hrefs?.[i]
+        return href ? (
+          <Link key={keys?.[i] ?? i} href={href} className={cx(s.tr, s.trLink)} role="row" data-hot>{cells}</Link>
+        ) : (
+          <div key={keys?.[i] ?? i} className={s.tr} role="row">{cells}</div>
+        )
+      })}
     </div>
   )
 }

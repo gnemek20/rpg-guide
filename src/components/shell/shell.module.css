@@ -97,6 +97,9 @@
   .link[aria-current='page']:hover {
     transform: none;
   }
+  .back:hover {
+    background: var(--panel-3);
+  }
 }
 
 /* ---------- 본문 열 */
@@ -114,6 +117,41 @@
   height: var(--top-h);
   padding: 0 16px;
   flex: none;
+}
+.back {
+  gap: 6px;
+  width: 132px;
+  height: 32px;
+  padding: 0 8px;
+  margin-right: auto;
+  flex: none;
+  background: var(--panel);
+  border: 2px solid #000;
+  box-shadow: inset 2px 2px 0 var(--edge-hi), inset -2px -2px 0 #000;
+  color: var(--ink);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition: opacity 0.14s linear, transform 0.14s ease-out, visibility 0s linear 0.14s;
+}
+.back[data-on='true'] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.14s linear, transform 0.14s ease-out, visibility 0s;
+}
+.backIcon {
+  scale: -1 1;
+}
+.backText {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.back:focus-visible {
+  border-color: var(--gold);
 }
 .topLogo {
   display: none;
@@ -152,6 +190,21 @@
   }
   .topLogo {
     display: inline-flex;
+  }
+  .topLogo {
+    width: 116px;
+    transition: opacity 0.14s linear;
+  }
+  .topLogo[data-back='true'] {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .back {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 116px;
+    margin-right: 0;
   }
   .foot {
     padding: 16px 12px 88px;
@@ -202,7 +255,13 @@
     inset: var(--top-h) 0 calc(56px + env(safe-area-inset-bottom, 0px)) 0;
     z-index: 40;
     background: var(--panel);
-    animation: page-in 0.14s ease-out both;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.14s linear, transform 0.14s ease-out;
+  }
+  .sheet[data-shown='true'] {
+    opacity: 1;
+    transform: none;
   }
   .sheetStrip {
     height: 16px;

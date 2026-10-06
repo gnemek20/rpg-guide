@@ -80,7 +80,7 @@
   gap: 2px;
 }
 .tocLink {
-  padding: 4px 8px;
+  padding: 6px 8px;
   border-left: 4px solid var(--line);
   color: var(--ink-2);
   flex: 1;

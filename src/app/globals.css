@@ -183,53 +183,25 @@ code {
 .ic {
   overflow: visible;
   shape-rendering: crispEdges;
-}
-/* 아이콘 hover: 한 번 톡 튀어 오르며 기울었다가 제자리로. 픽셀 단위로 끊어 움직인다 */
-@keyframes ic-hop {
-  0% {
-    transform: none;
-  }
-  35% {
-    transform: translateY(-3px) rotate(-10deg);
-  }
-  70% {
-    transform: translateY(0) rotate(6deg);
-  }
-  100% {
-    transform: none;
-  }
+  transition: transform 0.12s steps(3, end);
 }
 @media (hover: hover) {
   [data-hot]:hover .ic {
-    animation: ic-hop 0.3s steps(6, end) 1;
+    transform: translateY(-2px) rotate(-8deg);
   }
-  /* 인벤토리 칸 안의 아이템 그림은 움직이지 않는다 */
   [data-hot]:hover [class*='slot'] .ic,
   [class*='slot'][data-hot]:hover .ic {
-    animation: none;
-  }
-}
-
-/* 화면 전환: 패널이 살짝 올라오며 나타난다 */
-@keyframes page-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
     transform: none;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: 1ms !important;
     transition-duration: 1ms !important;
   }
 }
-
 /* display:flex 가 hidden 속성을 덮지 않게 한다 */
 [hidden] {
   display: none !important;

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { score } from '@/lib/hangul'
+import { usePresence } from '@/lib/usePresence'
 import { useShallowParam } from '@/lib/useShallowParam'
 import { BASE, Icon, ui } from '../ui'
 import s from './search.module.css'
@@ -74,6 +75,11 @@ export default function Search() {
   }
 
   const show = open && q.trim().length > 0
+  const panel = usePresence(show)
+  // 닫히는 동안에는 마지막으로 보이던 결과를 그대로 둔다
+  const kept = useRef(results)
+  if (show) kept.current = results
+  const list = show ? results : kept.current
   return (
     <div className={s.search} ref={box} data-open={show}>
       <label className={ui.field}>
@@ -95,14 +101,14 @@ export default function Search() {
           <Icon shape="close" size={16} />
         </button>
       </label>
-      {show && (
-        <div className={s.results} role="listbox">
+      {panel.mounted && (
+        <div className={s.results} role="listbox" data-shown={panel.shown} onTransitionEnd={panel.onTransitionEnd}>
           {!index ? (
             <span className={s.msg}>불러오는 중입니다.</span>
-          ) : results.length === 0 ? (
+          ) : list.length === 0 ? (
             <span className={s.msg}>결과가 없습니다.</span>
           ) : (
-            results.map((e, i) => (
+            list.map((e, i) => (
               <Link key={e.h + e.n + e.t} href={e.h} className={s.item} data-i={i} data-on={i === cursor} role="option" aria-selected={i === cursor} onClick={() => setOpen(false)} onPointerMove={() => setCursor(i)}>
                 <svg className="ic" width={16} height={16} viewBox="0 0 16 16" aria-hidden="true"><use href={`${BASE}/gen/icons.svg#${e.i}`} /></svg>
                 <span className={s.name}>{e.n}</span>

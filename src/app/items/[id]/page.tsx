@@ -117,8 +117,9 @@ export default async function ItemPage({ params }: P) {
         <Panel title="드롭" aside={<span className="t-faint">{drops.length}곳</span>}>
           <Table
             cols={[{ label: '몬스터', main: true, w: 1.4 }, { label: '사냥터' }, { label: '레벨', right: true, w: 0.5 }, { label: '확률', right: true, w: 0.6 }, { label: '수량', right: true, w: 0.5 }]}
+            hrefs={drops.map(({ monster, region: r }) => `/monsters/?r=${r.id}#${monster.id}`)}
             rows={drops.map(({ monster, region: r, drop }) => [
-              <Link key="m" href={`/monsters/?r=${r.id}#${monster.id}`} className={ui.ref}><span className={ui.refName}>{monster.name}</span></Link>,
+              monster.name,
               r.name,
               `Lv.${monster.level}`,
               <span key="c" className="t-gold">{d.pct(drop.chance_percent)}</span>,
