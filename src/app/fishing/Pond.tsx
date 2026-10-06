@@ -49,7 +49,8 @@ export default function Pond() {
     const w = water.current!
     const across = () => `translateX(${w.clientWidth + 80}px)`
     const stops = [
-      travel(w, 'backgroundPosition', '0px 0px', () => '64px 32px', 6000),
+      // 끝 자리가 무늬(64px) 의 정수배라서 처음 자리와 똑같이 보인다. 다시 걸어도 이음매가 없다
+      travel(w, 'backgroundPosition', '0px 0px', () => '6400px 3200px', 600000),
       travel(fishA.current!, 'transform', 'translateX(0px)', across, 14000),
       travel(fishB.current!, 'transform', 'translateX(0px)', across, 21000),
     ]
