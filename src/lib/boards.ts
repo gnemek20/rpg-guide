@@ -6,6 +6,8 @@ import { iconId } from './pixel/shapes'
 
 const STEP = 64, NODE = 48, LABEL_W = 112, COLS = 6, LANE_GAP = 72
 const icOf = (it?: d.Item, fallback = '') => iconId(...iconOf(it?.icon_material ?? fallback, it?.name ?? ''))
+// 재료 줄은 누르면 그 재료의 상세 페이지로 간다
+const matLink = (id: string) => (d.itemById(id) ? { href: d.itemHref(id) } : {})
 const statLines = (st?: Record<string, number>) => (st ? Object.entries(st).map(([k, v]) => `${k} +${v}`) : [])
 
 function itemDetail(it: d.Item): BDetail {
@@ -18,12 +20,12 @@ function itemDetail(it: d.Item): BDetail {
   if (recipe)
     sections.push({
       title: recipe.kind === 'brew' ? `양조 재료 (농사 Lv.${recipe.farming_level}, ${recipe.seconds}초)` : `제작 재료${recipe.result.amount > 1 ? ` (${recipe.result.amount}개 완성)` : ''}`,
-      rows: recipe.ingredients.map((g) => ({ ic: icOf(d.itemById(g.id), g.id), text: d.itemById(g.id)?.name ?? g.name, sub: `x${g.amount}`, go: g.id })),
+      rows: recipe.ingredients.map((g) => ({ ic: icOf(d.itemById(g.id), g.id), text: d.itemById(g.id)?.name ?? g.name, sub: `x${g.amount}`, ...matLink(g.id) })),
     })
   if (recipe) {
     const totals = [...d.rawTotals(it.id)]
     if (totals.some(([id]) => !recipe.ingredients.some((g) => g.id === id)))
-      sections.push({ title: '바닥 재료 합계', rows: totals.map(([id, n]) => ({ ic: icOf(d.itemById(id), id), text: d.itemById(id)?.name ?? id, sub: `x${n}`, go: id })) })
+      sections.push({ title: '바닥 재료 합계', rows: totals.map(([id, n]) => ({ ic: icOf(d.itemById(id), id), text: d.itemById(id)?.name ?? id, sub: `x${n}`, ...matLink(id) })) })
   }
   const src: NonNullable<BDetail['sections']>[number]['rows'] = [
     ...drops.slice(0, 6).map((x) => ({ ic: 'skull-white', text: x.monster.name, sub: `${x.region.name} ${d.pct(x.drop.chance_percent)}`, href: `/monsters/?r=${x.region.id}#${x.monster.id}` })),
