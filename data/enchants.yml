@@ -1,6 +1,6 @@
 # 잠재능력
 # 장비에 무작위로 붙는 추가 효과. for = 붙는 장비 종류.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 rules:
   npc: 잠재능력 재설정 NPC
@@ -21,7 +21,7 @@ rules:
     전설(최고): 0%
   cost: 100G + 등급 순번(0~3)×100G, 뒤틀린 청금석 1개 + 등급 순번×1개 (도구는 ×0.5)
   line_lock: 잠근 줄은 유지하고 나머지만 다시 뽑음. 1줄 잠글 때마다 기본 골드 ×1.0 추가, 잠그는 동안 등급업 없음, 모든 줄은 못 잠금
-  grade_bonus: 아이템 등급이 잠재능력 등급보다 한 단계 높을 때마다 효과 +45%
+  grade_bonus: 아이템 등급이 잠재능력 등급보다 한 단계 높을 때마다 효과 +10%
   note: effect_at_max는 최고 레벨·등급 보너스 없음(배율 1.0) 기준입니다. any_grade=true면 아이템 등급과 상관없이 나옵니다.
 enchants:
 - id: power
@@ -29,7 +29,7 @@ enchants:
   for: 무기
   grade: 일반
   max_level: 5
-  effect_at_max: 데미지 +15%
+  effect_at_max: 데미지 +10%
   any_grade: false
 - id: vital_strike
   name: 생기타격
@@ -176,14 +176,14 @@ enchants:
   for: 무기
   grade: 영웅
   max_level: 3
-  effect_at_max: 60% 확률로 근처 적에게 50% 전이
+  effect_at_max: 36% 확률로 근처 적에게 50% 전이
   any_grade: false
 - id: mortal_strike
   name: 필멸의일격
   for: 무기
   grade: 영웅
   max_level: 3
-  effect_at_max: 대상이 잃은 체력 비율 × 90% 추가 데미지
+  effect_at_max: 대상이 잃은 체력 비율 × 36% 추가 데미지
   any_grade: false
 - id: swift_blessing
   name: 쾌속의 축복
@@ -267,14 +267,14 @@ enchants:
   for: 무기
   grade: 전설
   max_level: 3
-  effect_at_max: 15% 확률로 주변 3칸의 적에게 이번 피해의 60%
+  effect_at_max: 36% 확률로 주변 3칸의 적에게 이번 피해의 60%
   any_grade: false
 - id: death_mark
   name: 사형선고
   for: 무기
   grade: 전설
   max_level: 3
-  effect_at_max: 타격한 대상에 5초 표식 — 표식 대상에게 내 데미지 +30%
+  effect_at_max: 타격한 대상에 5초 표식 — 표식 대상에게 내 데미지 +54%
   any_grade: false
 - id: reaper
   name: 사신의 낫
@@ -302,14 +302,14 @@ enchants:
   for: 무기
   grade: 전설
   max_level: 3
-  effect_at_max: 사냥 숙련도 경험치 +60%, 처치 골드 +15%
+  effect_at_max: 사냥 숙련도 경험치 +60%, 처치 골드 +24%
   any_grade: false
 - id: iron_skin
   name: 철갑
   for: 방어구
   grade: 일반
   max_level: 5
-  effect_at_max: 받는 피해 −15%
+  effect_at_max: 받는 피해 −4%
   any_grade: false
 - id: vital_ward
   name: 생명의 가호
@@ -323,14 +323,14 @@ enchants:
   for: 방어구
   grade: 일반
   max_level: 3
-  effect_at_max: 30% 확률로 받는 피해 절반
+  effect_at_max: 9% 확률로 받는 피해 절반
   any_grade: false
 - id: vitality_blessing
   name: 체력의 축복
   for: 방어구
   grade: 일반
   max_level: 5
-  effect_at_max: 최대 체력 +40 (상시)
+  effect_at_max: 최대 체력 +25 (상시)
   any_grade: false
 - id: regen_weave
   name: 재생의 실
@@ -379,7 +379,7 @@ enchants:
   for: 방어구
   grade: 희귀
   max_level: 3
-  effect_at_max: 받은 피해의 30% 반사
+  effect_at_max: 받은 피해의 30% 반사 (반사 합계 최대 50%)
   any_grade: false
 - id: frost_ward
   name: 서릿발 보호막
@@ -393,7 +393,7 @@ enchants:
   for: 방어구
   grade: 희귀
   max_level: 3
-  effect_at_max: 받는 피해 −15%
+  effect_at_max: 받는 피해 −4.5%
   any_grade: false
 - id: guardian_blessing
   name: 수호의 축복
@@ -442,21 +442,21 @@ enchants:
   for: 방어구
   grade: 희귀
   max_level: 3
-  effect_at_max: 받는 피해의 30%를 마나로 대신 받음 (마나가 있을 때)
+  effect_at_max: 받는 피해의 6%를 마나로 대신 받음 (마나가 있을 때)
   any_grade: false
 - id: guardian_spirit
   name: 수호령
   for: 방어구
   grade: 영웅
   max_level: 3
-  effect_at_max: 21% 확률로 피해 완전 무효
+  effect_at_max: 6% 확률로 피해 완전 무효
   any_grade: false
 - id: last_stand
   name: 최후의 저항
   for: 방어구
   grade: 영웅
   max_level: 3
-  effect_at_max: 체력이 낮을수록 피해 추가 감소 (최대 60%)
+  effect_at_max: 체력이 낮을수록 피해 추가 감소 (최대 12%)
   any_grade: false
 - id: retaliation
   name: 반격의 오라
@@ -505,7 +505,7 @@ enchants:
   for: 방어구
   grade: 영웅
   max_level: 3
-  effect_at_max: 받은 피해의 24%를 즉시 회복
+  effect_at_max: 받은 피해의 6%를 즉시 회복
   any_grade: false
 - id: counter_stance
   name: 반격 자세
@@ -526,7 +526,7 @@ enchants:
   for: 방어구
   grade: 전설
   max_level: 3
-  effect_at_max: 받는 피해 −24%
+  effect_at_max: 받는 피해 −7.5%
   any_grade: false
 - id: divine_aegis
   name: 천벌의 가호
@@ -568,7 +568,7 @@ enchants:
   for: 방어구
   grade: 전설
   max_level: 3
-  effect_at_max: 받는 피해 −30%, 받은 피해의 75% 반사
+  effect_at_max: 받는 피해 −9%, 받은 피해의 75% 반사 (반사 합계 최대 50%)
   any_grade: false
 - id: celestial_grace
   name: 천상의 은총
@@ -841,7 +841,7 @@ enchants:
   for: 괭이
   grade: 일반
   max_level: 2
-  effect_at_max: 범위 수확 반경 +2칸
+  effect_at_max: 범위 수확 최대 칸 수 +128
   any_grade: false
 - id: bumper_crop
   name: 풍작

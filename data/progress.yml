@@ -1,6 +1,6 @@
 # 도감·업적·파견·출석
 # collections = /도감(활동하면 자동 진행), titles = /업적(칭호), expedition = /파견, attendance = /출석.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 collections:
 - id: cobblestone

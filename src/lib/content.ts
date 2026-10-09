@@ -4,14 +4,8 @@ import { join } from 'node:path'
 
 export type Doc = { slug: string; title: string; lead?: string; body: string; file: string; date?: string }
 
-/**
- * 글자 정리: 가운뎃점, 긴 줄표, 화살표를 쉼표, 붙임표, 부등호로 바꾼다.
- * 파일을 읽는 자리에서 한 번에 바꿔 두므로 제목, 표 머리글 어디에 쓰여 있어도 화면에 그대로 나가지 않는다.
- */
-const tidy = (s: string) => s.replace(/[ \t]*·[ \t]*/g, ', ').replace(/[ \t]*[—–][ \t]*/g, ' - ').replace(/[ \t]*→[ \t]*/g, ' > ')
-
 function parseDoc(file: string, dir: string): Omit<Doc, 'slug'> {
-  const lines = tidy(readFileSync(join(process.cwd(), 'content', dir, file), 'utf8').replace(/\r\n/g, '\n')).split('\n')
+  const lines = readFileSync(join(process.cwd(), 'content', dir, file), 'utf8').replace(/\r\n/g, '\n').split('\n')
   let title = file.replace(/\.md$/, '')
   let lead: string | undefined
   let i = 0

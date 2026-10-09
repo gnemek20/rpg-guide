@@ -9,6 +9,7 @@ export const NAV: { group: string; items: NavItem[] }[] = [
       { href: '/notices/', label: '공지', icon: ['sign', 'gray'], scene: 'plains', hint: '점검, 패치' },
       { href: '/guide/', label: '가이드', icon: ['book', 'red'], scene: 'plains', hint: '시스템 설명 9종' },
       { href: '/commands/', label: '명령어', icon: ['chat', 'gray'], scene: 'plains', hint: '명령어, 단축키' },
+      { href: '/reports/', label: '버그 신고', icon: ['chat', 'gray'], scene: 'plains', hint: '문제 접수' },
     ],
   },
   {

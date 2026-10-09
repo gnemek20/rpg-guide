@@ -1,6 +1,6 @@
 # 경제
 # buy_price = 살 때 기본가(거래량에 따라 조금씩 움직임), sell_price = 팔 때 값. buy_price가 없으면 판매 전용 품목입니다.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 shop_tabs:
 - npc: 블럭 상점 헤이즐
@@ -29,11 +29,11 @@ shop_tabs:
     buy_price: 3
   - id: OAK_LOG
     name: 참나무 원목
-    buy_price: 5
+    buy_price: 2
     sell_price: 4
   - id: SPRUCE_LOG
     name: 가문비나무 원목
-    buy_price: 5
+    buy_price: 2
   - id: OAK_LEAVES
     name: 참나무 잎
     buy_price: 3
@@ -221,9 +221,6 @@ shop_tabs:
   - id: WARPED_FUNGUS
     name: 뒤틀린 균
     buy_price: 200
-  - id: BONE_MEAL
-    name: 뼛가루
-    buy_price: 5
 - npc: 상점 마르코
   tab: 약초 씨앗
   items:
@@ -498,12 +495,12 @@ shop_tabs:
     sell_price: 150
   - id: twisted_redstone
     name: 뒤틀린 레드스톤
-    buy_price: 450
-    sell_price: 300
+    buy_price: 420
+    sell_price: 280
   - id: twisted_lapis
     name: 뒤틀린 청금석
-    buy_price: 576
-    sell_price: 384
+    buy_price: 480
+    sell_price: 320
 shop_discount:
 - spent: 1000000
   discount: 10%

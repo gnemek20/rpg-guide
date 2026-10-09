@@ -21,6 +21,9 @@ export default function Home() {
   const quick: [string, string, string?][] = [
     ['모든 메뉴', '/메뉴'],
     ['내 섬으로', '/섬'],
+    ['작물 한 번에 수확', '다 자란 작물 우클릭', '/guide/controls/'],
+    ['나무 한 번에 벌목', '도끼로 밑동 캐기', '/guide/controls/'],
+    ['재료 배치 없이 제작', '레시피 상세의 결과물 클릭', '/guide/controls/'],
     ['사냥터로', '차원문지기 엘론', '/monsters/'],
     ['장비 입기', '/장비'],
     ['마법 배우기', '마법사 아이리스', '/spells/'],
@@ -75,6 +78,7 @@ export default function Home() {
           <ol className={ui.gap8}>
             {[
               ['/guide/start/', '시작하기', '튜토리얼 다음에 할 일'],
+              ['/guide/controls/', '간편조작', '수확, 벌목, 자동제작 방법'],
               ['/guide/growth/', '성장', '레벨이 오르는 원리'],
               ['/tree/', '제작 트리', '레벨대별 장비와 재료'],
             ].map(([href, t, sub], i) => (

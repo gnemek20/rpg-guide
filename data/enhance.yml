@@ -1,6 +1,6 @@
 # 강화·각성
 # 대장장이 볼칸(/강화). 실패해도 골드·재료는 사라집니다.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 enhance:
   npc: 대장장이 볼칸

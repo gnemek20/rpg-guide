@@ -15,7 +15,7 @@ function inputHash(): string {
     } else h.update(p.replace(/\\/g, '/')).update(readFileSync(p))
   }
   ;['data', 'content', 'src', 'scripts', 'package-lock.json'].forEach(walk)
-  return h.update(basePath).digest('hex').slice(0, 16)
+  return h.update(basePath).update(process.env.NEXT_PUBLIC_REPORT_API_URL ?? '').digest('hex').slice(0, 16)
 }
 
 const nextConfig: NextConfig = {

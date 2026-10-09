@@ -29,6 +29,7 @@ jobs:
         env:
           # 프로젝트 페이지는 /<저장소 이름>/ 아래에서 열린다
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_REPORT_API_URL: ${{ vars.BUG_REPORT_API_URL }}
       - name: Check design rules
         run: npm run lint:rules
       - uses: actions/upload-pages-artifact@v3

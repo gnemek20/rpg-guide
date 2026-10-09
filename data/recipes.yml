@@ -1,8 +1,44 @@
 # 제작·양조
 # crafting = 제작대(RPG 제작, shape는 3×3 배치·칸마다 재료 여러 개), brewing = 섬 양조. 제작 트리는 ingredients를 재귀로 펼치면 됩니다.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 crafting:
+- result:
+    id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 1
+  ingredients:
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 48
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 8
+  - id: COAL
+    name: 석탄
+    amount: 4
+  shape:
+  - LLL
+  - RCR
+  - LLL
+- result:
+    id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 1
+  ingredients:
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 32
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: COAL
+    name: 석탄
+    amount: 4
+  shape:
+  - RLR
+  - LCL
+  - RLR
 - result:
     id: rookie_pickaxe
     name: 초보자의 곡괭이

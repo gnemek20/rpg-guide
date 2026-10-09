@@ -1,6 +1,6 @@
 # 플레이어 명령어
 # 관리자·내부 명령은 뺐습니다. aliases는 같은 기능의 다른 이름입니다.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 commands:
 - command: /메뉴
@@ -64,7 +64,11 @@ commands:
 - command: /섬
   aliases:
   - /island
-  description: 개인 섬 관련 명령어
+  description: 소속 섬으로 바로 이동합니다. /섬 도움말, /섬 허브
+- command: /spawn
+  aliases:
+  - /넴주
+  description: 마을로 바로 이동합니다.
 - command: /창고
   aliases:
   - /vault
@@ -88,6 +92,16 @@ commands:
   aliases:
   - /appeal
   description: 제재를 받은 동안 이의를 제기합니다. 내용 없이 쓰면 제재 정보를 봅니다.
+- command: /피드백
+  aliases:
+  - /feedback
+  description: 개선 의견을 운영자에게 전달합니다.
+- command: /신고
+  aliases:
+  - /report
+  - /bugreport
+  - /버그신고
+  description: 버그를 운영자에게 접수합니다. /신고 내용
 - command: /낚시
   aliases:
   - /fishing

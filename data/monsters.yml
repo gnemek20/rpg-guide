@@ -1,6 +1,6 @@
 # 사냥터·몬스터
 # 마을의 차원문지기 엘론에게 말을 걸어 사냥터로 갑니다.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 regions:
 - id: SakuraValley

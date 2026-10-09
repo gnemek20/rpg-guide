@@ -22,6 +22,6 @@ export async function GET() {
   for (const c of d.fishing().catches) if (!c.item || !d.itemById(c.item)) out.push({ n: c.name, t: '낚시', h: '/fishing/', i: 'fish-sand', d: c.rarity })
   for (const b of d.challenges().boss_raid.bosses) out.push({ n: b.name, t: '보스', h: '/challenges/', i: 'skull-red', d: `권장 Lv.${b.recommended_level}` })
   for (const s of d.sets()) out.push({ n: `${s.name} 세트`, t: '세트', h: `/items/?f=${encodeURIComponent(s.name)}`, i: 'chestplate-iron' })
-  for (const g of guides()) out.push({ n: g.title, t: '가이드', h: `/guide/${g.slug}/`, i: 'book-red' })
+  for (const g of guides()) out.push({ n: g.title, t: '가이드', h: `/guide/${g.slug}/`, i: 'book-red', d: g.lead })
   return Response.json(out)
 }

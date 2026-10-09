@@ -1,6 +1,6 @@
 # 도전 — 시련의 탑·보스 레이드
 # 탑과 레이드는 서로 다른 콘텐츠입니다.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 tower:
   name: 시련의 탑

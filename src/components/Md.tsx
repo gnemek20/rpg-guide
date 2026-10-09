@@ -51,7 +51,7 @@ function block(t: Token, i: number): ReactNode {
       return (
         <Table
           key={i}
-          cols={tb.header.map((h, j) => ({ label: soften(h.text.replace(/\*\*/g, '').replace(/<br\s*\/?>/gi, ' ')), main: j === 0, w: j === 0 ? 1 : 2 }))}
+          cols={tb.header.map((h, j) => ({ label: h.text.replace(/\*\*/g, ''), main: j === 0, w: j === 0 ? 1 : 2 }))}
           rows={tb.rows.map((r) => r.map((c) => <p className={s.p}>{inline(c.tokens)}</p>))}
         />
       )

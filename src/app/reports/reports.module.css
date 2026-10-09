@@ -1,0 +1,26 @@
+.layout { flex-direction: row; gap: 20px; align-items: flex-start; }
+.main { flex: 1; min-width: 0; }
+.aside { width: 260px; gap: 16px; }
+.form, .fields { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.fields { border: 0; margin: 0; padding: 0; }
+.fields:disabled { opacity: .55; }
+.row { flex-direction: row; gap: 16px; }
+.field { flex: 1; gap: 8px; }
+.field input, .field select, .field textarea { width: 100%; background: var(--bg); color: var(--ink); border: 2px solid var(--line); padding: 10px 12px; font: inherit; border-radius: 0; min-height: 44px; }
+.field textarea { resize: vertical; line-height: 1.8; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; border-color: var(--grass-hi); box-shadow: 0 0 0 1px var(--grass-hi); }
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-3); }
+.hint { color: var(--ink-2); font-size: 12px; line-height: 1.9; }
+.notice { padding: 16px; border-left: 3px solid var(--gold); background: var(--panel-2); margin-bottom: 20px; }
+.submit { align-self: flex-start; min-height: 44px; padding: 10px 28px; }
+.submit:focus-visible, .success button:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
+.error { color: #ffb39e; border-left: 3px solid var(--red); padding: 12px; background: var(--panel-2); }
+.trap { display: none; }
+.tips { gap: 20px; }
+.tips li { gap: 8px; }
+.tips b { color: var(--grass-hi); }
+.tips span { color: var(--ink-2); line-height: 1.8; }
+.success { gap: 20px; align-items: flex-start; }
+.receipt { font-size: 22px; color: var(--gold); letter-spacing: 1px; overflow-wrap: anywhere; }
+@media (max-width: 1050px) { .layout { flex-direction: column; } .main, .aside { width: 100%; } }
+@media (max-width: 600px) { .row { flex-direction: column; } }

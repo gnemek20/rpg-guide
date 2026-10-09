@@ -1,6 +1,6 @@
 # 개인 섬
 # 섬 숙련도(농사·벌목·채굴) 자원과 섬 업그레이드 비용.
-# 생성: tools/export_commission.py (2026-10-06) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 crops:
 - id: WHEAT
