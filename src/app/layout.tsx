@@ -4,6 +4,7 @@ import SceneCanvas from '@/components/scene/Scene'
 import Shell from '@/components/shell/Shell'
 import { FONTS } from '@/generated/fonts'
 import { meta } from '@/lib/data'
+import 'katex/dist/katex.min.css'
 import './globals.css'
 
 export function generateMetadata(): Metadata {

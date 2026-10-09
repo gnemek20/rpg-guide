@@ -1,3 +1,4 @@
+import { tx } from '@/lib/markdown'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Md, { tocOf } from '@/components/Md'
@@ -24,7 +25,7 @@ export default async function Guide({ params }: P) {
   const g = all[i]
   const prev = all[i - 1], next = all[i + 1]
   return (
-    <Page title={g.title} lead={g.lead} icon={['book', 'red']} crumb={{ href: '/guide/', label: '가이드' }}>
+    <Page title={g.title} lead={g.lead ? tx(g.lead) : undefined} icon={['book', 'red']} crumb={{ href: '/guide/', label: '가이드' }}>
       <div className={s.doc}>
         <div className={s.docMain}>
           <Md src={g.body} tex={TEX[slug] ?? 'grass-side'} />

@@ -1,3 +1,4 @@
+import { tx } from '@/lib/markdown'
 import { notFound } from 'next/navigation'
 import Md from '@/components/Md'
 import { Page } from '@/components/ui'
@@ -18,7 +19,7 @@ export default async function Notice({ params }: P) {
   const n = notices().find((x) => x.slug === slug)
   if (!n) notFound()
   return (
-    <Page title={clean(n.title)} lead={n.lead ? clean(n.lead) : n.date} icon={['sign', 'gray']} crumb={{ href: '/notices/', label: '공지' }}>
+    <Page title={clean(n.title)} lead={n.lead ? tx(n.lead) : n.date} icon={['sign', 'gray']} crumb={{ href: '/notices/', label: '공지' }}>
       <Md src={n.body} tex="planks" />
     </Page>
   )

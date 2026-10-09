@@ -4,6 +4,7 @@ import { Ref, RefSlot } from '@/components/refs'
 import { BlockLink, Chip, Icon, ItemIcon, KV, Page, Panel, Table, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import s from '../../list.module.css'
+import { tx } from '@/lib/markdown'
 
 export const dynamicParams = false
 export const generateStaticParams = () => d.items().map((i) => ({ id: d.itemSlug(i.id) }))
@@ -64,7 +65,7 @@ export default async function ItemPage({ params }: P) {
             <div className={s.tip}>
               <span className={s.tipName}>{it.name}</span>
               {it.stats && Object.entries(it.stats).map(([k, v]) => <span key={k} className="t-grass">{k} +{v}</span>)}
-              {it.description?.map((l, i) => <span key={i} className={s.tipLore}>{d.clean(l)}</span>)}
+              {it.description?.map((l, i) => <span key={i} className={s.tipLore}>{tx(l)}</span>)}
             </div>
           </div>
           <KV rows={[
@@ -87,7 +88,7 @@ export default async function ItemPage({ params }: P) {
             <div className={ui.gap4}>
               {set.members.map((m) => <Ref key={m.id} r={m} suffix={m.id === it.id ? <span className="t-faint">(지금 보는 아이템)</span> : undefined} />)}
             </div>
-            {set.note && <p className={cx(ui.note, 't-tiny')}>{d.clean(set.note)}</p>}
+            {set.note && <p className={cx(ui.note, 't-tiny')}>{tx(set.note)}</p>}
           </Panel>
         )}
       </div>

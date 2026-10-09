@@ -4,6 +4,7 @@ import { notices } from '@/lib/content'
 import * as d from '@/lib/data'
 import { NAV } from '@/lib/nav'
 import s from './home.module.css'
+import { tx } from '@/lib/markdown'
 
 const TILE_TEX = ['grass-side', 'planks', 'stone', 'deepslate', 'dirt', 'cobble', 'dark-planks', 'stone-bricks', 'sand', 'deep-bricks', 'log']
 
@@ -67,7 +68,7 @@ export default function Home() {
               <li key={n.slug}>
                 <Link href={`/notices/${n.slug}/`} className={s.news} data-hot>
                   <Icon shape="sign" />
-                  <span className={s.newsTitle}>{d.clean(n.title)}</span>
+                  <span className={s.newsTitle}>{tx(n.title)}</span>
                   <span className="t-tiny t-faint">{n.date}</span>
                 </Link>
               </li>
@@ -92,7 +93,7 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <p className={ui.note}>{d.clean(m.level_rule)}</p>
+          <p className={ui.note}>{tx(m.level_rule)}</p>
         </Panel>
       </div>
 

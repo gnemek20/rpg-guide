@@ -9,6 +9,7 @@ import s from './board.module.css'
 
 export type BNode = { id: string; x: number; y: number; ic: string; name: string; label?: boolean; tone?: string }
 export type BDetail = {
+  /** desc 와 rows 의 text 는 빌드 때 만든 HTML 이다 (마크다운 적용) */
   chips?: string[]; stats?: string[]; desc?: string[]; href?: string
   sections?: { title: string; rows: { ic?: string; text: string; sub?: string; go?: string; href?: string }[] }[]
 }
@@ -269,7 +270,7 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
               {(sDetail.stats?.length || sDetail.desc?.length) ? (
                 <div className={s.tip}>
                   {sDetail.stats?.map((x) => <span key={x} className="t-grass">{x}</span>)}
-                  {sDetail.desc?.map((x, i) => <span key={i} className="t-dim">{x}</span>)}
+                  {sDetail.desc?.map((x, i) => <span key={i} className="t-dim" dangerouslySetInnerHTML={{ __html: x }} />)}
                 </div>
               ) : null}
               {sDetail.sections?.map((sec) => (
@@ -280,7 +281,7 @@ export default function Board({ data, param = 'item', placeholder = '이름으�
                       const inner = (
                         <>
                           {r.ic && <svg className="ic" width={16} height={16} viewBox="0 0 16 16" aria-hidden="true"><use href={`${BASE}/gen/icons.svg#${r.ic}`} /></svg>}
-                          <span className={s.rowText}>{r.text}</span>
+                          <span className={s.rowText} dangerouslySetInnerHTML={{ __html: r.text }} />
                           {r.sub && <span className="t-dim t-num">{r.sub}</span>}
                         </>
                       )

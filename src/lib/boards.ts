@@ -2,10 +2,21 @@
 import type { BDetail, BNode, BoardData } from '@/components/map/Board'
 import { iconOf } from '@/components/ui'
 import * as d from './data'
+import { inlineHtml } from './markdown'
 import { iconId } from './pixel/shapes'
 
 const STEP = 64, NODE = 48, LABEL_W = 112, COLS = 6, LANE_GAP = 72
 const icOf = (it?: d.Item, fallback = '') => iconId(...iconOf(it?.icon_material ?? fallback, it?.name ?? ''))
+// 재료 줄은 누르면 그 재료의 상세 페이지로 간다
+const matLink = (id: string) => (d.itemById(id) ? { href: d.itemHref(id) } : {})
+/** 설명 칸의 글자는 화면 쪽 컴포넌트(Board)가 그리므로 마크다운을 여기서 HTML 로 바꿔 넘긴다 */
+function html(details: Record<string, BDetail>): Record<string, BDetail> {
+  for (const x of Object.values(details)) {
+    x.desc = x.desc?.map(inlineHtml)
+    for (const sec of x.sections ?? []) for (const r of sec.rows) r.text = inlineHtml(r.text)
+  }
+  return details
+}
 const statLines = (st?: Record<string, number>) => (st ? Object.entries(st).map(([k, v]) => `${k} +${v}`) : [])
 
 function itemDetail(it: d.Item): BDetail {
@@ -18,12 +29,12 @@ function itemDetail(it: d.Item): BDetail {
   if (recipe)
     sections.push({
       title: recipe.kind === 'brew' ? `양조 재료 (농사 Lv.${recipe.farming_level}, ${recipe.seconds}초)` : `제작 재료${recipe.result.amount > 1 ? ` (${recipe.result.amount}개 완성)` : ''}`,
-      rows: recipe.ingredients.map((g) => ({ ic: icOf(d.itemById(g.id), g.id), text: d.itemById(g.id)?.name ?? g.name, sub: `x${g.amount}`, go: g.id })),
+      rows: recipe.ingredients.map((g) => ({ ic: icOf(d.itemById(g.id), g.id), text: d.itemById(g.id)?.name ?? g.name, sub: `x${g.amount}`, ...matLink(g.id) })),
     })
   if (recipe) {
     const totals = [...d.rawTotals(it.id)]
     if (totals.some(([id]) => !recipe.ingredients.some((g) => g.id === id)))
-      sections.push({ title: '바닥 재료 합계', rows: totals.map(([id, n]) => ({ ic: icOf(d.itemById(id), id), text: d.itemById(id)?.name ?? id, sub: `x${n}`, go: id })) })
+      sections.push({ title: '바닥 재료 합계', rows: totals.map(([id, n]) => ({ ic: icOf(d.itemById(id), id), text: d.itemById(id)?.name ?? id, sub: `x${n}`, ...matLink(id) })) })
   }
   const src: NonNullable<BDetail['sections']>[number]['rows'] = [
     ...drops.slice(0, 6).map((x) => ({ ic: 'skull-white', text: x.monster.name, sub: `${x.region.name} ${d.pct(x.drop.chance_percent)}`, href: `/monsters/?r=${x.region.id}#${x.monster.id}` })),
@@ -132,7 +143,7 @@ export function treeBoard(): BoardData {
 
   const links: [string, string][] = []
   for (const r of d.recipes()) for (const g of r.ingredients) if (placed.has(g.id) && placed.has(r.result.id)) links.push([g.id, r.result.id])
-  return { w: x0, h: maxH + 32, nodes, trunks, links, labels, frames, details }
+  return { w: x0, h: maxH + 32, nodes, trunks, links, labels, frames, details: html(details) }
 }
 
 /** 마법: 등급별 구역. 계열로는 나누지 않는다. 소환 마법은 구역 아래 칸에 따로 */
@@ -188,7 +199,7 @@ export function spellBoard(): BoardData {
   })
   // 등급 사이를 잇는 줄기
   for (let i = 0; i + 1 < heads.length; i++) trunks.push(`M${heads[i] + colW} 76H${heads[i + 1]}`)
-  return { w: 32 + grades.length * (colW + 48), h: maxH, nodes, trunks, links: [], labels, frames, details }
+  return { w: 32 + grades.length * (colW + 48), h: maxH, nodes, trunks, links: [], labels, frames, details: html(details) }
 }
 
 /** 업적, 칭호: 분류별 한 줄. 같은 줄은 왼쪽에서 오른쪽으로 이어진다 */
@@ -211,5 +222,5 @@ export function titleBoard(): BoardData {
     })
     if (list.length > 1) trunks.push(`M${104 + NODE / 2} ${y + NODE / 2}H${104 + (list.length - 1) * SX + NODE / 2}`)
   })
-  return { w: 104 + maxN * SX + 24, h: 32 + cats.length * SY + 16, nodes, trunks, links: [], labels, frames: [], details }
+  return { w: 104 + maxN * SX + 24, h: 32 + cats.length * SY + 16, nodes, trunks, links: [], labels, frames: [], details: html(details) }
 }

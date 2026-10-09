@@ -1,3 +1,4 @@
+import { tx } from '@/lib/markdown'
 import Link from 'next/link'
 import { Page, Panel } from '@/components/ui'
 import { guides } from '@/lib/content'
@@ -16,7 +17,7 @@ export default function GuideIndex() {
                 <span className={s.guideNo}>{i + 1}</span>
                 <span className={s.guideText}>
                   <span className={s.guideTitle}>{g.title}</span>
-                  <span className="t-dim">{g.lead}</span>
+                  <span className="t-dim">{tx(g.lead)}</span>
                 </span>
               </Link>
             </li>

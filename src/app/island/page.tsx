@@ -1,6 +1,7 @@
 import { Ref } from '@/components/refs'
 import { ItemIcon, KV, Page, Panel, Table, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
+import { tx } from '@/lib/markdown'
 
 export const metadata = { title: '섬 자원' }
 
@@ -32,7 +33,7 @@ export default function Island() {
 
       <div className={ui.cols}>
         <Panel title="보석" tex="deepslate">
-          <p className="t-dim">{d.clean(is.gems.chance)}</p>
+          <p className="t-dim">{tx(is.gems.chance)}</p>
           <Table keep cols={[{ label: '보석', main: true, w: 1.6 }, { label: '채굴', right: true }, { label: '경험치', right: true }]} rows={is.gems.list.map((g: any) => [<Ref key="r" r={g.gem} />, `Lv.${g.mining_level}`, g.exp])} />
         </Panel>
         <Panel title="작물" tex="dirt">
@@ -57,7 +58,7 @@ export default function Island() {
       </Panel>
 
       <Panel title="업그레이드 비용" tex="cobble">
-        <p className="t-dim">{d.clean(is.upgrade_cost_formula)}</p>
+        <p className="t-dim">{tx(is.upgrade_cost_formula)}</p>
         <Table
           cols={[{ label: '업그레이드', main: true, w: 1.6 }, { label: '지불', w: 1.2 }, ...[1, 2, 3, 4, 5].map((n) => ({ label: `${n}번째`, right: true }))]}
           rows={costs.map(([key, c]) => {

@@ -1,11 +1,18 @@
 // content/ 의 마크다운 로더. 빌드 때만 실행된다.
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
+import { plain } from './markdown'
 
 export type Doc = { slug: string; title: string; lead?: string; body: string; file: string; date?: string }
 
+/**
+ * 글자 정리: 가운뎃점, 긴 줄표, 화살표를 쉼표, 붙임표, 부등호로 바꾼다.
+ * 파일을 읽는 자리에서 한 번에 바꿔 두므로 제목, 표 머리글 어디에 쓰여 있어도 화면에 그대로 나가지 않는다.
+ */
+const tidy = (s: string) => s.replace(/[ \t]*·[ \t]*/g, ', ').replace(/[ \t]*[—–][ \t]*/g, ' - ').replace(/[ \t]*→[ \t]*/g, ' > ')
+
 function parseDoc(file: string, dir: string): Omit<Doc, 'slug'> {
-  const lines = readFileSync(join(process.cwd(), 'content', dir, file), 'utf8').replace(/\r\n/g, '\n').split('\n')
+  const lines = tidy(readFileSync(join(process.cwd(), 'content', dir, file), 'utf8').replace(/\r\n/g, '\n')).split('\n')
   let title = file.replace(/\.md$/, '')
   let lead: string | undefined
   let i = 0
@@ -17,7 +24,7 @@ function parseDoc(file: string, dir: string): Omit<Doc, 'slug'> {
     while (lines[i]?.startsWith('>')) buf.push(lines[i++].replace(/^>\s?/, ''))
     lead = buf.join(' ')
   }
-  return { title, lead, body: lines.slice(i).join('\n'), file }
+  return { title: plain(title), lead, body: lines.slice(i).join('\n'), file }
 }
 const list = (dir: string) => readdirSync(join(process.cwd(), 'content', dir)).filter((f) => f.endsWith('.md') && !f.startsWith('_')).sort()
 

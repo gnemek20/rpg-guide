@@ -2,6 +2,7 @@ import { Ref } from '@/components/refs'
 import { KV, Page, Panel, Table, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import s from '../list.module.css'
+import { tx } from '@/lib/markdown'
 
 export const metadata = { title: '강화' }
 
@@ -27,16 +28,16 @@ export default function Enhance() {
         <Panel title="규칙" tex="stone">
           <KV rows={[
             ['하는 곳', `${e.npc}, /강화`],
-            ['성공 효과', d.clean(e.stat_per_success)],
+            ['성공 효과', tx(e.stat_per_success)],
             ['재료', <div key="m" className={cx('wrap', ui.gap8)}>{e.material_any_of.map((m: d.Ref) => <Ref key={m.id} r={m} />)}</div>],
           ]} />
           <p className={cx(ui.note, 't-tiny')}>재료는 위 다섯 가지 중 아무거나 쓸 수 있습니다.</p>
         </Panel>
         <Panel title="보호" tex="deepslate">
-          <KV rows={Object.entries<string>(e.protect).map(([k, v]) => [k, d.clean(v)])} />
+          <KV rows={Object.entries<string>(e.protect).map(([k, v]) => [k, tx(v)])} />
         </Panel>
         <Panel title="각성" tex="obsidian">
-          <KV rows={[['비용', <Ref key="c" r={awaken.cost} />], ['효과', d.clean(awaken.effect)]]} />
+          <KV rows={[['비용', <Ref key="c" r={awaken.cost} />], ['효과', tx(awaken.effect)]]} />
         </Panel>
       </div>
 

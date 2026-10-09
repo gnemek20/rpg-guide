@@ -2,6 +2,7 @@ import Filter from '@/components/Filter'
 import { Chip, KV, Page, Panel, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import s from '../list.module.css'
+import { tx } from '@/lib/markdown'
 
 export const metadata = { title: '잠재능력' }
 
@@ -21,9 +22,9 @@ export default function Enchants() {
         </Panel>
         <Panel title="재설정" tex="deepslate">
           <KV rows={[
-            ['비용', d.clean(rules.cost)],
-            ['줄 잠금', d.clean(rules.line_lock)],
-            ['등급 보너스', d.clean(rules.grade_bonus)],
+            ['비용', tx(rules.cost)],
+            ['줄 잠금', tx(rules.line_lock)],
+            ['등급 보너스', tx(rules.grade_bonus)],
           ]} />
         </Panel>
       </div>
@@ -37,7 +38,7 @@ export default function Enchants() {
             { param: 'g', attr: 'g', all: '전체 등급', options: grades.map((g) => ({ v: g, label: g })) },
           ]}
         />
-        <p className="t-tiny t-faint">{d.clean(rules.note).replace(/effect_at_max/g, '효과').replace(/any_grade=true면/g, '"모든 등급" 표시가 있으면')}</p>
+        <p className="t-tiny t-faint">{tx(d.clean(rules.note).replace(/effect_at_max/g, '효과').replace(/any_grade=true면/g, '"모든 등급" 표시가 있으면'))}</p>
         <ul className={cx(s.cardGrid, ui.stage)} id="ench">
           {enchants.map((e) => (
             <li key={e.id} id={e.id} className={s.card} data-k={`${e.name} ${e.effect_at_max}`} data-for={e.for} data-g={e.grade} hidden={e.for !== kinds[0]}>
@@ -46,7 +47,7 @@ export default function Enchants() {
                 {e.any_grade && <Chip>모든 등급</Chip>}
                 <Chip color={rarity[e.grade]}>{e.grade}</Chip>
               </div>
-              <p className="t-grass">{d.clean(e.effect_at_max)}</p>
+              <p className="t-grass">{tx(e.effect_at_max)}</p>
               <p className="t-tiny t-faint">최고 Lv.{e.max_level} 기준</p>
             </li>
           ))}

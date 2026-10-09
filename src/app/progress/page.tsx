@@ -6,6 +6,7 @@ import { titleBoard } from '@/lib/boards'
 import * as d from '@/lib/data'
 import s from '../list.module.css'
 import p from './progress.module.css'
+import { tx } from '@/lib/markdown'
 
 export const metadata = { title: '진행' }
 
@@ -15,7 +16,7 @@ export default function Progress() {
   return (
     <Page title="진행" lead="도감, 업적, 파견, 출석, 랭킹입니다." icon={['trophy', 'gray']}>
       <Panel title="출석" tex="planks" aside={<code>/출석</code>}>
-        <p className="t-dim">{d.clean(pr.attendance.how).replace(/^\/출석 - /, '')}</p>
+        <p className="t-dim">{tx(d.clean(pr.attendance.how).replace(/^\/출석 - /, ''))}</p>
         <ol className={p.days}>
           {pr.attendance.days.map((day: any) => (
             <li key={day.day} className={p.day}>
@@ -39,14 +40,14 @@ export default function Progress() {
             <li key={c.id} className={s.card} data-k={c.name} data-c={c.category}>
               <div className={s.cardHead} data-hot>
                 <span className={ui.slot}><ItemIcon material={c.icon_material} name={c.name} /></span>
-                <span className={s.cardName}>{d.clean(c.name)}</span>
+                <span className={s.cardName}>{tx(c.name)}</span>
                 <Chip>{c.category}</Chip>
               </div>
               <div className={ui.gap4}>
                 {c.tiers.map((t: any, i: number) => (
                   <div key={i} className={cx('row', ui.gap8)}>
                     <span className={cx(p.need, 't-num')}>{d.num(t.required)}</span>
-                    <span className={/상시/.test(t.reward) ? 't-grass' : 't-gold'}>{d.clean(t.reward)}</span>
+                    <span className={/상시/.test(t.reward) ? 't-grass' : 't-gold'}>{tx(t.reward)}</span>
                   </div>
                 ))}
               </div>
@@ -57,11 +58,11 @@ export default function Progress() {
 
       <div className={ui.cols}>
         <Panel title="파견" tex="dirt" aside={<code>/파견</code>}>
-          <KV rows={[['방법', d.clean(pr.expedition.how).replace(/^\/파견 - /, '')], ['칸', d.clean(pr.expedition.slots)]]} />
+          <KV rows={[['방법', tx(d.clean(pr.expedition.how).replace(/^\/파견 - /, ''))], ['칸', tx(pr.expedition.slots)]]} />
           <Table
             cols={[{ label: '목적지', main: true, w: 1.4 }, { label: '시간', right: true, w: 0.6 }, { label: '골드', right: true }, { label: '추가 보상', right: true, w: 0.8 }, { label: '필요 레벨', right: true, w: 0.8 }]}
             rows={pr.expedition.destinations.map((x: any) => [
-              <div key="n" className={ui.gap4}><span>{x.name}</span><span className="t-tiny t-faint">{d.clean(x.description)}</span></div>,
+              <div key="n" className={ui.gap4}><span>{x.name}</span><span className="t-tiny t-faint">{tx(x.description)}</span></div>,
               `${x.minutes}분`, <span key="g" className="t-gold t-num">{d.range(x.gold, 'G')}</span>, x.bonus_chance, `Lv.${x.required_level}`,
             ])}
           />

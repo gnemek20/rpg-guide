@@ -4,6 +4,7 @@ import * as d from '@/lib/data'
 import Link from 'next/link'
 import s from '../list.module.css'
 import Pond from './Pond'
+import { tx } from '@/lib/markdown'
 
 export const metadata = { title: '낚시 도감' }
 
@@ -21,10 +22,10 @@ export default function Fishing() {
       <div className={ui.cols}>
         <Panel title="규칙" tex="dark-planks">
           <KV rows={[
-            ['판매', d.clean(rules.sell)],
-            ['판매가', d.clean(rules.price_per_level)],
-            ['트로피', d.clean(rules.trophy)],
-            ['멈춤', d.clean(rules.pause)],
+            ['판매', tx(rules.sell)],
+            ['판매가', tx(rules.price_per_level)],
+            ['트로피', tx(rules.trophy)],
+            ['멈춤', tx(rules.pause)],
           ]} />
         </Panel>
         <Panel title="조건 읽는 법" tex="sand">

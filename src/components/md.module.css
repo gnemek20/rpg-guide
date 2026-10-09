@@ -47,3 +47,8 @@
     color: #fff;
   }
 }
+/* 따로 선 수식: 넘치면 이 칸 안에서만 옆으로 민다 */
+.math {
+  overflow-x: auto;
+  padding: 4px 0;
+}
